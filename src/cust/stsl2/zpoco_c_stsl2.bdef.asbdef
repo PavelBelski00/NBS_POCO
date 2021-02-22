@@ -1,0 +1,9 @@
+projection;
+
+define behavior for zpoco_c_stsl2 alias StatusL2
+use etag
+{
+  use create;
+  use update;
+  use delete;
+}

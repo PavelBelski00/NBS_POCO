@@ -1,0 +1,25 @@
+managed;
+
+define behavior for ZPOCO_I_COUNTRY alias Country
+implementation in class ZCL_POCO_BP_COUNTRY unique
+persistent table ZPOCO_C_COUNTR_A
+lock master
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
+  field ( mandatory : create ) CountryId;
+
+  mapping for zpoco_c_countr_a
+  {
+    CountryId       = country_id;
+    CountryName     = country_name;
+    CreatedBy       = created_by;
+    CreatedAt       = created_at;
+    LastChangedBy   = last_changed_by;
+    LastChangedAt   = last_changed_at;
+  }
+}

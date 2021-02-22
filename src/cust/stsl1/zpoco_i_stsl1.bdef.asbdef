@@ -1,0 +1,25 @@
+managed;
+
+define behavior for ZPOCO_I_STSL1 alias StatusL1
+implementation in class ZCL_POCO_BP_STSL1 unique
+persistent table ZPOCO_C_STSL1_A
+lock master
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
+  field( mandatory: create ) StatusL1Id;
+
+  mapping for zpoco_c_stsl1_a
+  {
+    StatusL1Id    = stsl1_id;
+    StatusL1Name  = stsl1_name;
+    CreatedBy     = created_by;
+    CreatedAt     = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

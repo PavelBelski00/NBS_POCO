@@ -1,0 +1,164 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeName: 'Order',
+                  typeNamePlural: 'Orders' }
+annotate view ZPOCO_C_ORDER with
+{
+  @UI.facet: [
+          {
+                id:                 'GeneralInformation',
+                type:               #COLLECTION,
+                label:              'General Information',
+                position:           10
+          },
+          {
+                id:                 'AdminDataCollection',
+                type:               #COLLECTION,
+                label:              'Admin Data',
+                position:           20
+          },
+          {
+                 id:                'BasicData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Basic Data',
+                 position:          10,
+                 targetQualifier:   'BasicData'
+          },
+          {
+                 id:                'TherapyData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Therapy Data',
+                 position:          20,
+                 targetQualifier:   'TherapyData'
+          },
+          {
+                 id:                'StatusData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Status Data',
+                 position:          30,
+                 targetQualifier:   'StatusData'
+          },
+          {
+                 id:                'Day0Data',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Day 0 Data',
+                 position:          40,
+                 targetQualifier:   'Day0Data'
+          }, 
+          {
+                 id:                'OOSData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'OOS Data',
+                 position:          50,
+                 targetQualifier:   'OOSData'
+          },          
+          {
+                 id:                'Others',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Others',
+                 position:          60,
+                 targetQualifier:   'Others'
+          },            
+          {
+                 id:                'AdminData',
+                 purpose:           #STANDARD ,
+                 parentId:          'AdminDataCollection',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Admin Data',
+                 position:          20,
+                 targetQualifier:   'AdminData'
+           } ]
+
+  @UI.hidden: true
+  OrderUuid;
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem:       [{ position: 10, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
+  NvsId;
+
+  @UI.lineItem:       [{ position: 20, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'TherapyData' }]
+  Therapy;
+  
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem:       [{ position: 30, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
+  CountryId;
+  
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem:       [{ position: 40, importance: #HIGH, type: #WITH_NAVIGATION_PATH, targetElement: '_Plant' }]
+  @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData'  }]  
+  MfgPlantId;
+  
+  @UI.selectionField: [{ position: 50 }]
+  @UI.lineItem:       [{ position: 50, importance: #HIGH, type: #WITH_NAVIGATION_PATH, targetElement: '_TType' }]
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'TherapyData' }]    
+  TherapyTypeId;
+  
+  @UI.lineItem:       [{ position: 60, importance: #MEDIUM}]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'Day0Data' }]      
+  Day0;
+  
+  @UI.selectionField: [{ position: 70 }]
+  @UI.lineItem:       [{ position: 70, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'StatusData' }]   
+  StatusL1Id;
+  
+  @UI.selectionField: [{ position: 80 }]
+  @UI.lineItem:       [{ position: 80, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'StatusData' }]     
+  StatusL2Id;
+  
+  @UI.selectionField: [{ position: 90 }]
+  @UI.lineItem:       [{ position: 90, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 90, qualifier: 'BasicData' }]   
+  OrderingSiteId;
+  
+  @UI.lineItem:       [{ position: 100, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 10,  qualifier: 'OOSData' }]   
+  Oos;
+
+  @UI.lineItem:       [{ position: 110, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 20,  qualifier: 'OOSData' }]   
+  OosDescription;
+  
+  @UI.lineItem:       [{ position: 120, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 20,  qualifier: 'Others' }]  
+  AphDewar;
+  
+  @UI.lineItem:       [{ position: 130, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 10,  qualifier: 'Others' }]  
+  FpDewar;
+  
+  @UI.lineItem:       [{ position: 140, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 20,  qualifier: 'Day0Data' }]  
+  ActualDay0;
+    
+  @UI.lineItem:       [{ position: 150, importance: #LOW }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]  
+  CreatedBy;
+  
+  @UI.lineItem:       [{ position: 160, importance: #LOW }]
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'AdminData' }]  
+  CreatedAt;
+  
+  @UI.lineItem:       [{ position: 170, importance: #LOW }]
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'AdminData' }]  
+  LastChangedBy;
+
+  @UI.lineItem:       [{ position: 180, importance: #LOW }]
+  @UI.fieldGroup:     [{ position: 40, qualifier: 'AdminData' }]  
+  LastChangedAt;
+}

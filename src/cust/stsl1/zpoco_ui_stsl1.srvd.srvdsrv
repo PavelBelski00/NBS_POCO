@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service ZPOCO_UI_STSL1 {
+  expose ZPOCO_C_STSL1 as StatusL1;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition: Therapy Type'
+define service ZPOCO_UI_TTYPE {
+  expose ZPOCO_C_TTYPE as TType;
+}

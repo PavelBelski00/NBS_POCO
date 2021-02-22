@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service ZPOCO_UI_SITE {
+  expose ZPOCO_C_SITE as OrderingSite;
+}

@@ -1,0 +1,10 @@
+@EndUserText.label: 'Service Definition'
+define service ZPOCO_UI_ORDER {
+  expose ZPOCO_C_ORDER as Poco_Order;
+  expose ZPOCO_I_COUNTRY as Country;
+  expose ZPOCO_I_PLANT as Plant;
+  expose ZPOCO_I_STSL1 as StatusL1;
+  expose zpoco_i_stsl2 as StatusL2;
+  expose ZPOCO_I_TTYPE as TType;
+  expose ZPOCO_I_SITE as Site;
+}

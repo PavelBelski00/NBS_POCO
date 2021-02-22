@@ -1,0 +1,25 @@
+managed; // implementation in class zbp_poco_i_ttype unique;
+
+define behavior for ZPOCO_I_TTYPE alias TType
+implementation in class ZCL_POCO_BP_TTYPE unique
+persistent table zpoco_c_ttype_a
+lock master
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
+  field ( mandatory : create ) TherapyTypeID;
+
+  mapping for zpoco_c_ttype_a
+  {
+    TherapyTypeID   = therapy_type_id;
+    TherapyTypeName = therapy_type_name;
+    CreatedBy       = created_by;
+    CreatedAt       = created_at;
+    LastChangedBy   = last_changed_by;
+    LastChangedAt   = last_changed_at;
+  }
+}

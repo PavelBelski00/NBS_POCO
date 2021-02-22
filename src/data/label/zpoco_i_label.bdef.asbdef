@@ -1,0 +1,32 @@
+managed;
+
+define behavior for ZPOCO_I_LABEL alias Label
+implementation in class zbp_poco_i_label unique
+persistent table ZPOCO_D_LABEL_A
+lock master
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field( numbering: managed ) LabelUuid;
+  field( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
+
+  mapping for zpoco_d_label_a
+  {
+    LabelUuid     = label_uuid     ;
+    Therapy       = therapy        ;
+    MfgPlantId    = mfg_plant_id   ;
+    TherapyTypeId = ttype_id       ;
+    NvsId         = nvs_id         ;
+    PrintedLabels = printed_labels ;
+    UsedLabels    = used_labels    ;
+    Reconcile     = reconcile      ;
+    CreatedBy     = created_by     ;
+    CreatedAt     = created_at     ;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+
+  }
+}

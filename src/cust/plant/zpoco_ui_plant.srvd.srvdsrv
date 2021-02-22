@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service ZPOCO_UI_PLANT {
+  expose ZPOCO_C_PLANT as Plant;
+}
