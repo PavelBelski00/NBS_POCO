@@ -1,0 +1,33 @@
+managed;
+
+define behavior for ZPOCO_I_CAPACITY alias Capacity
+ implementation in class ZCL_POCO_BP_CAPACITY unique
+persistent table ZPOCO_D_CAPACT_A
+lock master
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field( numbering: managed ) CapacityUuid;
+  field( readonly:  update )  CapacityUuid;
+  field( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
+
+  mapping for zpoco_d_capact_a {
+      CapacityUuid      = capacity_uuid;
+      MfgPlantId        = mfg_plant_id;
+      MfgStartDate      = mfg_start_date;
+      ConsumedSlots     = cons_slots;
+      Priority          = priority;
+      ProtocolSubjectId = prot_subject_id;
+      TherapyTypeId     = ttype_id;
+      CountryId         = country_id;
+      NvsId             = nvs_id;
+      CountryAllocation = country_alloc;
+      CreatedBy         = created_by;
+      CreatedAt         = created_at;
+      LastChangedBy     = last_changed_by;
+      LastChangedAt     = last_changed_at;
+  }
+}

@@ -11,6 +11,7 @@ etag master LastChangedAt
   delete;
 
   field( numbering: managed ) OrderUuid;
+  field( readonly:  update )  OrderUuid;
   field( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
 
   mapping for zpoco_d_order_a

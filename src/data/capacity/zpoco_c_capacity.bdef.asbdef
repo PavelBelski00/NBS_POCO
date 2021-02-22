@@ -1,0 +1,8 @@
+projection;
+
+define behavior for ZPOCO_C_CAPACITY alias Capacity
+{
+  use create;
+  use update;
+  use delete;
+}

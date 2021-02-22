@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Definition'
+define service ZPOCO_UI_CAPACITY {
+  expose ZPOCO_C_CAPACITY as Capacity;
+  expose ZPOCO_I_COUNTRY as Country;
+  expose ZPOCO_I_TTYPE as TType;
+  expose ZPOCO_I_PLANT as Plant;
+}
