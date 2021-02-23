@@ -4,7 +4,7 @@
                   typeNamePlural: 'Countries' }
 
 annotate view ZPOCO_C_COUNTRY
-    with 
+    with  
 {
  @UI.facet: [
           {
@@ -16,7 +16,7 @@ annotate view ZPOCO_C_COUNTRY
           {    
                 id:                 'AdminDataCollection',
                 type:               #COLLECTION,
-                label:              'Admin Data',
+                label:              'Admin Data ',
                 position:           20
           },
           {
