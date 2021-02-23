@@ -34,6 +34,8 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
  )
  .
 
+
+
 *   Delete the possible entries in the database table - in case it was already filled
     DELETE FROM zpoco_d_order_a.
 *   insert the new table entries
@@ -43,6 +45,37 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
     SELECT * FROM zpoco_d_order_a INTO TABLE @lt_order.
     out->write( sy-dbcnt ).
     out->write( 'product groups data inserted successfully!').
+
+
+
+*******
+*******
+*******
+
+
+        DATA: lt_label  TYPE TABLE OF zpoco_d_label_a.
+    lt_label =
+ VALUE #(
+* ( CLIENT ='100' LABEL_UUID ='02E7896636F21EEB9DA2C6E197E0DFAA' THERAPY ='KYMRIAH - DLBCL US' MFG_PLANT_ID ='US33' TTYPE_ID ='Commercial' NVS_ID ='NT57853' PRINTED_LABELS ='3' USED_LABELS ='1' RECONCILE ='Y' CREATED_BY ='CB0000000723' CREATED_AT
+*='20210219143901.0587920 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210219143901.0587920 '  )
+*
+ ( CLIENT ='100' LABEL_UUID ='02E7896636F21EEB9DA2C6E197E0DFB0' THERAPY ='weaer' MFG_PLANT_ID ='' TTYPE_ID ='' NVS_ID ='' PRINTED_LABELS ='' USED_LABELS ='' RECONCILE ='' CREATED_BY ='CB0000000723' CREATED_AT ='20210222135944.3376650 ' LAST_CHANGED_BY =
+'CB0000000723' LAST_CHANGED_AT ='20210222135944.3376650 '  )
+
+ ( CLIENT ='100' LABEL_UUID ='02E7896636F21EEB9DA2C6E197E0DFB1' THERAPY ='weaer' MFG_PLANT_ID ='' TTYPE_ID ='' NVS_ID ='' PRINTED_LABELS ='' USED_LABELS ='' RECONCILE ='' CREATED_BY ='CB0000000723' CREATED_AT ='20210222135944.3376650 ' LAST_CHANGED_BY =
+'CB0000000723' LAST_CHANGED_AT ='20210222135944.3376650 '  )
+ ).
+
+
+    DELETE FROM zpoco_d_label_a.
+*   insert the new table entries
+    INSERT zpoco_d_label_a FROM TABLE @lt_label.
+
+*   check the result
+    SELECT * FROM zpoco_d_label_a INTO TABLE @lt_label.
+    out->write( sy-dbcnt ).
+    out->write( 'product groups data inserted successfully!').
+
 
 ENDMETHOD.
 ENDCLASS.

@@ -11,6 +11,7 @@ etag master LastChangedAt
   delete;
 
   field( numbering: managed ) LabelUuid;
+  field( readonly: update ) LabelUuid;
   field( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
 
   mapping for zpoco_d_label_a

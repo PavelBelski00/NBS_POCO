@@ -2,6 +2,8 @@
 @EndUserText.label: 'Label'
 define root view entity ZPOCO_I_LABEL
   as select from zpoco_d_label_a
+  association [0..1] to ZPOCO_I_TTYPE   as _TType    on $projection.TherapyTypeId  = _TType.TherapyTypeID
+  association [0..1] to ZPOCO_I_PLANT   as _Plant    on $projection.MfgPlantId     = _Plant.PlantID
 {
   key label_uuid      as LabelUuid,
       therapy         as Therapy,
@@ -20,6 +22,7 @@ define root view entity ZPOCO_I_LABEL
       last_changed_by as LastChangedBy,
       @EndUserText.label : 'Last Changed At'
       @Semantics.systemDateTime.lastChangedAt: true
-      last_changed_at as LastChangedAt
-
+      last_changed_at as LastChangedAt,
+      _TType,
+      _Plant
 }

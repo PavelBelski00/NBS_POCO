@@ -1,7 +1,7 @@
 managed;
 
 define behavior for ZPOCO_I_CAPACITY alias Capacity
- implementation in class ZCL_POCO_BP_CAPACITY unique
+implementation in class ZCL_POCO_BP_CAPACITY unique
 persistent table ZPOCO_D_CAPACT_A
 lock master
 etag master LastChangedAt

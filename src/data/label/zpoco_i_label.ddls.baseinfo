@@ -6,7 +6,10 @@
 "ZPOCO_D_LABEL_A"
 ],
 "ASSOCIATED":
-[],
+[
+"ZPOCO_I_PLANT",
+"ZPOCO_I_TTYPE"
+],
 "BASE":
 [],
 "ANNO_REF":

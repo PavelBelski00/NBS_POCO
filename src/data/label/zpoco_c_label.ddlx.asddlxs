@@ -57,17 +57,17 @@ annotate view ZPOCO_C_LABEL with
   @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData' }]
   NvsId  ;      
   
-  @UI.selectionField: [{ position: 50 }]
+
   @UI.lineItem:       [{ position: 50, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 50, qualifier: 'BasicData' }]
   PrintedLabels;
   
-  @UI.selectionField: [{ position: 60 }]
+
   @UI.lineItem:       [{ position: 60, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 60, qualifier: 'BasicData' }]
   UsedLabels   ;
   
-  @UI.selectionField: [{ position: 70 }]
+
   @UI.lineItem:       [{ position: 70, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 70, qualifier: 'BasicData' }]
   Reconcile    ;
