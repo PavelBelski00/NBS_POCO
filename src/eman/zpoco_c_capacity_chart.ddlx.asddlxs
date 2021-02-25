@@ -37,7 +37,6 @@ annotate view zpoco_c_capacity_chart with
                } 
              ]
              
-
   @UI.hidden: true
   CapacityUuid;
 
@@ -69,7 +68,6 @@ annotate view zpoco_c_capacity_chart with
   @UI.fieldGroup:     [{ position: 50, qualifier: 'BasicData' }]    
   ProtSubjectId;
   
-//  @UI.selectionField: [{ position: 60 }]
   @UI.lineItem:       [{ position: 60, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 60, qualifier: 'BasicData' }]   
   TtypeId;
