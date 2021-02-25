@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Definition for Capacity chart'
+define service Zpoco_ui_capacity_chart {
+  expose zpoco_c_capacity_chart as Capacity;
+  expose zpoco_c_plants_card as Plants;
+  expose ZPOCO_C_SLOTS_PLANTS_CARD as Slots_plants;
+  expose ZPOCO_C_SLOTS_DATE_CARD as Slots_dates;
+}
