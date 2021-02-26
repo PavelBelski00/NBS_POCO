@@ -22,6 +22,7 @@
 define view zpoco_c_order_stsl2_card
   as select from ZPOCO_I_ORDER
 {
+      @ObjectModel.text.element: ['StatusL2Name']
   key StatusL2Id,
       _StatusL2.StatusL2Name,
       @EndUserText.label:'L2 Status quantity'

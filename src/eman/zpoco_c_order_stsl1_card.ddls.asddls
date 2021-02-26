@@ -7,9 +7,10 @@
 @UI.chart: [{
               qualifier:           'STSL1',
               chartType:           #DONUT,
+              
               dimensions:          [ 'StatusL1Id' ],
               measures:            [ 'StatusL1_quontity' ],
-              dimensionAttributes: [ { dimension: 'StatusL1Id',   role: #CATEGORY } ],
+              dimensionAttributes: [ { dimension: 'StatusL1Id',  role: #CATEGORY  } ],
               measureAttributes:   [ { measure:   'StatusL1_quontity', role: #AXIS_1 }]
            }]
 
@@ -21,6 +22,7 @@
 define view zpoco_c_order_stsl1_card
   as select from ZPOCO_I_ORDER
 {
+      @ObjectModel.text.element: ['StatusL1Name']
   key StatusL1Id,
       _StatusL1.StatusL1Name,
       @EndUserText.label:'L2 Status quantity'

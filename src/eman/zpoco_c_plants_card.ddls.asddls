@@ -21,6 +21,7 @@
 define view zpoco_c_plants_card
   as select from zpoco_i_capacity_chart
 {
+      @ObjectModel.text.element: ['PlantName']
   key MfgPlantId,
       _Plant.PlantName,
       count(*) as PlantsQuontity,
