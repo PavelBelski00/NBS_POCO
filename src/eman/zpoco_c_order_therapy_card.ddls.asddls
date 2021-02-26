@@ -24,6 +24,7 @@ define view zpoco_c_order_therapy_card
 {
   key TherapyTypeId,
       Therapy,
+      @EndUserText.label:'Therapy quantity'
       count( * ) as Therapy_quontity
 } 
 group by 

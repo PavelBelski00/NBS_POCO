@@ -738,206 +738,442 @@ VALUE #( ( client ='100' therapy_type_id ='Clinic' therapy_type_name ='Clinic' c
     DATA: lt_capacity TYPE TABLE OF zpoco_d_capact_a.
 
     lt_capacity =
-VALUE #( ( client ='100' capacity_uuid ='02605AA74F061EEB9DA41FE3ED879EE2' mfg_plant_id ='PL1' mfg_start_date ='20210331' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151654.5272730 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153003.3375300 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA41EC20A058230' mfg_plant_id ='PL1' mfg_start_date ='20210331' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151640.9305380 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153009.8054110 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA454081CEF827C' mfg_plant_id ='PL2' mfg_start_date ='20210331' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152835.1270400 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153016.8387690 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA454FF8FA8027E' mfg_plant_id ='PL2' mfg_start_date ='20210331' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152848.4322260 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153023.7422220 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA41CA4CEE38221' mfg_plant_id ='PL1' mfg_start_date ='20210330' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151610.9543900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153030.6451720 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA41D9BB3FB4222' mfg_plant_id ='PL1' mfg_start_date ='20210330' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151623.8954460 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153035.9931710 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA452EC9D8E1F32' mfg_plant_id ='PL2' mfg_start_date ='20210329' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152820.8547010 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153041.4944470 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA41B9EF407C220' mfg_plant_id ='PL1' mfg_start_date ='20210329' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151557.2219980 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153046.2274870 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4520888A98279' mfg_plant_id ='PL2' mfg_start_date ='20210329' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152807.5354450 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153058.5959190 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA417BE86499EDC' mfg_plant_id ='PL1' mfg_start_date ='20210328' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151505.1908960 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153104.7108040 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA418868A36FEDD' mfg_plant_id ='PL1' mfg_start_date ='20210328' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151516.7086760 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153111.6406990 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA41A20E8469EDE' mfg_plant_id ='PL1' mfg_start_date ='20210328' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151537.1896460 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153117.9386940 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4510D26140277' mfg_plant_id ='PL2' mfg_start_date ='20210328' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152755.5339320 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153123.2982570 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA45056BE1B1F2E' mfg_plant_id ='PL2' mfg_start_date ='20210327' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152744.7885590 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153128.6683430 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA416B6ACC8E21A' mfg_plant_id ='PL1' mfg_start_date ='20210327' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151451.9978650 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153253.6787210 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA40BB394BA5ED0' mfg_plant_id ='PL1' mfg_start_date ='20210326' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151223.5539890 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153259.9848290 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA44F7F6EFFDF2D' mfg_plant_id ='PL2' mfg_start_date ='20210326' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152733.5005770 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153305.1201530 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4096D15194206' mfg_plant_id ='PL1' mfg_start_date ='20210326' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151153.0160240 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153310.7464710 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA40EF5CD38820F' mfg_plant_id ='PL1' mfg_start_date ='20210326' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151307.2910460 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153315.9722570 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4068ADCAE41F7' mfg_plant_id ='PL1' mfg_start_date ='20210325' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151114.7071820 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153321.1825300 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4076B583781F8' mfg_plant_id ='PL1' mfg_start_date ='20210325' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151126.0180760 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153326.4165280 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA44D4E1D9E8273' mfg_plant_id ='PL2' mfg_start_date ='20210325' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152704.0094140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153331.9755530 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA44E9CD6376274' mfg_plant_id ='PL2' mfg_start_date ='20210325' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152722.8537080 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153337.0809320 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA44B3CEC715F21' mfg_plant_id ='PL2' mfg_start_date ='20210324' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152636.3257180 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153342.7552180 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA44C4E45DBBF22' mfg_plant_id ='PL2' mfg_start_date ='20210324' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152651.9136120 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153348.5505440 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA4057C5DBFDEBB' mfg_plant_id ='PL1' mfg_start_date ='20210323' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151101.9215950 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153354.8878730 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA44A3A1BB1DF21' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152622.7579710 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153401.2114960 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA447807C758268' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152546.1812350 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153406.1587030 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4486851790268' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152558.3363980 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153411.2122570 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA449566135426A' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152610.8176140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153416.3620490 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA446804CCD5F1D' mfg_plant_id ='PL2' mfg_start_date ='20210322' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152532.7497890 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153421.2370210 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA445B3EBC70264' mfg_plant_id ='PL2' mfg_start_date ='20210322' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152522.3183140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153426.4969050 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA444AA3627DF1A' mfg_plant_id ='PL2' mfg_start_date ='20210321' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152508.1059440 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153431.4056700 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA404A05FA31EBB' mfg_plant_id ='PL1' mfg_start_date ='20210320' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151049.0190090 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153436.5333050 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA441C98D44DF19' mfg_plant_id ='PL2' mfg_start_date ='20210320' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152430.8462270 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153442.8626070 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA442D25F548260' mfg_plant_id ='PL2' mfg_start_date ='20210320' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152443.3658430 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153450.7673000 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA443A3C7368261' mfg_plant_id ='PL2' mfg_start_date ='20210320' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152455.7081030 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153456.4151360 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA43F2601BB5F14' mfg_plant_id ='PL2' mfg_start_date ='20210319' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152354.0634860 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153502.3027770 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA44027D52DDF15' mfg_plant_id ='PL2' mfg_start_date ='20210319' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152407.5859560 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153508.5224240 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA44101227C5F18' mfg_plant_id ='PL2' mfg_start_date ='20210319' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152418.9725300 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153513.9052550 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA403ACA28E81F3' mfg_plant_id ='PL1' mfg_start_date ='20210319' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151036.1773630 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153520.9355580 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA402916B5A41F2' mfg_plant_id ='PL1' mfg_start_date ='20210318' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151020.9677270 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153527.1302940 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA43E0EAF1D825A' mfg_plant_id ='PL2' mfg_start_date ='20210318' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152339.4188540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153532.3175640 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA40058346B1EB7' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150952.9708310 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153538.2830990 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA43B5398F19F11' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152302.7770030 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153544.2099150 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA43C526CDF1F13' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152316.1289730 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153549.0486600 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3FE489D95C1EC' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150923.4638170 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153553.9831140 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3FF4B9525C1EE' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150937.7820400 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153606.4109290 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA40153AB4081F0' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151004.9677290 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153612.2270030 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4396B8DB98255' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152237.2736730 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153618.1874190 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA43A5D8476C257' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152249.8642980 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153625.2000580 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA43D319EF14259' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152327.8387280 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153631.0994830 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3FD54BCC0C1EB' mfg_plant_id ='PL1' mfg_start_date ='20210316' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150910.6782630 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153637.3868200 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3FC3AA0351EB0' mfg_plant_id ='PL1' mfg_start_date ='20210315' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150856.8339210 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153642.8046940 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA43843DF859F11' mfg_plant_id ='PL2' mfg_start_date ='20210315' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152222.6835740 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153648.9532750 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3FB37026021E8' mfg_plant_id ='PL1' mfg_start_date ='20210315' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150842.8274020 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153654.8486910 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3F6D2E5CADEA9' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150743.3503310 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153700.7679700 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3F7DD9D3C41E3' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150757.3895490 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153706.0618100 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3F8E49D0001E4' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150811.6035930 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153712.2245600 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3F9E038F1A1E5' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150825.1139860 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153718.4662610 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA43456E112E248' mfg_plant_id ='PL2' mfg_start_date ='20210314' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152129.1400870 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153725.3636360 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4352F4D77E251' mfg_plant_id ='PL2' mfg_start_date ='20210314' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152141.2205030 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153733.3098870 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4369FB6A1C252' mfg_plant_id ='PL2' mfg_start_date ='20210314' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152159.6487610 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153739.4156230 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3F567398D9EA8' mfg_plant_id ='PL1' mfg_start_date ='20210313' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150724.2750880 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153745.3640940 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3F4714439C1DD' mfg_plant_id ='PL1' mfg_start_date ='20210313' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150711.3766160 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153750.9725350 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4338785A3E247' mfg_plant_id ='PL2' mfg_start_date ='20210313' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152118.0656170 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153757.4601210 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3E9673A201E91' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150443.4736280 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153803.2076550 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3EC6E20395E96' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150523.8412330 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153810.6202770 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA431BD7B8B9F04' mfg_plant_id ='PL2' mfg_start_date ='20210312' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152054.1012770 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153816.7232640 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA4328EB9971F05' mfg_plant_id ='PL2' mfg_start_date ='20210312' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152105.0706390 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153822.0901710 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3EA5CDFA401C3' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150457.5019150 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153827.9017340 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3EB70FC8541C4' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150510.7065530 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153833.4542940 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3E86073C81E8F' mfg_plant_id ='PL1' mfg_start_date ='20210311' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150430.2262390 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153840.3886520 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA42EEB9BE1C243' mfg_plant_id ='PL2' mfg_start_date ='20210311' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152016.2534820 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153846.6342790 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA42FD0B4A84244' mfg_plant_id ='PL2' mfg_start_date ='20210311' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152029.5947690 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153852.4924530 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA430AC2E4D0246' mfg_plant_id ='PL2' mfg_start_date ='20210311' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152039.7708750 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153858.6525740 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA42BE274A59EFB' mfg_plant_id ='PL2' mfg_start_date ='20210310' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151935.5139090 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153904.5976710 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA42C8B7403BEFC' mfg_plant_id ='PL2' mfg_start_date ='20210310' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151945.7151660 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153910.9670140 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA42DAA6D338241' mfg_plant_id ='PL2' mfg_start_date ='20210310' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151959.4184880 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153916.7785960 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3E76901A21E8F' mfg_plant_id ='PL1' mfg_start_date ='20210309' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150416.4586590 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153922.2838380 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3E55E1E7B81BE' mfg_plant_id ='PL1' mfg_start_date ='20210308' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150349.0517550 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153928.7627850 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA422DB201C4234' mfg_plant_id ='PL2' mfg_start_date ='20210301' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151734.9580570 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153936.0603030 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA4572809F35F39' mfg_plant_id ='PL3' mfg_start_date ='20210301' cons_slots ='X' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='NT58165' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222152916.2932490 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153943.2234870 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA421BFA5ECDEED' mfg_plant_id ='PL2' mfg_start_date ='20210301' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151720.3641240 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153948.9042230 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3DBF58A9BDE75' mfg_plant_id ='PL1' mfg_start_date ='20210301' cons_slots ='X' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='IT' nvs_id ='NT58348' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150142.7681780 ' last_changed_by ='CB0000000723' last_changed_at ='20210222153954.1121220 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA423C303A2C235' mfg_plant_id ='PL2' mfg_start_date ='20210302' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151746.6037640 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154000.5416420 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4266902BD8238' mfg_plant_id ='PL2' mfg_start_date ='20210304' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151822.6338390 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154006.0104450 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA42493E256A236' mfg_plant_id ='PL2' mfg_start_date ='20210304' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151758.6550690 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154011.3776810 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3DFCC331A41B6' mfg_plant_id ='PL1' mfg_start_date ='20210304' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150234.4122020 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154017.2873060 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA4257959579EF2' mfg_plant_id ='PL2' mfg_start_date ='20210304' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151810.3334140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154023.1512630 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3DEB0CCD09E81' mfg_plant_id ='PL1' mfg_start_date ='20210304' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150219.6254200 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154029.4505880 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3DD874836DE75' mfg_plant_id ='PL1' mfg_start_date ='20210304' cons_slots ='' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150203.8296100 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154035.5414010 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA4274D8C250239' mfg_plant_id ='PL2' mfg_start_date ='20210305' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151834.0126990 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154041.4462180 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3E0F6E01B81B9' mfg_plant_id ='PL1' mfg_start_date ='20210305' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150249.9534200 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154047.6173070 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA42830BA555EF5' mfg_plant_id ='PL2' mfg_start_date ='20210305' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151845.9261570 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154053.4052200 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA429E86A68023B' mfg_plant_id ='PL2' mfg_start_date ='20210306' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151908.9764420 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154101.0690780 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3E64592BD41BF' mfg_plant_id ='PL1' mfg_start_date ='20210308' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150402.5780420 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154108.0958110 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA3E467924081BC' mfg_plant_id ='PL1' mfg_start_date ='20210307' cons_slots ='' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150336.1184370 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154114.0074140 '  )
- ( client ='100' capacity_uuid ='02E7896636F21EDB9DA42B03C041023C' mfg_plant_id ='PL2' mfg_start_date ='20210307' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222151923.8357350 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154120.3041530 '  )
- ( client ='100' capacity_uuid ='02605AA74F061EEB9DA3E21B3A9E1E86' mfg_plant_id ='PL1' mfg_start_date ='20210306' cons_slots ='' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
-'CB0000000723' created_at ='20210222150305.2722750 ' last_changed_by ='CB0000000723' last_changed_at ='20210222154126.6353560 '  )
+VALUE #( ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872541CAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210301' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='IT' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872541EAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210304' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725420AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210304' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725422AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210304' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725424AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210305' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725426AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210306' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725428AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210306' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872542AAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210307' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872542CAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210308' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872542EAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210308' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725430AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210309' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725432AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210311' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725434AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210312' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725436AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210312' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725438AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210312' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872543AAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210312' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872543CAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210313' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872543EAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210313' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725440AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210314' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725442AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210314' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725444AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210314' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725446AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210314' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725448AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210315' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872544AAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210315' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872544CAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210316' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872544EAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725450AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725452AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725454AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725456AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210318' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725458AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210319' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872545AAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210320' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872545CAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210323' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872545EAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210325' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725460AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210325' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725462AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210326' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725464AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210326' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725466AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210326' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725468AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210327' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872546AAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210328' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872546CAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210328' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872546EAC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210328' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725470AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210329' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725472AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210330' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725474AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210330' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725476AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210331' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725478AC7' MFG_PLANT_ID ='PL1' MFG_START_DATE ='20210331' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872547AAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210301' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872547CAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210301' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872547EAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210302' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725480AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210304' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725482AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210304' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725484AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210304' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725486AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210305' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725488AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210305' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872548AAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210306' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872548CAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210306' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872548EAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210307' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725490AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210310' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725492AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210310' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725494AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210310' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725496AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210311' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725498AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210311' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872549AAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210311' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872549CAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210312' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872549EAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210312' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254A0AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210313' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254A2AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210314' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254A4AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210314' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254A6AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210314' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254A8AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210315' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254AAAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254ACAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254AEAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254B0AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254B2AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254B4AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210318' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254B6AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210319' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254B8AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210319' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254BAAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210319' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254BCAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210320' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254BEAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210320' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254C0AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210320' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254C2AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210321' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254C4AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210322' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254C6AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210322' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254C8AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210323' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254CAAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210323' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254CCAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210323' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254CEAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210323' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254D0AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210324' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254D2AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210324' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254D4AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210325' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254D6AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210325' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254D8AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210326' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254DAAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210327' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254DCAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210328' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254DEAC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210329' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254E0AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210329' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254E2AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210331' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254E4AC7' MFG_PLANT_ID ='PL2' MFG_START_DATE ='20210331' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254E6AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210301' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254E8AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210301' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254EAAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210302' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='IT' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254ECAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210302' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254EEAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210302' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254F0AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210303' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254F2AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210303' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254F4AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210303' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='IT' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254F6AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210304' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254F8AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210304' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254FAAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210304' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254FCAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210304' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687254FEAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210305' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725500AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210306' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725502AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210307' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725504AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210307' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725506AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210308' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725508AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210308' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872550AAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210309' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872550CAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210309' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872550EAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210310' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725510AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210314' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725512AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210314' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725514AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210315' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725516AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210315' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725518AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210316' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872551AAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210316' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872551CAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872551EAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210317' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725520AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210318' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725522AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210318' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725524AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210319' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725526AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210319' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725528AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210319' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872552AAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210319' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872552CAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210320' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872552EAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210321' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='DE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725530AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210321' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725532AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210323' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725534AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210324' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725536AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210324' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725538AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210325' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872553AAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210325' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872553CAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210325' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872553EAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210326' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725540AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210327' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725542AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210327' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725544AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210327' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725546AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210328' CONS_SLOTS ='' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725548AC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210329' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872554AAC7' MFG_PLANT_ID ='PL3' MFG_START_DATE ='20210329' CONS_SLOTS ='' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872554CAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210301' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872554EAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210301' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725550AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210301' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725552AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210301' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725554AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210302' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='NO' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725556AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210302' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='NO' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725558AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210303' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='NO' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872555AAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210303' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872555CAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210303' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872555EAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210304' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725560AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210305' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725562AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210305' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725564AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210306' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725566AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210306' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725568AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210306' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872556AAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210306' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872556CAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210306' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872556EAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210307' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725570AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210307' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725572AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210307' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725574AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210307' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725576AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210307' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725578AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210307' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872557AAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210307' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872557CAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210308' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872557EAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210308' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725580AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210308' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='NO' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725582AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210308' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='NO' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725584AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210309' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725586AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210309' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725588AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210309' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872558AAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210309' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872558CAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210310' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872558EAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210310' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725590AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210310' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725592AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210311' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725594AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210311' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725596AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210311' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E81668725598AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210312' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872559AAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210312' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872559CAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210313' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='NO' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E8166872559EAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210313' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255A0AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210313' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255A2AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210313' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255A4AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210313' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255A6AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210313' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255A8AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210313' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255AAAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210314' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255ACAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210314' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255AEAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210314' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255B0AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210315' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255B2AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210315' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255B4AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210315' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255B6AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210315' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255B8AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210316' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255BAAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210316' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255BCAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210317' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255BEAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210317' CONS_SLOTS ='X' PRIORITY ='H' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255C0AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210318' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='US' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255C2AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210318' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255C4AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210318' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='BE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255C6AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210318' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255C8AC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210318' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='BE' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255CAAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210318' CONS_SLOTS ='X' PRIORITY ='N' PROT_SUBJECT_ID ='' TTYPE_ID ='Commercial' COUNTRY_ID ='FR' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255CCAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210318' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
+ ( CLIENT ='100' CAPACITY_UUID ='02E81366251E1EDB9E816687255CEAC7' MFG_PLANT_ID ='PL4' MFG_START_DATE ='20210323' CONS_SLOTS ='' PRIORITY ='Clin' PROT_SUBJECT_ID ='' TTYPE_ID ='Clinical' COUNTRY_ID ='' NVS_ID ='' COUNTRY_ALLOC ='' CREATED_BY =
+'CB0000000723' CREATED_AT ='20210226081828.0000000 ' LAST_CHANGED_BY ='CB0000000723' LAST_CHANGED_AT ='20210226081828.0000000 '  )
  ).
 
     DELETE FROM zpoco_d_capact_a.

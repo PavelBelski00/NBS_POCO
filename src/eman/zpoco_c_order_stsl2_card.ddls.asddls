@@ -24,6 +24,7 @@ define view zpoco_c_order_stsl2_card
 {
   key StatusL2Id,
       _StatusL2.StatusL2Name,
+      @EndUserText.label:'L2 Status quantity'
       count( * ) as StatusL2_quontity,
       /* Associations */
       _StatusL2
