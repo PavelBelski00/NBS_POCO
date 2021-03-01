@@ -4,4 +4,5 @@ define service ZPOCO_UI_ORDER_CHART {
   expose zpoco_c_order_stsl2_card as STSL2_Card;
   expose zpoco_c_order_stsl1_card as STSL1_Card;
   expose zpoco_c_order_therapy_card as Therapy_Card;
+  expose zpoco_c_table_card as Table_Card;
 }

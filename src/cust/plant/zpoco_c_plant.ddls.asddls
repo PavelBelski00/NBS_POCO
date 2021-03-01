@@ -17,7 +17,10 @@ define root view entity ZPOCO_C_PLANT
       fuzzinessThreshold: 0.8
   }
       PlantName,
+      
+      @UI.hidden: true
       CreatedBy,
+      @UI.hidden: true
       CreatedAt,
       LastChangedBy,
       LastChangedAt

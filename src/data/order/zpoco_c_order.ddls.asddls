@@ -24,6 +24,7 @@ define root view entity ZPOCO_C_ORDER
       fuzzinessThreshold: 0.8
   }
       @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_COUNTRY', element: 'CountryId'} }]
+      @Consumption.semanticObject: 'NBS_POC_OVP_COUNTRY'
       @ObjectModel.text.element: ['CountryName']
       CountryId,
       _Country.CountryName as CountryName,
@@ -32,6 +33,7 @@ define root view entity ZPOCO_C_ORDER
       MfgPlantId,
       _Plant.PlantName as PlantName,
       @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_TTYPE',   element: 'TherapyTypeID'} }]
+//      @Consumption.semanticObject: 'NBS_POC_OVP_TTYPE'
       @ObjectModel.text.element: ['TherapyTypeName']
       TherapyTypeId,
       _TType.TherapyTypeName as TherapyTypeName,

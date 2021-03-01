@@ -93,7 +93,9 @@ annotate view ZPOCO_C_ORDER with
   Therapy;
   
   @UI.selectionField: [{ position: 30 }]
-  @UI.lineItem:       [{ position: 30, importance: #HIGH }]
+  @UI.lineItem:       [{ position: 30, importance: #HIGH 
+//                         semanticObjectAction: 'display
+                         }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
   CountryId;
   
@@ -103,7 +105,9 @@ annotate view ZPOCO_C_ORDER with
   MfgPlantId;
   
   @UI.selectionField: [{ position: 50 }]
-  @UI.lineItem:       [{ position: 50, importance: #HIGH, type: #WITH_NAVIGATION_PATH, targetElement: '_TType' }]
+  @UI.lineItem:       [{ position: 50, importance: #HIGH, type: #WITH_NAVIGATION_PATH, targetElement: '_TType'
+//                         semanticObjectAction: 'manage'
+                        }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'TherapyData' }]    
   TherapyTypeId;
   
