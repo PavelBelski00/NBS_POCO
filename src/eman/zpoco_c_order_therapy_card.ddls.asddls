@@ -13,7 +13,7 @@
               measureAttributes:   [ { measure:   'Therapy_quontity', role: #AXIS_1 }]
            }]
 
-@UI.presentationVariant:[{ 
+@UI.presentationVariant:[{
                            qualifier:      'Default',
                            sortOrder: [{ by: 'TherapyTypeId', direction:  #ASC }],
                            visualizations: [{ type: #AS_CHART, qualifier: 'Therapy'}]
@@ -24,10 +24,11 @@ define view zpoco_c_order_therapy_card
 {
   key TherapyTypeId,
       Therapy,
+
       @EndUserText.label:'Therapy quantity'
+
       count( * ) as Therapy_quontity
-} 
-group by 
+}
+group by
   TherapyTypeId,
   Therapy
- 

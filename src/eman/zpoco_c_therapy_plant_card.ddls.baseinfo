@@ -3,7 +3,8 @@
 {
 "FROM":
 [
-"ZPOCO_I_ORDER"
+"ZPOCO_I_ORDER",
+"ZPOCO_I_PLANT"
 ],
 "ASSOCIATED":
 [

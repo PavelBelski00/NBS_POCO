@@ -5,6 +5,7 @@ define root view entity ZPOCO_I_PLANT
 {
   key zpoco_c_plant_a.plant_id        as PlantID,
       zpoco_c_plant_a.plant_name      as PlantName,
+      zpoco_c_plant_a.plant_image     as PlantImage,
       @Semantics.user.createdBy: true
       zpoco_c_plant_a.created_by      as CreatedBy,
       @EndUserText.label : 'Created At'

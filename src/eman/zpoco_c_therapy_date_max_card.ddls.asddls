@@ -3,7 +3,7 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Max Therapy By Date'
-@UI.presentationVariant: [{ qualifier: 'Default' }]
+@UI.presentationVariant: [{ qualifier: 'Default', sortOrder: [{by: 'Quantity', direction: #DESC }] } ]
 define view zpoco_c_therapy_date_max_card 
 as select from zpoco_c_therapy_plant_card 
 {
@@ -23,8 +23,8 @@ as select from zpoco_c_therapy_plant_card
       @UI.dataPoint: {
                        criticalityCalculation: {
                                                  improvementDirection: #MAXIMIZE, 
-                                                 deviationRangeLowValue:  1,
-                                                 toleranceRangeLowValue:  2
+                                                 deviationRangeLowValue:  2,
+                                                 toleranceRangeLowValue:  4
                                                }
                      }
       @UI.lineItem: [{ 
