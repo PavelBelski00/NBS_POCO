@@ -33,7 +33,8 @@ annotate view zpoco_c_order_chart
   @UI.lineItem:       [{ position: 10, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
   NvsId;
-
+    
+  @UI.selectionField: [{ position: 20 }]
   @UI.lineItem:       [{ position: 20, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'TherapyData' }]
   Therapy;
@@ -54,6 +55,7 @@ annotate view zpoco_c_order_chart
   @UI.fieldGroup:     [{ position: 10, qualifier: 'Day0Data' }]      
   Day0;
   
+  @UI.selectionField: [{ position: 70 }]
   @UI.lineItem:       [{ position: 70, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'StatusData' }]   
   StatusL1Id;
