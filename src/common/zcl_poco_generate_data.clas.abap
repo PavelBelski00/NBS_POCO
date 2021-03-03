@@ -643,6 +643,7 @@ VALUE #( ( client ='100' plant_id ='PL1' plant_name ='CH12' created_by ='CB00000
  ).
 
     DELETE FROM zpoco_c_plant_a.
+
     INSERT zpoco_c_plant_a FROM TABLE @lt_plant.
 
   ENDMETHOD.
