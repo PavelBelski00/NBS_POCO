@@ -27,13 +27,26 @@ as select from zpoco_i_therapy_plant_max
       @UI.lineItem: [{position: 20, qualifier: 'ChartUp' }]
       PlantName,
       
-      @UI.lineItem:  [{ position: 30, label: 'Max. Quantity', type: #AS_DATAPOINT, qualifier: 'ChartUp' }]
+      @UI.lineItem:  [{ position: 30,
+                        importance: #HIGH, 
+                        label: 'Max. Quantity', 
+                        type: #AS_DATAPOINT, 
+                        qualifier: 'ChartUp' }]
       @UI.dataPoint: { title: 'Maximum Quantity',
                        criticalityCalculation: {
                                                  improvementDirection: #MAXIMIZE,
                                                  toleranceRangeLowValue: 15,
                                                  deviationRangeLowValue: 10 
-                                               } }
+                                               },
+                       targetValue: 7,                        
+                       trendCalculation: { 
+                                           referenceValue:'MaxQuantity' ,
+                                           downDifference: 1, 
+                                           strongUpDifference: 2,
+                                           strongDownDifference: 2 ,
+                                           upDifference: 1 
+                                         }
+                     }
       @Aggregation.default: #MAX
       @UI.kpi: [{ detail: { defaultPresentationVariantQualifier: 'Default' } }]
       max(Quantity) as MaxQuantity,

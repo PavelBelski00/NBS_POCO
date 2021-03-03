@@ -23,10 +23,9 @@ define view zpoco_c_order_therapy_card
   as select from ZPOCO_I_ORDER
 {
   key TherapyTypeId,
-      Therapy,
+  key Therapy,
 
       @EndUserText.label:'Therapy quantity'
-
       count( * ) as Therapy_quontity
 }
 group by

@@ -14,6 +14,8 @@ as select from ZPOCO_I_ORDER
     @UI.lineItem: [{ position: 20, importance: #HIGH }]
     @ObjectModel.text.element: ['PlantName']
     MfgPlantId,
+    
+    @UI.lineItem: [{ position: 30, importance: #HIGH }]    
     _Plant.PlantName as PlantName,
 
     Day0,
@@ -22,7 +24,7 @@ as select from ZPOCO_I_ORDER
               type: #AS_DATAPOINT,
               importance: #HIGH,
               label: 'Therapy Quantity',
-              position: 30
+              position: 40
           } ]
           
           @UI.dataPoint: {

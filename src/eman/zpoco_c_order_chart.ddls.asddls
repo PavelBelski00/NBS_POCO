@@ -8,6 +8,8 @@
 
 define view zpoco_c_order_chart
   as select from ZPOCO_I_ORDER
+//  association [1..1] to zpoco_c_order_therapy_card as _CardTherapy on $projection.TherapyTypeId = _CardTherapy.TherapyTypeId  and
+//                                                                      $projection.Therapy       = _CardTherapy.Therapy
 {
     key OrderUuid,
   @Search: {
@@ -21,6 +23,7 @@ define view zpoco_c_order_chart
       ranking: #HIGH,
       fuzzinessThreshold: 0.8
   }
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_c_ther_search_help',   element: 'Therapy'} }]
       Therapy,
   @Search: {
       defaultSearchElement: true,
@@ -67,4 +70,5 @@ define view zpoco_c_order_chart
       _StatusL2,
       _Country,
       _Site
+//      _CardTherapy
 }

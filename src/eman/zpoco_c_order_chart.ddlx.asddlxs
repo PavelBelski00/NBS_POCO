@@ -1,4 +1,19 @@
 @Metadata.layer: #CORE
+//@UI.chart: [{
+//              qualifier:           'Therapy',
+//              chartType:           #COLUMN_STACKED,
+//              dimensions:          [ 'Therapy' ],
+//              measures:            [ '_CardTherapy.Therapy_quontity' ],
+//              dimensionAttributes: [ { dimension: 'Therapy',   role: #CATEGORY } ],
+//              measureAttributes:   [ { measure:   '_CardTherapy.Therapy_quontity', role: #AXIS_1 }]
+//           }]
+//
+//@UI.presentationVariant:[{
+//                           qualifier:      'Default',
+//                           sortOrder:      [{ by: 'TherapyTypeId', direction:  #ASC }],
+//                           visualizations: [{ type: #AS_CHART, qualifier: 'Therapy'}]
+//                        }]
+
 annotate view zpoco_c_order_chart
     with 
 {
@@ -39,6 +54,7 @@ annotate view zpoco_c_order_chart
   @UI.fieldGroup:     [{ position: 10, qualifier: 'TherapyData' }]
   Therapy;
   
+  @UI.selectionField: [{ position: 30 }]
   @UI.lineItem:       [{ position: 30, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
   CountryId;
@@ -48,6 +64,7 @@ annotate view zpoco_c_order_chart
   @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData'  }]  
   MfgPlantId;
   
+  @UI.selectionField: [{ position: 50 }]
   @UI.lineItem:       [{ position: 50, importance: #HIGH, type: #WITH_NAVIGATION_PATH, targetElement: '_TType' }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'TherapyData' }]    
   TherapyTypeId;
@@ -66,6 +83,7 @@ annotate view zpoco_c_order_chart
   @UI.fieldGroup:     [{ position: 20, qualifier: 'StatusData' }]     
   StatusL2Id;
   
+  @UI.selectionField: [{ position: 90 }]
   @UI.lineItem:       [{ position: 90, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 90, qualifier: 'BasicData' }]   
   OrderingSiteId;
