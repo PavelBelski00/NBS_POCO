@@ -631,15 +631,15 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     lt_plant =
 VALUE #( ( client ='100' plant_id ='PL1' plant_name ='CH12' created_by ='CB0000000723' created_at ='20210219131923.3721680 ' last_changed_by ='CB0000000723' last_changed_at ='20210219131923.3721680 '
-   plant_image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0eV4FI231N-5rdw0J6ILtrtQsXjjG_QST0Q&usqp=CAU')
+    plant_image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0eV4FI231N-5rdw0J6ILtrtQsXjjG_QST0Q&usqp=CAU')
  ( client ='100' plant_id ='PL2' plant_name ='FH00' created_by ='CB0000000723' created_at ='20210219131942.6703810 ' last_changed_by ='CB0000000723' last_changed_at ='20210219131942.6703810 '
-   plant_image = 'https://img.yicaiglobal.com/cdn/news/novartis-starts-mass-production-of-heart-failure-drug-at-beijing-plant-for-local-market/top.jpg')
+    plant_image = 'https://img.yicaiglobal.com/cdn/news/novartis-starts-mass-production-of-heart-failure-drug-at-beijing-plant-for-local-market/top.jpg')
  ( client ='100' plant_id ='PL3' plant_name ='FR69' created_by ='CB0000000723' created_at ='20210219132042.2565060 ' last_changed_by ='CB0000000723' last_changed_at ='20210219132042.2565060 '
-   plant_image = 'https://www.pmlive.com/__data/assets/image/0011/398837/Novartis_building_body.jpg')
+    plant_image = 'https://www.pmlive.com/__data/assets/image/0011/398837/Novartis_building_body.jpg')
  ( client ='100' plant_id ='PL4' plant_name ='US33' created_by ='CB0000000723' created_at ='20210219132051.0661700 ' last_changed_by ='CB0000000723' last_changed_at ='20210219132051.0661700 '
-   plant_image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1yd5aTNht-lfJiJEGl5MkxdCQ3Lj_iIcrRQ&usqp=CAU')
+    plant_image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1yd5aTNht-lfJiJEGl5MkxdCQ3Lj_iIcrRQ&usqp=CAU')
  ( client ='100' plant_id ='PL5' plant_name ='US34' created_by ='CB0000000723' created_at ='20210219132105.5348630 ' last_changed_by ='CB0000000723' last_changed_at ='20210219132105.5348630 '
-   plant_image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUuTypVx4RsAg99GGusKA5eI-hPRgpeI8-tg&usqp=CAU')
+    plant_image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUuTypVx4RsAg99GGusKA5eI-hPRgpeI8-tg&usqp=CAU')
  ).
 
     DELETE FROM zpoco_c_plant_a.
