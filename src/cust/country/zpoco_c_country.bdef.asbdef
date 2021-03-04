@@ -1,6 +1,6 @@
 projection;
 
-define behavior for ZPOCO_C_COUNTRY alias Country
+define behavior for zpoco_c_country alias Country
 use etag
 {
   use create;

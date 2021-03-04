@@ -2,7 +2,7 @@
 
 @UI.headerInfo: { typeName: 'Therapy Type',
                   typeNamePlural: 'Therapy Types' }
-annotate view ZPOCO_C_TTYPE
+annotate view zpoco_c_ttype
     with 
 {
   @UI.facet: [
@@ -40,7 +40,7 @@ annotate view ZPOCO_C_TTYPE
   @UI.selectionField: [{ position: 10 }]
   @UI.lineItem:       [{ position: 10 }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
-  TherapyTypeID;
+  TherapyTypeId;
 
   @UI.selectionField: [{ position: 20 }]
   @UI.lineItem:       [{ position: 20 }]

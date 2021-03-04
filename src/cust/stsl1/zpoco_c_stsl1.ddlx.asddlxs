@@ -1,7 +1,7 @@
 @Metadata.layer: #CORE
 @UI.headerInfo: { typeName: 'Status L1',
                   typeNamePlural: 'Statuses L1' }
-annotate view ZPOCO_C_STSL1 with
+annotate view zpoco_c_stsl1 with
 {
   @UI.facet: [
           {

@@ -1,6 +1,6 @@
 @EndUserText.label: 'Status L1'
 @AccessControl.authorizationCheck: #CHECK
-define root view entity ZPOCO_I_STSL1
+define root view entity zpoco_i_stsl1
   as select from zpoco_c_stsl1_a
 {
   key zpoco_c_stsl1_a.stsl1_id        as StatusL1Id,

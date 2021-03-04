@@ -1,7 +1,7 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Ordering Site'
 
-define root view entity ZPOCO_I_SITE
+define root view entity zpoco_i_site
   as select from zpoco_c_site_a
 {
   key zpoco_c_site_a.ord_site_id     as OrderingSiteId,

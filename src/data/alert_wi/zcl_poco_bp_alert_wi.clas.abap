@@ -1,0 +1,5 @@
+CLASS zcl_poco_bp_alert_wi DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zpoco_i_alert_wi.
+ENDCLASS.
+
+CLASS zcl_poco_bp_alert_wi IMPLEMENTATION.
+ENDCLASS.

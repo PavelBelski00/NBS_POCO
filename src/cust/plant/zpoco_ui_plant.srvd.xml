@@ -5,7 +5,7 @@
    <SRVD>
     <NAME>ZPOCO_UI_PLANT</NAME>
     <TYPE>SRVD/SRV</TYPE>
-    <DESCRIPTION>Service Definition</DESCRIPTION>
+    <DESCRIPTION>Service Definition: Plant</DESCRIPTION>
     <LANGUAGE>EN</LANGUAGE>
     <LINKS>
      <item>
@@ -13,7 +13,7 @@
        <UNDEFINED_ATTRIBUTES>
         <item>
          <NAME>etag</NAME>
-         <TEXT>19710401000000001text/plain_2DPxlmdYV86BHF7zEFOrrLvjqJ4=</TEXT>
+         <TEXT>19710401000000001text/plain_dkKx8ZreBo7g6LkB3mCsFyV+E+w=</TEXT>
         </item>
        </UNDEFINED_ATTRIBUTES>
       </COMMON_ATTRIBUTES>

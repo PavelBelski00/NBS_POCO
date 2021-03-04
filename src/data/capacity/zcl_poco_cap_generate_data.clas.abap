@@ -4,7 +4,7 @@ CLASS zcl_poco_cap_generate_data DEFINITION
   CREATE PUBLIC .
 
   PUBLIC SECTION.
-  INTERFACES if_oo_adt_classrun.
+    INTERFACES if_oo_adt_classrun.
   PROTECTED SECTION.
   PRIVATE SECTION.
 ENDCLASS.
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 CLASS zcl_poco_cap_generate_data IMPLEMENTATION.
-METHOD if_oo_adt_classrun~main.
+  METHOD if_oo_adt_classrun~main.
 
     DATA: lt_capacity  TYPE TABLE OF zpoco_d_capact_a.
 
@@ -45,5 +45,5 @@ METHOD if_oo_adt_classrun~main.
     SELECT * FROM zpoco_d_capact_a INTO TABLE @lt_capacity.
     out->write( sy-dbcnt ).
     out->write( 'capacity data inserted successfully!').
-ENDMETHOD.
+  ENDMETHOD.
 ENDCLASS.

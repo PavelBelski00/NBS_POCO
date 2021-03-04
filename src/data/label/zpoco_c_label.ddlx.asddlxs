@@ -2,7 +2,7 @@
 @UI.headerInfo: { typeName: 'Label',
                   typeNamePlural: 'Labels' }
 
-annotate view ZPOCO_C_LABEL with
+annotate view zpoco_c_label with
 {
   @UI.facet: [{
                   id:              'GeneralInformation',

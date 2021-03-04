@@ -1,6 +1,6 @@
 projection;
 
-define behavior for ZPOCO_C_CAPACITY alias Capacity
+define behavior for zpoco_c_capacity alias Capacity
 use etag
 {
   use create;

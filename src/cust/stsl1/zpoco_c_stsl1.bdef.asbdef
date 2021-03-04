@@ -1,6 +1,6 @@
 projection;
 
-define behavior for ZPOCO_C_STSL1 alias StatusL1
+define behavior for zpoco_c_stsl1 alias StatusL1
 use etag
 {
   use create;

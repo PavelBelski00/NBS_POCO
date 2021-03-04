@@ -1,4 +1,4 @@
 @EndUserText.label: 'Service definition for STSL2'
-define service ZPOCO_UI_STSL2 {
+define service zpoco_ui_stsl2 {
   expose zpoco_c_stsl2 as StatusL2;
 }

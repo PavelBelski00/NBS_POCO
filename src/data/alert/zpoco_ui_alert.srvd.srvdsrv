@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition: Alert'
+define service Zpoco_ui_alert {
+  expose zpoco_c_alert as Alert;
+}

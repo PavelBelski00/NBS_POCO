@@ -1,0 +1,9 @@
+projection;
+
+define behavior for zpoco_c_alert_wi alias AlertWorkItem
+use etag
+{
+  use create;
+  use update;
+  use delete;
+}

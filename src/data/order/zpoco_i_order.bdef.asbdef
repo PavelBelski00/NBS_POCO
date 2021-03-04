@@ -1,8 +1,8 @@
 managed;
 
-define behavior for ZPOCO_I_ORDER alias Order
-implementation in class ZCL_POCO_BP_ORDER unique
-persistent table ZPOCO_D_ORDER_A
+define behavior for zpoco_i_order alias Order
+implementation in class zcl_poco_bp_order unique
+persistent table zpoco_d_order_a
 lock master
 etag master LastChangedAt
 {

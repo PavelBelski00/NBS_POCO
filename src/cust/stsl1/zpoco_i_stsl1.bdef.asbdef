@@ -1,8 +1,8 @@
 managed;
 
-define behavior for ZPOCO_I_STSL1 alias StatusL1
-implementation in class ZCL_POCO_BP_STSL1 unique
-persistent table ZPOCO_C_STSL1_A
+define behavior for zpoco_i_stsl1 alias StatusL1
+implementation in class zcl_poco_bp_stsl1 unique
+persistent table zpoco_c_stsl1_a
 lock master
 etag master LastChangedAt
 {

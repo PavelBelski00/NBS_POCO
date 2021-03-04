@@ -1,8 +1,8 @@
 managed;
 
-define behavior for ZPOCO_I_COUNTRY alias Country
-implementation in class ZCL_POCO_BP_COUNTRY unique
-persistent table ZPOCO_C_COUNTR_A
+define behavior for zpoco_i_country alias Country
+implementation in class zcl_poco_bp_country unique
+persistent table zpoco_c_countr_a
 lock master
 etag master LastChangedAt
 {

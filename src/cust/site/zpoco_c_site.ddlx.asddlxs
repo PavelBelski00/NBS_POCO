@@ -1,7 +1,7 @@
 @Metadata.layer: #CORE
 @UI.headerInfo: { typeName: 'Ordering Site',
                   typeNamePlural: 'Ordering Sites' }
-annotate view ZPOCO_C_SITE
+annotate view zpoco_c_site
     with 
 {
   @UI.facet: [

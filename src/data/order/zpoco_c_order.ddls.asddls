@@ -2,60 +2,71 @@
 @AccessControl.authorizationCheck: #CHECK
 @Metadata.allowExtensions: true
 @Search.searchable: true
-define root view entity ZPOCO_C_ORDER
-  as projection on ZPOCO_I_ORDER
+define root view entity zpoco_c_order
+  as projection on zpoco_i_order
 {
   key OrderUuid,
-  @Search: {
-      defaultSearchElement: true,
-      ranking: #HIGH,
-      fuzzinessThreshold: 0.8
-  }
+      @Search: {
+          defaultSearchElement: true,
+          ranking: #HIGH,
+          fuzzinessThreshold: 0.8
+      }
       NvsId,
-  @Search: {
-      defaultSearchElement: true,
-      ranking: #HIGH,
-      fuzzinessThreshold: 0.8
-  }
+      
+      @Search: {
+          defaultSearchElement: true,
+          ranking: #HIGH,
+          fuzzinessThreshold: 0.8
+      }
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_c_therapy_vh',   element: 'Therapy'} }]
       Therapy,
-  @Search: {
-      defaultSearchElement: true,
-      ranking: #HIGH,
-      fuzzinessThreshold: 0.8
-  }
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_COUNTRY', element: 'CountryId'} }]
+      @Search: {
+          defaultSearchElement: true,
+          ranking: #HIGH,
+          fuzzinessThreshold: 0.8
+      }
       @Consumption.semanticObject: 'NBS_POC_OVP_COUNTRY'
-      @ObjectModel.text.element: ['CountryName']
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_country', element: 'CountryId'} }]
+//      @ObjectModel.text.element: ['CountryName']
       CountryId,
-      _Country.CountryName as CountryName,
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_PLANT',   element: 'PlantID'} }]
+      _Country.CountryName   as CountryName,
+
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_plant',   element: 'MfgPlantId'} }]
       @ObjectModel.text.element: ['PlantName']
       MfgPlantId,
-      _Plant.PlantName as PlantName,
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_TTYPE',   element: 'TherapyTypeID'} }]
-//      @Consumption.semanticObject: 'NBS_POC_OVP_TTYPE'
+      _Plant.PlantName       as PlantName,
+
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_ttype',   element: 'TherapyTypeId'} }]
       @ObjectModel.text.element: ['TherapyTypeName']
       TherapyTypeId,
       _TType.TherapyTypeName as TherapyTypeName,
+      
+      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
+      OrderCreatedDay,
+      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
       Day0,
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_STSL1',   element: 'StatusL1Id'} }]
+
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_stsl1',   element: 'StatusL1Id'} }]
       @ObjectModel.text.element: ['StatusL1Name']
       StatusL1Id,
       _StatusL1.StatusL1Name as StatusL1Name,
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_STSL2',   element: 'StatusL2Id'} }]
+
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_stsl2',   element: 'StatusL2Id'} }]
       @ObjectModel.text.element: ['StatusL2Name']
       StatusL2Id,
       _StatusL2.StatusL2Name as StatusL2Name,
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_SITE',    element: 'OrderingSiteId'} }]
+
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_site',    element: 'OrderingSiteId'} }]
       @ObjectModel.text.element: ['OrderingSiteName']
       OrderingSiteId,
       _Site.OrderingSiteName as OrderingSiteName,
+
       Oos,
       OosDescription,
       AphDewar,
       FpDewar,
       ActualDay0,
-      CreatedBy,
+      CreatedBy,  
       CreatedAt,
       LastChangedBy,
       LastChangedAt,

@@ -1,9 +1,9 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Manufacturing Plant'
-define root view entity ZPOCO_I_PLANT
+define root view entity zpoco_i_plant
   as select from zpoco_c_plant_a
 {
-  key zpoco_c_plant_a.plant_id        as PlantID,
+  key zpoco_c_plant_a.plant_id        as MfgPlantId,
       zpoco_c_plant_a.plant_name      as PlantName,
       zpoco_c_plant_a.plant_image     as PlantImage,
       @Semantics.user.createdBy: true

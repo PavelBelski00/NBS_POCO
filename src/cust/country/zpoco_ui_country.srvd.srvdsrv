@@ -1,4 +1,4 @@
 @EndUserText.label: 'Service Definition: Country'
-define service ZPOCO_UI_COUNTRY {
-  expose ZPOCO_C_COUNTRY as Country;
+define service zpoco_ui_country {
+  expose zpoco_c_country as Country;
 }

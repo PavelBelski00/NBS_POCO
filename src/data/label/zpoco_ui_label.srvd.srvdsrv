@@ -1,6 +1,6 @@
 @EndUserText.label: 'Label'
-define service ZPOCO_UI_LABEL {
-  expose ZPOCO_C_LABEL as Label;
-  expose ZPOCO_I_PLANT as Plant;
-  expose ZPOCO_I_TTYPE as TType;
+define service zpoco_ui_label {
+  expose zpoco_c_label as Label;
+  expose zpoco_i_plant as Plant;
+  expose zpoco_i_ttype as TType;
 }

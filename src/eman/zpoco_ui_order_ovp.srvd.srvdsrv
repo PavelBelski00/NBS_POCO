@@ -1,0 +1,23 @@
+@EndUserText.label: 'Service Definition: Order OVP'
+define service zpoco_ui_order_ovp {
+  expose zpoco_c_order as PocoOrder;
+  expose zpoco_i_country as Country;
+  expose zpoco_i_plant as Plant;
+  expose zpoco_i_stsl1 as StatusL1;
+  expose zpoco_i_stsl2 as StatusL2;
+  expose zpoco_i_ttype as TType;
+  expose zpoco_i_site as Site;
+  expose zpoco_c_therapy_vh as TherapyValueHelp;
+  expose zpoco_c_plant as CardPlant;
+  expose zpoco_c_card_quan_stsl1 as CardStatusL1Quantity;
+  expose zpoco_c_card_quan_stsl2 as CardStatusL2Quantity;
+  expose zpoco_c_card_quan_therapy as CardTherapyQuantity;
+  expose zpoco_c_card_quan_therapy_date as CardTherapyDateQuantity;
+  expose zpoco_c_card_sum_quan_therapy as CardTherapyDateSum;
+  expose zpoco_c_card_max_quan_therapy as CardTherapyMaxQuantity;
+  expose zpoco_c_card_quan_cap_plant as CardCapacityPlantQuantity;
+  expose zpoco_c_card_sum_slots_date as CardCapacitySlotsDateSum;
+  expose zpoco_c_card_sum_slots_plant as CardCapacitySlotsPlantSum;
+  expose zpoco_c_card_alert as CardAlert;
+  expose zpoco_c_card_alert_wi as CardAlertWorkItem;
+}

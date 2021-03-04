@@ -1,8 +1,8 @@
 managed;
 
-define behavior for ZPOCO_I_LABEL alias Label
-implementation in class zbp_poco_i_label unique
-persistent table ZPOCO_D_LABEL_A
+define behavior for zpoco_i_label alias Label
+implementation in class zcl_poco_bp_label unique
+persistent table zpoco_d_label_a
 lock master
 etag master LastChangedAt
 {

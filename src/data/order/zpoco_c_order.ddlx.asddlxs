@@ -1,7 +1,7 @@
 @Metadata.layer: #CORE
 @UI.headerInfo: { typeName: 'Order',
                   typeNamePlural: 'Orders' }
-annotate view ZPOCO_C_ORDER with
+annotate view zpoco_c_order with
 {
   @UI.facet: [
           {
@@ -87,82 +87,85 @@ annotate view ZPOCO_C_ORDER with
   @UI.lineItem:       [{ position: 10, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
   NvsId;
-
+  
+  @UI.selectionField: [{ position: 15 }]
   @UI.lineItem:       [{ position: 20, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'TherapyData' }]
   Therapy;
   
   @UI.selectionField: [{ position: 30 }]
-  @UI.lineItem:       [{ position: 30, importance: #HIGH 
-//                         semanticObjectAction: 'display
-                         }]
+  @UI.lineItem:       [{ position: 30, importance: #HIGH, semanticObjectAction: 'display' }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
   CountryId;
   
   @UI.selectionField: [{ position: 40 }]
-  @UI.lineItem:       [{ position: 40, importance: #HIGH, type: #WITH_NAVIGATION_PATH, targetElement: '_Plant' }]
+  @UI.lineItem:       [{ position: 40, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData'  }]  
   MfgPlantId;
   
   @UI.selectionField: [{ position: 50 }]
-  @UI.lineItem:       [{ position: 50, importance: #HIGH, type: #WITH_NAVIGATION_PATH, targetElement: '_TType'
-//                         semanticObjectAction: 'manage'
-                        }]
+  @UI.lineItem:       [{ position: 50, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'TherapyData' }]    
   TherapyTypeId;
-  
+
+  @UI.selectionField: [{ position: 60 }]
   @UI.lineItem:       [{ position: 60, importance: #MEDIUM}]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'Day0Data' }]      
+  OrderCreatedDay;
+    
+  @UI.selectionField: [{ position: 70 }]
+  @UI.lineItem:       [{ position: 70, importance: #MEDIUM}]
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'Day0Data' }]      
   Day0;
   
-  @UI.selectionField: [{ position: 70 }]
-  @UI.lineItem:       [{ position: 70, importance: #HIGH }]
+  @UI.selectionField: [{ position: 80 }]
+  @UI.lineItem:       [{ position: 80, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'StatusData' }]   
   StatusL1Id;
   
-  @UI.selectionField: [{ position: 80 }]
+  @UI.selectionField: [{ position: 90 }]
   @UI.lineItem:       [{ position: 80, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'StatusData' }]     
   StatusL2Id;
   
-  @UI.selectionField: [{ position: 90 }]
-  @UI.lineItem:       [{ position: 90, importance: #MEDIUM }]
-  @UI.fieldGroup:     [{ position: 90, qualifier: 'BasicData' }]   
+  @UI.selectionField: [{ position: 100 }]
+  @UI.lineItem:       [{ position: 100, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 100, qualifier: 'BasicData' }]   
   OrderingSiteId;
   
-  @UI.lineItem:       [{ position: 100, importance: #MEDIUM }]
+  @UI.lineItem:       [{ position: 110, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 10,  qualifier: 'OOSData' }]   
   Oos;
 
-  @UI.lineItem:       [{ position: 110, importance: #MEDIUM }]
+  @UI.lineItem:       [{ position: 120, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 20,  qualifier: 'OOSData' }]   
   OosDescription;
   
-  @UI.lineItem:       [{ position: 120, importance: #MEDIUM }]
+  @UI.lineItem:       [{ position: 130, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 20,  qualifier: 'Others' }]  
   AphDewar;
   
-  @UI.lineItem:       [{ position: 130, importance: #MEDIUM }]
+  @UI.lineItem:       [{ position: 140, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 10,  qualifier: 'Others' }]  
   FpDewar;
   
-  @UI.lineItem:       [{ position: 140, importance: #MEDIUM }]
-  @UI.fieldGroup:     [{ position: 20,  qualifier: 'Day0Data' }]  
+  @UI.lineItem:       [{ position: 150, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 30,  qualifier: 'Day0Data' }]  
   ActualDay0;
     
-  @UI.lineItem:       [{ position: 150, importance: #LOW }]
+  @UI.lineItem:       [{ position: 160, importance: #LOW }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]  
   CreatedBy;
   
-  @UI.lineItem:       [{ position: 160, importance: #LOW }]
+  @UI.lineItem:       [{ position: 170, importance: #LOW }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'AdminData' }]  
   CreatedAt;
   
-  @UI.lineItem:       [{ position: 170, importance: #LOW }]
+  @UI.lineItem:       [{ position: 180, importance: #LOW }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'AdminData' }]  
   LastChangedBy;
 
-  @UI.lineItem:       [{ position: 180, importance: #LOW }]
+  @UI.lineItem:       [{ position: 190, importance: #LOW }]
   @UI.fieldGroup:     [{ position: 40, qualifier: 'AdminData' }]  
   LastChangedAt;
 }

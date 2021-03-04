@@ -2,8 +2,8 @@
 @AccessControl.authorizationCheck: #CHECK
 @Metadata.allowExtensions: true
 @Search.searchable: true
-define root view entity ZPOCO_C_COUNTRY
-  as projection on ZPOCO_I_COUNTRY
+define root view entity zpoco_c_country
+  as projection on zpoco_i_country
 {
   @Search: {
       defaultSearchElement: true,

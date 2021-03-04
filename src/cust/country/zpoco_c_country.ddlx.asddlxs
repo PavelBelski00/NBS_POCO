@@ -3,7 +3,7 @@
 @UI.headerInfo: { typeName: 'Country',
                   typeNamePlural: 'Countries' }
 
-annotate view ZPOCO_C_COUNTRY
+annotate view zpoco_c_country
     with  
 {
  @UI.facet: [

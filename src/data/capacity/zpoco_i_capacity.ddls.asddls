@@ -1,10 +1,10 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Capacity'
-define root view entity ZPOCO_I_CAPACITY
+define root view entity zpoco_i_capacity
   as select from zpoco_d_capact_a
-  association [0..1] to ZPOCO_I_TTYPE   as _TType    on $projection.TherapyTypeId  = _TType.TherapyTypeID
-  association [0..1] to ZPOCO_I_COUNTRY as _Country  on $projection.CountryId      = _Country.CountryId
-  association [0..1] to ZPOCO_I_PLANT   as _Plant    on $projection.MfgPlantId     = _Plant.PlantID
+  association [0..1] to zpoco_i_ttype   as _TType   on $projection.TherapyTypeId = _TType.TherapyTypeId
+  association [0..1] to zpoco_i_country as _Country on $projection.CountryId = _Country.CountryId
+  association [0..1] to zpoco_i_plant   as _Plant   on $projection.MfgPlantId = _Plant.MfgPlantId
 {
   key capacity_uuid   as CapacityUuid,
       mfg_plant_id    as MfgPlantId,
@@ -26,6 +26,17 @@ define root view entity ZPOCO_I_CAPACITY
       @EndUserText.label : 'Last Changed At'
       @Semantics.systemDateTime.lastChangedAt: true
       last_changed_at as LastChangedAt,
+      
+       case cons_slots
+       when 'X' then 1
+       else 0
+       end            as CountYes,
+
+      case cons_slots
+        when '' then 1
+        else 0
+        end           as CountNo,
+        
       _TType,
       _Country,
       _Plant

@@ -2,8 +2,8 @@
 @EndUserText.label: 'Ordering Site'
 @Metadata.allowExtensions: true
 @Search.searchable: true
-define root view entity ZPOCO_C_SITE
-  as projection on ZPOCO_I_SITE
+define root view entity zpoco_c_site
+  as projection on zpoco_i_site
 {
   @Search: {
       defaultSearchElement: true,

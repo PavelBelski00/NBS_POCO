@@ -1,9 +1,9 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Label'
-define root view entity ZPOCO_I_LABEL
+define root view entity zpoco_i_label
   as select from zpoco_d_label_a
-  association [0..1] to ZPOCO_I_TTYPE   as _TType    on $projection.TherapyTypeId  = _TType.TherapyTypeID
-  association [0..1] to ZPOCO_I_PLANT   as _Plant    on $projection.MfgPlantId     = _Plant.PlantID
+  association [0..1] to zpoco_i_ttype   as _TType    on $projection.TherapyTypeId  = _TType.TherapyTypeId
+  association [0..1] to zpoco_i_plant   as _Plant    on $projection.MfgPlantId     = _Plant.MfgPlantId
 {
   key label_uuid      as LabelUuid,
       therapy         as Therapy,

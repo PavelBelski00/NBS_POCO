@@ -1,6 +1,6 @@
 projection;
 
-define behavior for ZPOCO_C_SITE alias OrderingSite
+define behavior for zpoco_c_site alias OrderingSite
 use etag
 {
   use create;

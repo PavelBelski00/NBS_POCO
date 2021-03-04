@@ -1,6 +1,6 @@
 projection;
 
-define behavior for ZPOCO_C_TTYPE alias TType
+define behavior for zpoco_c_ttype alias TType
 use etag
 {
   use create;

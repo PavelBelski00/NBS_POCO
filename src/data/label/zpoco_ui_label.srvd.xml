@@ -5,7 +5,7 @@
    <SRVD>
     <NAME>ZPOCO_UI_LABEL</NAME>
     <TYPE>SRVD/SRV</TYPE>
-    <DESCRIPTION>Label</DESCRIPTION>
+    <DESCRIPTION>Service Definition: Label</DESCRIPTION>
     <LANGUAGE>EN</LANGUAGE>
     <LINKS>
      <item>
@@ -13,7 +13,7 @@
        <UNDEFINED_ATTRIBUTES>
         <item>
          <NAME>etag</NAME>
-         <TEXT>19710401000000001text/plain_d/+QX3MI4uZIwhClumueIVRY27g=</TEXT>
+         <TEXT>19710401000000001text/plain_PIFZKJOL2g/Lok+d2rOIst0YwkM=</TEXT>
         </item>
        </UNDEFINED_ATTRIBUTES>
       </COMMON_ATTRIBUTES>

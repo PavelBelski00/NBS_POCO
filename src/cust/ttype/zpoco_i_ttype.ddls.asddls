@@ -1,9 +1,9 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Manufacturing Plant'
-define root view entity ZPOCO_I_TTYPE
+define root view entity zpoco_i_ttype
   as select from zpoco_c_ttype_a
 {
-  key zpoco_c_ttype_a.therapy_type_id   as TherapyTypeID,
+  key zpoco_c_ttype_a.therapy_type_id   as TherapyTypeId,
       zpoco_c_ttype_a.therapy_type_name as TherapyTypeName,
       @Semantics.user.createdBy: true
       zpoco_c_ttype_a.created_by        as CreatedBy,

@@ -5,7 +5,7 @@
    <SRVD>
     <NAME>ZPOCO_UI_SITE</NAME>
     <TYPE>SRVD/SRV</TYPE>
-    <DESCRIPTION>Service Definition</DESCRIPTION>
+    <DESCRIPTION>Service Definition: Ordering Site</DESCRIPTION>
     <LANGUAGE>EN</LANGUAGE>
     <LINKS>
      <item>
@@ -13,7 +13,7 @@
        <UNDEFINED_ATTRIBUTES>
         <item>
          <NAME>etag</NAME>
-         <TEXT>19710401000000001text/plain_wT3yQF7H5yart5r79A0Oh2op3so=</TEXT>
+         <TEXT>19710401000000001text/plain_oavknxd8uy+7H1rU9PrshfYmRSw=</TEXT>
         </item>
        </UNDEFINED_ATTRIBUTES>
       </COMMON_ATTRIBUTES>

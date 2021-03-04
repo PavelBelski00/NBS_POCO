@@ -1,14 +1,11 @@
 @Metadata.layer: #CORE
-
-@UI.headerInfo: { title:        { label: 'Plant ID', value: 'PlantID'}, 
+@UI.headerInfo: { title:        { label: 'Plant ID', value: 'MfgPlantId'}, 
                   description : { label: 'Plant Description' , value: 'PlantName'},
-//                  typeImageUrl: 'PlantImage',
                   imageUrl: 'PlantImage',
                   typeName: 'Plant', 
                   typeNamePlural: 'Plants'
-                  }
-                  
-annotate view ZPOCO_C_PLANT with
+                }  
+annotate view zpoco_c_plant with
 {
   @UI.facet: [
           {
@@ -45,13 +42,12 @@ annotate view ZPOCO_C_PLANT with
   @UI.selectionField: [{ position: 10 }]
   @UI.lineItem:       [{ position: 10 }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
-  PlantID;
+  MfgPlantId;
 
   @UI.selectionField: [{ position: 20 }]
   @UI.lineItem:       [{ position: 20 }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'BasicData' }]
   PlantName;
-  
   
   @UI.hidden: true
   PlantImage;

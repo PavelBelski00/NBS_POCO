@@ -1,7 +1,7 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Ordering Site'
 
-define root view entity ZPOCO_I_COUNTRY
+define root view entity zpoco_i_country
   as select from zpoco_c_countr_a
 { 
   
