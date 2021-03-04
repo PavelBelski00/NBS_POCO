@@ -20,14 +20,16 @@
 @UI.presentationVariant: [{ 
                             qualifier: 'Default',
                             groupBy: ['PlantName'],
-                            visualizations: [{element: 'MaxQuantity' }]
+                            visualizations: [{element: 'MaxQuantity' }],
+                            selectionFieldsQualifier: 'Default'
                          }]
 
-@UI.selectionVariant: [{ qualifier: 'Default' }]                         
+@UI.selectionVariant: [{ qualifier: 'Default'  }]                         
 define view zpoco_c_card_max_quan_therapy 
 as select from zpoco_i_sum_quan_therapy_pl 
 {
-      
+
+//      @Consumption.filter: { selectionType: #SINGLE, multipleSelections: true }
       @UI.selectionField: [{ position: 10, qualifier: 'Default' }]
       @UI.lineItem: [{position: 10 }]
   key MfgPlantId,

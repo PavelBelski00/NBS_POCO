@@ -9,33 +9,33 @@ define root view entity zpoco_i_order
   association [0..1] to zpoco_i_plant   as _Plant    on $projection.MfgPlantId = _Plant.MfgPlantId
   association [0..1] to zpoco_i_site    as _Site     on $projection.OrderingSiteId = _Site.OrderingSiteId
 {
-  key order_uuid                         as OrderUuid,
-      nvs_id                             as NvsId,
-      therapy                            as Therapy,
-      country_id                         as CountryId,
-      mfg_plant_id                       as MfgPlantId,
-      ttype_id                           as TherapyTypeId,
+  key order_uuid                          as OrderUuid,
+      nvs_id                              as NvsId,
+      therapy                             as Therapy,
+      country_id                          as CountryId,
+      mfg_plant_id                        as MfgPlantId,
+      ttype_id                            as TherapyTypeId,
       @EndUserText.label : 'Order Created Day'
-      dats_add_days(day0, -1, 'INITIAL') as OrderCreatedDay,
-      day0                               as Day0,
-      stsl1_id                           as StatusL1Id,
-      stsl2_id                           as StatusL2Id,
-      ord_site_id                        as OrderingSiteId,
-      oos                                as Oos,
-      oos_descr                          as OosDescription,
-      aph_dewar                          as AphDewar,
-      fp_dewar                           as FpDewar,
-      actual_day0                        as ActualDay0,
+      dats_add_days(day0, -10, 'INITIAL') as OrderCreatedDay,
+      day0                                as Day0,
+      stsl1_id                            as StatusL1Id,
+      stsl2_id                            as StatusL2Id,
+      ord_site_id                         as OrderingSiteId,
+      oos                                 as Oos,
+      oos_descr                           as OosDescription,
+      aph_dewar                           as AphDewar,
+      fp_dewar                            as FpDewar,
+      actual_day0                         as ActualDay0,
       @Semantics.user.createdBy: true
-      created_by                         as CreatedBy,
+      created_by                          as CreatedBy,
       @EndUserText.label : 'Created At'
       @Semantics.systemDateTime.createdAt: true
-      created_at                         as CreatedAt,
+      created_at                          as CreatedAt,
       @Semantics.user.lastChangedBy: true
-      last_changed_by                    as LastChangedBy,
+      last_changed_by                     as LastChangedBy,
       @EndUserText.label : 'Last Changed At'
       @Semantics.systemDateTime.lastChangedAt: true
-      last_changed_at                    as LastChangedAt,
+      last_changed_at                     as LastChangedAt,
       _Country,
       _Plant,
       _StatusL1,

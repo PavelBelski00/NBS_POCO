@@ -27,10 +27,11 @@ define root view entity zpoco_c_order
       }
       @Consumption.semanticObject: 'NBS_POC_OVP_COUNTRY'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_country', element: 'CountryId'} }]
-//      @ObjectModel.text.element: ['CountryName']
+      @ObjectModel.text.element: ['CountryName']
       CountryId,
       _Country.CountryName   as CountryName,
-
+      
+//      @Consumption.semanticObject: 'NBS_POC_OVP_PLANT'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_plant',   element: 'MfgPlantId'} }]
       @ObjectModel.text.element: ['PlantName']
       MfgPlantId,
