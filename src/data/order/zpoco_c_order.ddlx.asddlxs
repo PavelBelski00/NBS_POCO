@@ -78,7 +78,7 @@ annotate view zpoco_c_order with
                  label:             'Admin Data',
                  position:          20,
                  targetQualifier:   'AdminData'
-           } ]
+           }]
 
   @UI.hidden: true
   OrderUuid;
@@ -95,7 +95,7 @@ annotate view zpoco_c_order with
   
   @UI.selectionField: [{ position: 30 }]
   @UI.lineItem:       [{ position: 30, importance: #HIGH }]
-  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData', semanticObjectAction: 'display' }]
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData', semanticObjectAction: 'display'}]
   CountryId;
   
   @UI.selectionField: [{ position: 40 }]
