@@ -29,7 +29,7 @@ define view zpoco_c_card_oos
   as select from zpoco_i_order
 {
   
-  key upper(OosDescription) as  Description,
+  key OosDescription as  Description,
       @EndUserText.label: 'Oos Description'
       count( * ) as OrdersOosDescription
 
