@@ -24,7 +24,7 @@ as select from zpoco_i_order
 {
       @ObjectModel.text.element: ['StatusL2Name']
       key StatusL2Id,
-      _StatusL2.StatusL2Name,
+      _StatusL2.StatusL2Name as StatusL2Name,
       
       @EndUserText.label:'Status L2 Quantity'
       count( * ) as StatusL2Quantity,

@@ -20,4 +20,6 @@ define service zpoco_ui_order_ovp {
   expose zpoco_c_card_sum_slots_plant as CardCapacitySlotsPlantSum;
   expose zpoco_c_card_alert as CardAlert;
   expose zpoco_c_card_alert_wi as CardAlertWorkItem;
+  expose zpoco_c_card_quan_therapy_l1l2 as CardTherapyL1L2;
+  expose zpoco_c_card_av_slots as CardAveilableSlots;
 }
