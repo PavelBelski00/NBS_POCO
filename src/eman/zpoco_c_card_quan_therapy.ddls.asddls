@@ -3,7 +3,7 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Card: Quantity Order-Therapy'
-
+ 
 @UI.chart: [{
               qualifier:           'ChartTherapyQuantity',
               title:               'Number of Orders per Therapy',
