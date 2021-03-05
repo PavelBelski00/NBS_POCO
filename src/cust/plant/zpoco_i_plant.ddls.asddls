@@ -4,6 +4,7 @@ define root view entity zpoco_i_plant
   as select from zpoco_c_plant_a
 {
   key zpoco_c_plant_a.plant_id        as MfgPlantId,
+      '' as PlantId,
       zpoco_c_plant_a.plant_name      as PlantName,
       zpoco_c_plant_a.plant_image     as PlantImage,
       @Semantics.user.createdBy: true

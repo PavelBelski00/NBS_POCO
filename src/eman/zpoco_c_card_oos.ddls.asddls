@@ -9,33 +9,32 @@
               title:      'OOS Description',
               qualifier:  'ChartOosDescription',
               chartType:  #COLUMN_STACKED,
-              dimensions: ['OosDescription'],
+              dimensions: ['Description'],
               measures:   ['OrdersOosDescription'],
-              dimensionAttributes: [{ dimension:  'OosDescription',  
+              dimensionAttributes: [{ dimension:  'Description',  
                                       role:       #CATEGORY }],
               measureAttributes:   [{ measure:    'OrdersOosDescription', 
-                                      role:        #AXIS_1, 
-                                      asDataPoint: true }]
+                                      role:        #AXIS_1 }]
             }
            ]
            
 @UI.presentationVariant:[{
-                qualifier:      'Default',
-                visualizations: [{ type: #AS_CHART, qualifier: 'ChartOosDescription'}]
-             }]
+                           qualifier:      'Default',
+                           visualizations: [{ type:       #AS_CHART, 
+                                              qualifier: 'ChartOosDescription'}]
+                        }]
            
 
 define view zpoco_c_card_oos
   as select from zpoco_i_order
 {
   
+  key upper(OosDescription) as  Description,
       @EndUserText.label: 'Oos Description'
-  key OosDescription,
-      
       count( * ) as OrdersOosDescription
 
 }
 where
   OosDescription is not initial
 group by
-  OosDescription
+  OosDescription  

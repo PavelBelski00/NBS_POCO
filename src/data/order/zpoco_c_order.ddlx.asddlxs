@@ -94,8 +94,8 @@ annotate view zpoco_c_order with
   Therapy;
   
   @UI.selectionField: [{ position: 30 }]
-  @UI.lineItem:       [{ position: 30, importance: #HIGH }]
-  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData', semanticObjectAction: 'display'}]
+  @UI.lineItem:       [{ position: 30, importance: #HIGH, semanticObjectAction: 'manage' }]
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
   CountryId;
   
   @UI.selectionField: [{ position: 40 }]
