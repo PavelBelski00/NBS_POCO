@@ -49,6 +49,7 @@ annotate view zpoco_c_capacity
   @UI.fieldGroup:     [{ position: 20, qualifier: 'BasicData' }]  
   MfgStartDate;
   
+  @UI.selectionField: [{ position: 17 }]
   @UI.lineItem:       [{ position: 30, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]    
   ConsumedSlots;

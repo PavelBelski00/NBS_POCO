@@ -6,7 +6,7 @@
 
 @UI.chart: [{
               qualifier:           'ChartTherapyQuantity',
-              title:               'Number of Orders per Therapy',
+//              title:               'Number of Orders per Therapy',
               chartType:           #COLUMN_STACKED,
               dimensions:          [ 'Therapy' ],
               measures:            [ 'TherapyQuantity' ],
@@ -27,8 +27,11 @@ define view zpoco_c_card_quan_therapy
   //    P_day0          : zpoco_day0
   as select from zpoco_i_order
   //  ( P_Day0 : $parameters.P_day0 )
-{
+{      
 
+      @Consumption.semanticObject: 'NBS_POC_OVP_ORDER'
+      @UI.identification: [{ semanticObjectAction: 'manage', 
+                             type: #FOR_INTENT_BASED_NAVIGATION }]  
   key Therapy,
   key TherapyTypeId,
 

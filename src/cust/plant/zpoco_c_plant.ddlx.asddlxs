@@ -52,19 +52,18 @@ annotate view zpoco_c_plant with
   @UI.hidden: true
   PlantImage;
   
-  @UI.hidden: true
   @UI.lineItem:       [{ position: 30 }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]
   CreatedBy;
-  @UI.hidden: true
+
   @UI.lineItem:       [{ position: 40 }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'AdminData' }]
   CreatedAt;
-  @UI.hidden: true
+  
   @UI.lineItem:       [{ position: 50 }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'AdminData' }]
   LastChangedBy;
-  @UI.hidden: true
+
   @UI.lineItem:       [{ position: 60 }]
   @UI.fieldGroup:     [{ position: 40, qualifier: 'AdminData' }]
   LastChangedAt;

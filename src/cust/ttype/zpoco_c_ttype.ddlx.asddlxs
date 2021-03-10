@@ -46,7 +46,7 @@ annotate view zpoco_c_ttype
   @UI.lineItem:       [{ position: 20 }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'BasicData' }]
   TherapyTypeName;
-
+  
   @UI.lineItem:       [{ position: 30 }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]
   CreatedBy;

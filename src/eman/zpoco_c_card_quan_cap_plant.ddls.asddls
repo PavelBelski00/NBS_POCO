@@ -23,7 +23,7 @@ define view zpoco_c_card_quan_cap_plant
 {     
       @Consumption.semanticObject: 'NBS_POC_OVP_CAPACITY'
       @UI.identification: [{ semanticObjectAction: 'manage', 
-                             type: #FOR_INTENT_BASED_NAVIGATION }]
+                             type: #FOR_INTENT_BASED_NAVIGATION }]  
       @ObjectModel.text.element: ['PlantName']
   key MfgPlantId,
   

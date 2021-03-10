@@ -17,8 +17,13 @@ define root view entity zpoco_c_ttype
       fuzzinessThreshold: 0.8
   }
       TherapyTypeName,
+      
+      @Consumption.filter.hidden: true
       CreatedBy,
+      @Consumption.filter.hidden: true
       CreatedAt,
+      @Consumption.filter.hidden: true
       LastChangedBy,
+      @Consumption.filter.hidden: true
       LastChangedAt
 }

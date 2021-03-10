@@ -1,10 +1,7 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Order'
 define root view entity zpoco_i_order
-//  with parameters
-////    @Consumption.hidden: true
-//    @Environment.systemField: #SYSTEM_DATE  
-//    P_Day0           : zpoco_day0
+
     
   as select from zpoco_d_order_a
   association [0..1] to zpoco_i_ttype   as _TType    on $projection.TherapyTypeId = _TType.TherapyTypeId
@@ -43,6 +40,7 @@ define root view entity zpoco_i_order
       @EndUserText.label : 'Last Changed At'
       @Semantics.systemDateTime.lastChangedAt: true
       last_changed_at                     as LastChangedAt,
+    
       _Country,
       _Plant,
       _StatusL1,

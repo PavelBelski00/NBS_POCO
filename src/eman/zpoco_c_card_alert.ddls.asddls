@@ -9,10 +9,12 @@ define view zpoco_c_card_alert
 {
       @UI.hidden: true
   key AlertUuid,
-
+      
+      @Consumption.semanticObject: 'NBS_POC_OVP_ALERT'
       @UI.lineItem: [{ position: 10 }]
       NvsId, 
-
+      
+      @Consumption.filter.hidden: true
       @UI.lineItem: [{ position: 20 }]
       AlertMessage,
       

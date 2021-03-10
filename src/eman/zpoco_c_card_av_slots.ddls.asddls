@@ -49,7 +49,8 @@ define view zpoco_c_card_av_slots
   association [1..1] to ZPOCO_CAPAC_3DECADE 
     as _3Decade on $projection.PlantID = _3Decade.PlantID
   
-{     @ObjectModel.text.element: ['PlantName']
+{      
+      @ObjectModel.text.element: ['PlantName']
   key PlantID,
       _Plant.PlantName,
      

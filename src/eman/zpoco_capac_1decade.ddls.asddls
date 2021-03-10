@@ -14,4 +14,4 @@ define view zpoco_capac_1decade
 where
   MfgStartDate between '20210301' and '20210310'
 group by
-  MfgPlantId 
+  MfgPlantId
