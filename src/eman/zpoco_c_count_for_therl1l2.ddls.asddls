@@ -4,13 +4,13 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Therapy aggregation by L1 & L2 staus'
 
-define view ZPOCO_C_COUNT_FOR_THERL1L2
+define view zpoco_c_count_for_therl1l2
   as select from zpoco_i_order
 {
   key Therapy,
       StatusL1Id,
       StatusL2Id,
-//      @Aggregation.default: #COUNT_DISTINCT
+
       count( * ) as TherapyQuantity,
 
       /* Associations */

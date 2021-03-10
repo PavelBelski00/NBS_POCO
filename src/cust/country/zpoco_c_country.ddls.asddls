@@ -10,7 +10,6 @@ define root view entity zpoco_c_country
       ranking: #HIGH,
       fuzzinessThreshold: 0.8
   }
-
   key CountryId,
   @Search: {
       defaultSearchElement: true,

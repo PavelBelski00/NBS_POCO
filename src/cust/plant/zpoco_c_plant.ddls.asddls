@@ -11,6 +11,7 @@ define root view entity zpoco_c_plant
           ranking: #HIGH,
           fuzzinessThreshold: 0.8
       }
+      
   key MfgPlantId,
       @Search: {
           defaultSearchElement: true,

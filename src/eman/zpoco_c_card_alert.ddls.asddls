@@ -11,7 +11,7 @@ define view zpoco_c_card_alert
   key AlertUuid,
 
       @UI.lineItem: [{ position: 10 }]
-      NvsId,
+      NvsId, 
 
       @UI.lineItem: [{ position: 20 }]
       AlertMessage,

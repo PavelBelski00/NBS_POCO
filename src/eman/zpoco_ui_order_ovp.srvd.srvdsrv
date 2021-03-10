@@ -24,4 +24,6 @@ define service zpoco_ui_order_ovp {
   expose zpoco_c_card_av_slots as CardAveilableSlots;
   expose zpoco_c_card_oos as CardOOSDescription;
   expose zpoco_c_card_ther_clcom as CardTherapyClCom;
+  expose zpoco_c_stack_card_set as CardSteckSet;
+  expose zpoco_c_card_oos_details as CardOOS;
 }

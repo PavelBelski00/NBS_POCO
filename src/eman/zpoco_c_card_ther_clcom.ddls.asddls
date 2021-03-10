@@ -25,7 +25,12 @@
 
 
 define view zpoco_c_card_ther_clcom
+//  with parameters
+//    @Consumption.hidden: true
+//    @Environment.systemField: #SYSTEM_DATE  
+//    P_day0          : zpoco_day0
   as select from zpoco_i_order
+//  ( P_Day0 : $parameters.P_day0 )
 {
   key Therapy,
       TherapyTypeId,

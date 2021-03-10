@@ -9,9 +9,9 @@
               title:      'OOS Description',
               qualifier:  'ChartOosDescription',
               chartType:  #COLUMN_STACKED,
-              dimensions: ['Description'],
+              dimensions: ['OosDescription'],
               measures:   ['OrdersOosDescription'],
-              dimensionAttributes: [{ dimension:  'Description',  
+              dimensionAttributes: [{ dimension:  'OosDescription',  
                                       role:       #CATEGORY }],
               measureAttributes:   [{ measure:    'OrdersOosDescription', 
                                       role:        #AXIS_1 }]
@@ -26,9 +26,14 @@
            
 
 define view zpoco_c_card_oos
+//  with parameters
+//    @Consumption.hidden: true
+//    @Environment.systemField: #SYSTEM_DATE  
+//    P_day0          : zpoco_day0
   as select from zpoco_i_order
-{
-  key OosDescription as  Description,
+//  ( P_Day0 : $parameters.P_day0 )
+{ 
+  key OosDescription,
       @EndUserText.label: 'Oos Description'
       count( * ) as OrdersOosDescription
 

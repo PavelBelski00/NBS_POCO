@@ -21,7 +21,10 @@
                         
 define view zpoco_c_card_quan_stsl2
 as select from zpoco_i_order 
-{
+{     
+      @Consumption.semanticObject: 'NBS_POC_OVP_ORDER'
+      @UI.identification: [{ semanticObjectAction: 'manage', 
+                             type: #FOR_INTENT_BASED_NAVIGATION }]
       @ObjectModel.text.element: ['StatusL2Name']
       key StatusL2Id,
       _StatusL2.StatusL2Name as StatusL2Name,

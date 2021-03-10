@@ -1,0 +1,125 @@
+@Metadata.layer: #CORE
+@UI: { 
+       headerInfo: { 
+                     title:        { label: 'OOS Details', 
+                                     type:   #STANDARD,          
+                                     value: 'OosId' },           
+                     
+                     description:  { value: 'OosDetails',
+                                     type: #STANDARD },
+
+                                         
+                     typeName:       'OOS Details',
+                     typeNamePlural: 'OOS Details'
+                    },
+       
+       presentationVariant: [{ 
+                               sortOrder: [ { by: 'OosId',  direction: #ASC } ] 
+                            }]                            
+     }
+annotate view zpoco_c_oos
+    with 
+{
+    @UI.facet: [
+---------------------------------------------------------------------
+//                       Header Facet Annotations                        
+              {
+                 id:              'HeaderOosId',
+                 purpose:          #HEADER,
+                 type:             #DATAPOINT_REFERENCE,
+                 targetQualifier: 'OosId',
+                 position: 10
+              },
+              {
+                 id:              'HeaderOosDetails',
+                 purpose:          #HEADER,
+                 type:             #DATAPOINT_REFERENCE,
+                 targetQualifier: 'OosDetails',
+                 position: 20
+              },
+                            
+---------------------------------------------------------------------            
+//                       Object Page Tabs                                               
+              {
+                 id:                 'MainInfo',
+                 type:               #COLLECTION,
+                 label:              'Main Information',
+                 position:           10
+              },
+              {
+                 id:                 'TechInfo',
+                 type:               #COLLECTION,
+                 label:              'Technical Information',
+                 position:           20
+              },
+ --------------------------------------------------------------------             
+//                      Field Groups              
+              
+              {
+                 id:                'BasicData',
+                 purpose:           #STANDARD ,
+                 parentId:          'MainInfo',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Main Information',
+                 position:          10,
+                 targetQualifier:   'BasicData'
+              },
+              {     
+                 id:                'TechData',     
+                 purpose:           #STANDARD ,     
+                 parentId:          'TechInfo',     
+                 type:              #FIELDGROUP_REFERENCE,     
+                 label:             'Technical Data',     
+                 position:           20,     
+                 targetQualifier:   'TechData'     
+              } 
+              ] 
+--------------------------------------------------------------------- 
+  
+  @UI: { 
+         lineItem:       [ { position: 10, importance: #HIGH } ],
+         identification: [ { position: 10, label: 'OOS ID'} ],
+         selectionField: [ { position: 10 } ],
+         fieldGroup:     [ { position: 10, qualifier: 'BasicData'} ],
+         dataPoint:      { title:'OOS ID', qualifier: 'OosId' } 
+       }
+  OosId;
+  
+  @UI: { 
+         lineItem:       [ { position: 20, importance: #HIGH, criticality: 'OosDetailsCriticality' } ],
+         identification: [ { position: 20, label: 'OOS Details'} ],
+         selectionField: [ { position: 20 } ],
+         fieldGroup:     [ { position: 20, qualifier: 'BasicData'} ],
+         dataPoint:      { title:'OOS Details', qualifier: 'OosDetails', criticality: 'OosDetailsCriticality' } 
+       }
+  OosDetails;
+  
+  
+  @UI: { 
+         lineItem:       [ { position: 30, importance: #LOW } ],
+         fieldGroup:     [ { position: 10, qualifier: 'TechData'} ]
+       }
+  CreatedBy;
+  
+  @UI: { 
+         lineItem:       [ { position: 40, importance: #LOW } ],
+         fieldGroup:     [ { position: 20, qualifier: 'TechData'} ]
+       } 
+  CreatedAt;
+  
+  @UI: { 
+         lineItem:       [ { position: 50, importance: #LOW } ],
+         fieldGroup:     [ { position: 30, qualifier: 'TechData'} ]
+       }
+  LastChangedBy;
+   
+  @UI: { 
+         lineItem:       [ { position: 60, importance: #LOW } ],
+         fieldGroup:     [ { position: 40, qualifier: 'TechData'} ]
+       }
+  LastChangedAt;
+  
+  @UI.hidden: true
+  OosDetailsCriticality;
+    
+}

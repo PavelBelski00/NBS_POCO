@@ -1,6 +1,11 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Order'
 define root view entity zpoco_i_order
+//  with parameters
+////    @Consumption.hidden: true
+//    @Environment.systemField: #SYSTEM_DATE  
+//    P_Day0           : zpoco_day0
+    
   as select from zpoco_d_order_a
   association [0..1] to zpoco_i_ttype   as _TType    on $projection.TherapyTypeId = _TType.TherapyTypeId
   association [0..1] to zpoco_i_stsl1   as _StatusL1 on $projection.StatusL1Id = _StatusL1.StatusL1Id
@@ -8,6 +13,7 @@ define root view entity zpoco_i_order
   association [0..1] to zpoco_i_country as _Country  on $projection.CountryId = _Country.CountryId
   association [0..1] to zpoco_i_plant   as _Plant    on $projection.MfgPlantId = _Plant.MfgPlantId
   association [0..1] to zpoco_i_site    as _Site     on $projection.OrderingSiteId = _Site.OrderingSiteId
+  association [0..1] to zpoco_i_oos     as _OOS      on $projection.OosDetailsID = _OOS.OosId
 {
   key order_uuid                          as OrderUuid,
       nvs_id                              as NvsId,
@@ -21,6 +27,7 @@ define root view entity zpoco_i_order
       stsl1_id                            as StatusL1Id,
       stsl2_id                            as StatusL2Id,
       ord_site_id                         as OrderingSiteId,
+      oos_id                              as OosDetailsID,
       oos                                 as Oos,
       oos_descr                           as OosDescription,
       aph_dewar                           as AphDewar,
@@ -41,5 +48,6 @@ define root view entity zpoco_i_order
       _StatusL1,
       _StatusL2,
       _TType,
-      _Site
+      _Site,
+      _OOS
 }

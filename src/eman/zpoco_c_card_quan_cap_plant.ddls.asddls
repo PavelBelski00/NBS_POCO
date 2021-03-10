@@ -3,8 +3,7 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Card: Quantity Capacity-Plant'
-
-@UI.chart: [{
+@UI.chart: [{ 
               qualifier:           'ChartPlantQuantity',
               title:               'Aggregation by plants',
               chartType:           #DONUT,
@@ -21,9 +20,13 @@
 
 define view zpoco_c_card_quan_cap_plant
   as select from zpoco_i_capacity
-{
+{     
+      @Consumption.semanticObject: 'NBS_POC_OVP_CAPACITY'
+      @UI.identification: [{ semanticObjectAction: 'manage', 
+                             type: #FOR_INTENT_BASED_NAVIGATION }]
       @ObjectModel.text.element: ['PlantName']
   key MfgPlantId,
+  
       _Plant.PlantName as PlantName,
       count(*)         as PlantQuantity,
       _Plant

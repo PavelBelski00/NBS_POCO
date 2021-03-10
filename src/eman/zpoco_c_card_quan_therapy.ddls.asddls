@@ -3,7 +3,7 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Card: Quantity Order-Therapy'
- 
+
 @UI.chart: [{
               qualifier:           'ChartTherapyQuantity',
               title:               'Number of Orders per Therapy',
@@ -19,13 +19,19 @@
                            sortOrder:      [{ by: 'TherapyTypeId', direction:  #ASC }],
                            visualizations: [{ type: #AS_CHART, qualifier: 'ChartTherapyQuantity'}]
                         }]
-                        
+
 define view zpoco_c_card_quan_therapy
-as select from zpoco_i_order 
+  //  with parameters
+  //    @Consumption.hidden: true
+  //    @Environment.systemField: #SYSTEM_DATE
+  //    P_day0          : zpoco_day0
+  as select from zpoco_i_order
+  //  ( P_Day0 : $parameters.P_day0 )
 {
+
   key Therapy,
   key TherapyTypeId,
-  
+
       @EndUserText.label:'Therapy Quantity'
       count( * ) as TherapyQuantity
 }

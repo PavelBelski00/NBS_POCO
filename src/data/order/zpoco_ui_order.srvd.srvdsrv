@@ -7,4 +7,5 @@ define service zpoco_ui_order {
   expose zpoco_i_stsl2 as StatusL2;
   expose zpoco_i_ttype as TType;
   expose zpoco_i_site as Site;
+  expose zpoco_i_oos as OOSDetails;
 }

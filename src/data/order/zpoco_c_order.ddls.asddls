@@ -3,7 +3,10 @@
 @Metadata.allowExtensions: true
 @Search.searchable: true
 define root view entity zpoco_c_order
-  as projection on zpoco_i_order
+  
+  as projection on zpoco_i_order  
+  
+
 {
   key OrderUuid,
       @Search: {
@@ -25,7 +28,7 @@ define root view entity zpoco_c_order
           ranking: #HIGH,
           fuzzinessThreshold: 0.8
       }
-      @Consumption.semanticObject: 'NBS_POC_OVP_COUNTRY'
+//      @Consumption.semanticObject: 'NBS_POC_OVP_COUNTRY'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_country', element: 'CountryId'} }]
       @ObjectModel.text.element: ['CountryName']
       CountryId,
@@ -61,7 +64,12 @@ define root view entity zpoco_c_order
       @ObjectModel.text.element: ['OrderingSiteName']
       OrderingSiteId,
       _Site.OrderingSiteName as OrderingSiteName,
-
+      
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_oos', element: 'OosId' }}]
+      @ObjectModel.text.element: ['OosDetails']
+      OosDetailsID,
+      _OOS.OosDetails as OosDetails,
+      
       Oos,
       OosDescription,
       AphDewar,
@@ -76,5 +84,6 @@ define root view entity zpoco_c_order
       _StatusL1,
       _StatusL2,
       _Country,
-      _Site
+      _Site,
+      _OOS
 }

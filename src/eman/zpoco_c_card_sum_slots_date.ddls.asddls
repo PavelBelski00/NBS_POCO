@@ -22,7 +22,7 @@
                         
 define view zpoco_c_card_sum_slots_date 
 as select from zpoco_i_capacity 
-{
+{ 
   key MfgStartDate,
       @Aggregation.default: #SUM
       sum(CountYes) as Consumed,

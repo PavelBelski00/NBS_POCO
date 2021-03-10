@@ -21,6 +21,7 @@ define root view entity zpoco_c_capacity
           ranking: #HIGH,
           fuzzinessThreshold: 0.8
       }
+      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
       MfgStartDate,
       
       ConsumedSlots,

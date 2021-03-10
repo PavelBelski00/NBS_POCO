@@ -1,0 +1,24 @@
+managed;
+
+define behavior for zpoco_i_oos alias OOSDetails
+implementation in class zcl_poco_bp_oos unique
+persistent table zpoco_c_oos_a
+lock master
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
+  field ( mandatory : create ) OosId;
+
+  mapping for zpoco_c_oos_a {
+    OosId         = oos_id;
+    OosDetails    = oos_description;
+    CreatedBy     = created_by;
+    CreatedAt     = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

@@ -6,6 +6,7 @@ CLASS zcl_poco_generate_data DEFINITION
   PUBLIC SECTION.
     INTERFACES if_oo_adt_classrun.
   PROTECTED SECTION.
+
   PRIVATE SECTION.
     METHODS:
       fill_countries,
@@ -19,7 +20,8 @@ CLASS zcl_poco_generate_data DEFINITION
       fill_label,
       fill_order,
       fill_alertwi,
-      fill_alert
+      fill_alert,
+      fill_oos
       .
 
 ENDCLASS.
@@ -36,6 +38,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
     me->fill_stsl1(  ).
     me->fill_stsl2(  ).
     me->fill_therapy_type(  ).
+    me->fill_oos( ).
 
     me->fill_capacity(  ).
     me->fill_order(  ).
@@ -1196,95 +1199,96 @@ VALUE #( ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872541CAC7' mfg_p
     DATA: lt_order TYPE TABLE OF zpoco_d_order_a.
 
     lt_order =
-VALUE #( ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDDC' nvs_id ='NT57853' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '  )
- ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAA' nvs_id ='NT57854' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST4' stsl2_id ='ST6' ord_site_id ='OS22' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '  )
- ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAB' nvs_id ='NT57855' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS17' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '  )
- ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAC' nvs_id ='NT57856' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS10' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222132523.6762670 '  )
- ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAD' nvs_id ='NT57857' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210305' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS6' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222132637.9875340 '  )
- ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAE' nvs_id ='NT57858' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210307' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='S13' oos ='X'
-oos_descr ='Physycian Requested' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222132932.6862670 '  )
- ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAF' nvs_id ='NT57859' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20210307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS17' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222133019.4930520 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA55861D2EC40A8' nvs_id ='NT57864' therapy ='CYTB323A12105' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200305' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS10' oos ='' oos_descr =''
-aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222162650.4264010 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061045.1308330 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA5483368A5040E' nvs_id ='NT57860' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200313' stsl1_id ='ST3' stsl2_id ='ST11' ord_site_id ='S13' oos ='' oos_descr =''
-aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162312.0491520 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061118.8777470 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA54CBCFCE0C413' nvs_id ='NT57861' therapy ='CYTB323A12102' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200305' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS17' oos ='' oos_descr =''
-aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222162412.4398340 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061126.2087560 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA55083D71F0419' nvs_id ='NT57862' therapy ='CYTB323A12103' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200313' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS6' oos ='' oos_descr =''
-aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162503.1346070 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061132.7135560 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA554E92755E41E' nvs_id ='NT57863' therapy ='CYTB323A12104' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200307' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='S13' oos ='' oos_descr =''
-aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222162602.0834220 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061138.5204720 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA55BB58CE6042E' nvs_id ='NT57865' therapy ='CYTB323A12106' country_id ='FR' mfg_plant_id ='PL2' ttype_id ='Clinic' day0 ='20200313' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS12' oos ='' oos_descr =''
-aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162733.4585450 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061143.9841030 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA55F1F1413C433' nvs_id ='NT57866' therapy ='CYTB323A12107' country_id ='DE' mfg_plant_id ='PL2' ttype_id ='Clinic' day0 ='20200309' stsl1_id ='ST1' stsl2_id ='' ord_site_id ='OS24' oos ='X' oos_descr =
-'Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162819.1758290 ' last_changed_by ='CB0000000723' last_changed_at ='20210222162819.1758290 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA56252C8FFC437' nvs_id ='NT57867' therapy ='CYTB323A12108' country_id ='IT' mfg_plant_id ='PL2' ttype_id ='Clinic' day0 ='20200307' stsl1_id ='ST1' stsl2_id ='' ord_site_id ='OS11' oos ='' oos_descr =''
-aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162902.1542680 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061152.3715920 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA56674D405C43D' nvs_id ='NT57868' therapy ='CCTL019G2201J' country_id ='DE' mfg_plant_id ='PL1' ttype_id ='Clinic' day0 ='20200312' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS4' oos ='' oos_descr =''
-aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162957.6241430 ' last_changed_by ='CB0000000723' last_changed_at ='20210222162957.6241430 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA569AB5112C442' nvs_id ='NT57869' therapy ='CCTL019G2201J' country_id ='FR' mfg_plant_id ='PL3' ttype_id ='Clinic' day0 ='20200305' stsl1_id ='ST3' stsl2_id ='ST10' ord_site_id ='OS20' oos ='' oos_descr =''
-aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222163040.7463750 ' last_changed_by ='CB0000000723' last_changed_at ='20210222163040.7463750 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA56D366D064446' nvs_id ='NT57870' therapy ='CCTL019G2201J' country_id ='AU' mfg_plant_id ='PL1' ttype_id ='Clinic' day0 ='20200303' stsl1_id ='ST4' stsl2_id ='ST6' ord_site_id ='OS25' oos ='' oos_descr =''
-aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222163128.3080710 ' last_changed_by ='CB0000000723' last_changed_at ='20210222163128.3080710 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA5ABE17B93412D' nvs_id ='NT57871' therapy ='KYMRIAH - Pediatric ALL US' country_id ='AT' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200306' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS25' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164529.9611200 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164529.9611200 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA5AFB5DDF504D1' nvs_id ='NT57872' therapy ='KYMRIAH - Pediatric ALL US' country_id ='ES' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200306' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS15' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164620.8244810 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164620.8244810 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA5B2DB27880133' nvs_id ='NT57873' therapy ='KYMRIAH - Pediatric ALL US' country_id ='ES' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200305' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS15' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164703.0496320 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164703.0496320 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA5B61D7615C146' nvs_id ='NT57874' therapy ='KYMRIAH - Pediatric ALL US' country_id ='CZ' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200301' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='OS3' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164746.7868270 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164746.7868270 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA5B8DDA427414A' nvs_id ='NT57875' therapy ='KYMRIAH - Pediatric ALL US' country_id ='CZ' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200312' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS3' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222164823.7057140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164823.7057140 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA5BBB25F6B04E3' nvs_id ='NT57876' therapy ='KYMRIAH - Pediatric ALL US' country_id ='HU' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200312' stsl1_id ='ST3' stsl2_id ='ST11' ord_site_id ='OS9' oos =
-'' oos_descr ='' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222164901.7047570 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164901.7047570 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA5BE7DA94B814E' nvs_id ='NT57877' therapy ='KYMRIAH - Pediatric ALL US' country_id ='RO' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200305' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS1' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164939.2093330 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164939.2093330 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA5C14F40E34152' nvs_id ='NT57878' therapy ='KYMRIAH - Pediatric ALL US' country_id ='RO' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200309' stsl1_id ='ST3' stsl2_id ='ST3' ord_site_id ='OS1' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222165017.0352140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222165017.0352140 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA5C465803A8155' nvs_id ='NT57879' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200313' stsl1_id ='ST3' stsl2_id ='ST3' ord_site_id ='OS21' oos
-='' oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222165059.2628540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222165059.2628540 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA5C76F1DA304F5' nvs_id ='NT57880' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200305' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='OS21' oos
-='' oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222165139.2421510 ' last_changed_by ='CB0000000723' last_changed_at ='20210222165139.2421510 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA6045048D34568' nvs_id ='NT57881' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS21' oos
-='' oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170516.3565410 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170516.3565410 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA60793B8F801C5' nvs_id ='NT57882' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='IT' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS7' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170600.1702630 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170600.1702630 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA60A7E52FE456F' nvs_id ='NT57883' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='IT' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS18' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170639.2949900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170639.2949900 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA60E9B241B81D7' nvs_id ='NT57884' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='GR' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200304' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS5' oos =
-'X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170735.6021510 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170735.6021510 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA611085DC1057E' nvs_id ='NT57885' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='GR' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST1' stsl2_id ='' ord_site_id ='OS5' oos =''
-oos_descr ='' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222170807.0629640 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170807.0629640 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA6140318554582' nvs_id ='NT57886' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS1' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222170847.0525320 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170847.0525320 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA61750C77E8583' nvs_id ='NT57887' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200306' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS1' oos =
-'X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170931.3884000 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170931.3884000 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA61A4C641F81E3' nvs_id ='NT57888' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='UK' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200306' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS14' oos =
-'' oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222171011.4305710 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171011.4305710 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA61E6C7B4B058E' nvs_id ='NT57889' therapy ='KYMRIAH - DLBCL EU' country_id ='DE' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS19' oos ='X'
-oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222171106.7934310 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171106.7934310 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA62107BE358593' nvs_id ='NT57890' therapy ='KYMRIAH - DLBCL EU' country_id ='DE' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST3' stsl2_id ='ST2' ord_site_id ='OS4' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171141.7781010 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171141.7781010 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA623483121C5A0' nvs_id ='NT57891' therapy ='KYMRIAH - DLBCL EU' country_id ='FR' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200309' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS20' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171212.0004840 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171212.0004840 '  )
- ( client ='100' order_uuid ='02605AA74F061EDB9DA626BEC21481F9' nvs_id ='NT57892' therapy ='KYMRIAH - DLBCL EU' country_id ='FR' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS16' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222171258.6508880 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171258.6508880 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA62A744502C5A9' nvs_id ='NT57893' therapy ='KYMRIAH - DLBCL EU' country_id ='NO' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200311' stsl1_id ='ST3' stsl2_id ='ST2' ord_site_id ='OS2' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171348.3249220 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171348.3249220 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA62D5C6303C5AC' nvs_id ='NT57894' therapy ='KYMRIAH - DLBCL EU' country_id ='NO' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200311' stsl1_id ='ST3' stsl2_id ='ST10' ord_site_id ='OS2' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171427.2762910 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171427.2762910 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA62FE3E82945B0' nvs_id ='NT57895' therapy ='KYMRIAH - DLBCL EU' country_id ='BE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200314' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS8' oos =''
-oos_descr ='' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171501.2250100 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171501.2250100 '  )
- ( client ='100' order_uuid ='02E7896636F21EDB9DA63202ED9D05B3' nvs_id ='NT57896' therapy ='KYMRIAH - DLBCL EU' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200310' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23' oos =''
-oos_descr ='' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
- ).
+    VALUE #(
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDDC' nvs_id ='NT57853' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '  )
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAA' nvs_id ='NT57854' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST4' stsl2_id ='ST6' ord_site_id ='OS22'
+       oos_id ='OOS2' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '  )
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAB' nvs_id ='NT57855' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS17'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '  )
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAC' nvs_id ='NT57856' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS10'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222132523.6762670 '  )
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAD' nvs_id ='NT57857' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210305' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS6'
+       oos_id ='OOS3' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222132637.9875340 '  )
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAE' nvs_id ='NT57858' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210307' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='S13'
+       oos_id ='OOS7' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222132932.6862670 '  )
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAF' nvs_id ='NT57859' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20210307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS17'
+       oos_id ='OOS4' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222133019.4930520 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA55861D2EC40A8' nvs_id ='NT57864' therapy ='CYTB323A12105' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200305' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS10'
+       oos_id ='OOS5' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222162650.4264010 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061045.1308330 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA5483368A5040E' nvs_id ='NT57860' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200313' stsl1_id ='ST3' stsl2_id ='ST11' ord_site_id ='S13'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162312.0491520 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061118.8777470 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA54CBCFCE0C413' nvs_id ='NT57861' therapy ='CYTB323A12102' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200305' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS17'
+       oos_id ='OOS7' oos ='X' oos_descr ='Physician Declined' aph_dewar = 'X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222162412.4398340 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061126.2087560 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA55083D71F0419' nvs_id ='NT57862' therapy ='CYTB323A12103' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200313' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS6'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162503.1346070 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061132.7135560 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA554E92755E41E' nvs_id ='NT57863' therapy ='CYTB323A12104' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200307' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='S13'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222162602.0834220 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061138.5204720 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA55BB58CE6042E' nvs_id ='NT57865' therapy ='CYTB323A12106' country_id ='FR' mfg_plant_id ='PL2' ttype_id ='Clinic' day0 ='20200313' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS12'
+       oos_id ='OOS1' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162733.4585450 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061143.9841030 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA55F1F1413C433' nvs_id ='NT57866' therapy ='CYTB323A12107' country_id ='DE' mfg_plant_id ='PL2' ttype_id ='Clinic' day0 ='20200309' stsl1_id ='ST1' stsl2_id ='' ord_site_id ='OS24'
+       oos_id ='OOS3' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162819.1758290 ' last_changed_by ='CB0000000723' last_changed_at ='20210222162819.1758290 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA56252C8FFC437' nvs_id ='NT57867' therapy ='CYTB323A12108' country_id ='IT' mfg_plant_id ='PL2' ttype_id ='Clinic' day0 ='20200307' stsl1_id ='ST1' stsl2_id ='' ord_site_id ='OS11'
+       oos_id ='OOS6' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162902.1542680 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061152.3715920 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA56674D405C43D' nvs_id ='NT57868' therapy ='CCTL019G2201J' country_id ='DE' mfg_plant_id ='PL1' ttype_id ='Clinic' day0 ='20200312' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS4'
+       oos_id ='OOS3' oos ='X' oos_descr ='Physician Declined' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162957.6241430 ' last_changed_by ='CB0000000723' last_changed_at ='20210222162957.6241430 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA569AB5112C442' nvs_id ='NT57869' therapy ='CCTL019G2201J' country_id ='FR' mfg_plant_id ='PL3' ttype_id ='Clinic' day0 ='20200305' stsl1_id ='ST3' stsl2_id ='ST10' ord_site_id ='OS20'
+       oos_id ='OOS4' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222163040.7463750 ' last_changed_by ='CB0000000723' last_changed_at ='20210222163040.7463750 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA56D366D064446' nvs_id ='NT57870' therapy ='CCTL019G2201J' country_id ='AU' mfg_plant_id ='PL1' ttype_id ='Clinic' day0 ='20200303' stsl1_id ='ST4' stsl2_id ='ST6' ord_site_id ='OS25'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222163128.3080710 ' last_changed_by ='CB0000000723' last_changed_at ='20210222163128.3080710 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5ABE17B93412D' nvs_id ='NT57871' therapy ='KYMRIAH - Pediatric ALL US' country_id ='AT' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200306' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS25'
+       oos_id ='OOS3' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164529.9611200 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164529.9611200 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA5AFB5DDF504D1' nvs_id ='NT57872' therapy ='KYMRIAH - Pediatric ALL US' country_id ='ES' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200306' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS15'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164620.8244810 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164620.8244810 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5B2DB27880133' nvs_id ='NT57873' therapy ='KYMRIAH - Pediatric ALL US' country_id ='ES' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200305' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS15'
+       oos_id ='OOS1' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164703.0496320 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164703.0496320 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5B61D7615C146' nvs_id ='NT57874' therapy ='KYMRIAH - Pediatric ALL US' country_id ='CZ' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200301' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='OS3'
+       oos_id ='OOS1' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164746.7868270 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164746.7868270 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5B8DDA427414A' nvs_id ='NT57875' therapy ='KYMRIAH - Pediatric ALL US' country_id ='CZ' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200312' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS3'
+       oos_id ='OOS4' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222164823.7057140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164823.7057140 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA5BBB25F6B04E3' nvs_id ='NT57876' therapy ='KYMRIAH - Pediatric ALL US' country_id ='HU' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200312' stsl1_id ='ST3' stsl2_id ='ST11' ord_site_id ='OS9'
+       oos_id ='OOS3' oos ='X' oos_descr ='Physician Declined' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222164901.7047570 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164901.7047570 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5BE7DA94B814E' nvs_id ='NT57877' therapy ='KYMRIAH - Pediatric ALL US' country_id ='RO' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200305' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS1'
+       oos_id ='OOS3' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164939.2093330 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164939.2093330 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5C14F40E34152' nvs_id ='NT57878' therapy ='KYMRIAH - Pediatric ALL US' country_id ='RO' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200309' stsl1_id ='ST3' stsl2_id ='ST3' ord_site_id ='OS1'
+       oos_id ='OOS1' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222165017.0352140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222165017.0352140 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5C465803A8155' nvs_id ='NT57879' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200313' stsl1_id ='ST3' stsl2_id ='ST3' ord_site_id ='OS21'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222165059.2628540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222165059.2628540 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA5C76F1DA304F5' nvs_id ='NT57880' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200305' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='OS21'
+       oos_id ='OOS6' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222165139.2421510 ' last_changed_by ='CB0000000723' last_changed_at ='20210222165139.2421510 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA6045048D34568' nvs_id ='NT57881' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS21'
+       oos_id ='OOS4' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170516.3565410 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170516.3565410 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA60793B8F801C5' nvs_id ='NT57882' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='IT' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS7'
+       oos_id ='OOS4' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170600.1702630 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170600.1702630 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA60A7E52FE456F' nvs_id ='NT57883' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='IT' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS18'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170639.2949900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170639.2949900 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA60E9B241B81D7' nvs_id ='NT57884' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='GR' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200304' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS5'
+       oos_id ='OOS5' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170735.6021510 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170735.6021510 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA611085DC1057E' nvs_id ='NT57885' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='GR' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST1' stsl2_id ='' ord_site_id ='OS5'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222170807.0629640 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170807.0629640 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA6140318554582' nvs_id ='NT57886' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS1'
+       oos_id ='OOS1' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222170847.0525320 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170847.0525320 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA61750C77E8583' nvs_id ='NT57887' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200306' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS1'
+       oos_id ='OOS4' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170931.3884000 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170931.3884000 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA61A4C641F81E3' nvs_id ='NT57888' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='UK' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200306' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS14'
+       oos_id ='OOS6' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222171011.4305710 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171011.4305710 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA61E6C7B4B058E' nvs_id ='NT57889' therapy ='KYMRIAH - DLBCL EU' country_id ='DE' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS19'
+       oos_id ='OOS4' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222171106.7934310 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171106.7934310 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA62107BE358593' nvs_id ='NT57890' therapy ='KYMRIAH - DLBCL EU' country_id ='DE' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST3' stsl2_id ='ST2' ord_site_id ='OS4'
+       oos_id ='OOS1' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171141.7781010 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171141.7781010 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA623483121C5A0' nvs_id ='NT57891' therapy ='KYMRIAH - DLBCL EU' country_id ='FR' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200309' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS20'
+       oos_id ='OOS7' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171212.0004840 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171212.0004840 '  )
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA626BEC21481F9' nvs_id ='NT57892' therapy ='KYMRIAH - DLBCL EU' country_id ='FR' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS16'
+       oos_id ='OOS4' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222171258.6508880 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171258.6508880 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA62A744502C5A9' nvs_id ='NT57893' therapy ='KYMRIAH - DLBCL EU' country_id ='NO' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200311' stsl1_id ='ST3' stsl2_id ='ST2' ord_site_id ='OS2'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171348.3249220 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171348.3249220 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA62D5C6303C5AC' nvs_id ='NT57894' therapy ='KYMRIAH - DLBCL EU' country_id ='NO' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200311' stsl1_id ='ST3' stsl2_id ='ST10' ord_site_id ='OS2'
+       oos_id ='' oos ='X' oos_descr ='Physician Requested' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171427.2762910 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171427.2762910 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA62FE3E82945B0' nvs_id ='NT57895' therapy ='KYMRIAH - DLBCL EU' country_id ='BE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200314' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS8'
+       oos_id ='OOS2' oos ='X' oos_descr ='Physician Declined' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171501.2250100 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171501.2250100 '  )
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA63202ED9D05B3' nvs_id ='NT57896' therapy ='KYMRIAH - DLBCL EU' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200310' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr ='Physician Declined' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ).
 
 
     DELETE FROM zpoco_d_order_a.
@@ -1357,6 +1361,70 @@ last_changed_at ='20210304114623.8753210 '  )
     DELETE FROM zpoco_d_alerwi_a.
     INSERT zpoco_d_alerwi_a FROM TABLE @lt_alertwi.
 
+  ENDMETHOD.
+
+  METHOD fill_oos.
+
+    DATA: lt_oos     TYPE STANDARD TABLE OF zpoco_c_oos_a,
+          time_stamp TYPE timestamp.
+
+    DELETE FROM zpoco_c_oos_a.
+
+    GET TIME STAMP FIELD time_stamp.
+
+    lt_oos = VALUE #(
+      ( oos_id          = 'OOS1'
+        oos_description = 'OOS Beads'
+        created_by      = sy-uname
+        created_at      = time_stamp
+        last_changed_by = sy-uname
+        last_changed_at = time_stamp )
+
+      ( oos_id          = 'OOS2'
+        oos_description = 'OOS Dose'
+        created_by      = sy-uname
+        created_at      = time_stamp
+        last_changed_by = sy-uname
+        last_changed_at = time_stamp )
+
+      ( oos_id          = 'OOS3'
+        oos_description = 'OOS Low % CAR'
+        created_by      = sy-uname
+        created_at      = time_stamp
+        last_changed_by = sy-uname
+        last_changed_at = time_stamp )
+
+      ( oos_id          = 'OOS4'
+        oos_description = 'OOS Mycopl'
+        created_by      = sy-uname
+        created_at      = time_stamp
+        last_changed_by = sy-uname
+        last_changed_at = time_stamp )
+
+      ( oos_id          = 'OOS5'
+        oos_description = 'OOS Potency'
+        created_by      = sy-uname
+        created_at      = time_stamp
+        last_changed_by = sy-uname
+        last_changed_at = time_stamp )
+
+      ( oos_id          = 'OOS6'
+        oos_description = 'OOS Sterility'
+        created_by      = sy-uname
+        created_at      = time_stamp
+        last_changed_by = sy-uname
+        last_changed_at = time_stamp )
+
+      ( oos_id          = 'OOS7'
+        oos_description = 'OOS viability (<70%)'
+        created_by      = sy-uname
+        created_at      = time_stamp
+        last_changed_by = sy-uname
+        last_changed_at = time_stamp )
+      ).
+
+    INSERT zpoco_c_oos_a FROM TABLE @lt_oos.
 
   ENDMETHOD.
+
 ENDCLASS.

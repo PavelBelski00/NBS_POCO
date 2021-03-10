@@ -78,7 +78,9 @@ annotate view zpoco_c_order with
                  label:             'Admin Data',
                  position:          20,
                  targetQualifier:   'AdminData'
-           }]
+           }
+         
+           ]
 
   @UI.hidden: true
   OrderUuid;
@@ -94,13 +96,13 @@ annotate view zpoco_c_order with
   Therapy;
   
   @UI.selectionField: [{ position: 30 }]
-  @UI.lineItem:       [{ position: 30, importance: #HIGH, semanticObjectAction: 'manage' }]
+  @UI.lineItem:       [{ position: 30, importance: #HIGH  }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
   CountryId;
   
   @UI.selectionField: [{ position: 40 }]
-  @UI.lineItem:       [{ position: 40, importance: #HIGH }]
-  @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData'  }]  
+  @UI.lineItem:       [{ position: 40, importance: #HIGH}]
+  @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData' }]  
   MfgPlantId;
   
   @UI.selectionField: [{ position: 50 }]
@@ -133,10 +135,19 @@ annotate view zpoco_c_order with
   @UI.fieldGroup:     [{ position: 100, qualifier: 'BasicData' }]   
   OrderingSiteId;
   
+  @UI.selectionField: [{ position: 103 }]
+  @UI.lineItem:       [{ position: 103, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 13,  qualifier: 'OOSData' }]
+  OosDetailsID;
+  
+  @UI.hidden: true
+  OosDetails;
+  
   @UI.lineItem:       [{ position: 110, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 10,  qualifier: 'OOSData' }]   
   Oos;
-
+  
+  @UI.selectionField: [{ position: 110 }]
   @UI.lineItem:       [{ position: 120, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 20,  qualifier: 'OOSData' }]   
   OosDescription;

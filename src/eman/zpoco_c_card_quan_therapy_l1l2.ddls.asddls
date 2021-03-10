@@ -25,8 +25,9 @@
            ]
 
 define view zpoco_c_card_quan_therapy_l1l2
-  as select from ZPOCO_C_COUNT_FOR_THERL1L2
+  as select from zpoco_c_count_for_therl1l2
 {
+
   key Therapy,
 
       StatusL1Id,

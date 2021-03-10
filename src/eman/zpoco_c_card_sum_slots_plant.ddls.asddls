@@ -22,7 +22,7 @@
 
 define view zpoco_c_card_sum_slots_plant
   as select from zpoco_i_capacity
-{
+{   
       @ObjectModel.text.element: ['PlantName']
   key MfgPlantId,
       _Plant.PlantName as PlantName, 

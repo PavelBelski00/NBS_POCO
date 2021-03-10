@@ -6,7 +6,12 @@
 @UI.presentationVariant: [{ qualifier: 'Default',
                             sortOrder: [{by: 'Therapy_Quantity', direction: #DESC }] } ]
 define view zpoco_c_card_quan_therapy_date
+//  with parameters
+//    @Consumption.hidden: true
+//    @Environment.systemField: #SYSTEM_DATE  
+//    P_day0          : zpoco_day0
   as select from zpoco_i_order
+//  ( P_Day0 : $parameters.P_day0 )
 {
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_c_therapy_vh',   element: 'Therapy'} }]
       @UI.lineItem: [{ position: 10, importance: #HIGH }]

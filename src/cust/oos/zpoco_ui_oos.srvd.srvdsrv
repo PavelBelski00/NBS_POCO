@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for OOS Details'
+define service Zpoco_ui_oos {
+  expose zpoco_c_oos as OOSDetails;
+}

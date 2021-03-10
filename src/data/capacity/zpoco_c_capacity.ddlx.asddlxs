@@ -43,7 +43,8 @@ annotate view zpoco_c_capacity
   @UI.lineItem:       [{ position: 10, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
   MfgPlantId;
-
+  
+  @UI.selectionField: [{ position: 15 }]
   @UI.lineItem:       [{ position: 20, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'BasicData' }]  
   MfgStartDate;
