@@ -1,4 +1,0 @@
-@EndUserText.label: 'Service Definition: Order with Parameters'
-define service ZPOCO_UI_ORDER_PARAM {
-  expose ZPOCO_C_ORDER_PARAM;
-}
