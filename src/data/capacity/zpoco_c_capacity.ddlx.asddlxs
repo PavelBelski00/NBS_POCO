@@ -79,20 +79,16 @@ annotate view zpoco_c_capacity
   @UI.lineItem:       [{ position: 90, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 90, qualifier: 'BasicData' }]    
   CountryAllocation;
-    
-  @UI.lineItem:       [{ position: 100, importance: #LOW }]
+  
   @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]  
   CreatedBy;
   
-  @UI.lineItem:       [{ position: 110, importance: #LOW }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'AdminData' }]  
   CreatedAt;
   
-  @UI.lineItem:       [{ position: 120, importance: #LOW }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'AdminData' }]  
   LastChangedBy;
 
-  @UI.lineItem:       [{ position: 130, importance: #LOW }]
   @UI.fieldGroup:     [{ position: 40, qualifier: 'AdminData' }]  
   LastChangedAt;
 }

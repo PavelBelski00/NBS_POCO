@@ -1,7 +1,7 @@
 managed;
 
 define behavior for zpoco_i_site alias OrderingSite
-implementation in class zcl_bp_poco_i_site unique
+implementation in class zcl_poco_bp_site unique
 persistent table zpoco_c_site_a
 lock master
 etag master LastChangedAt

@@ -3,8 +3,8 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Therapy Value Help'
-define view zpoco_c_therapy_vh 
-as select from zpoco_i_order 
+define view zpoco_c_therapy_vh
+  as select from zpoco_i_order
 {
   key Therapy as Therapy
 }

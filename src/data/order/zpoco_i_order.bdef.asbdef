@@ -26,8 +26,9 @@ etag master LastChangedAt
     StatusL1Id      = stsl1_id;
     StatusL2Id      = stsl2_id;
     OrderingSiteId  = ord_site_id;
+    OosId           = oos_id;
     Oos             = oos;
-    OosDescription  = oos_descr;
+    OosDescriptionId = oos_descr_id;
     AphDewar        = aph_dewar;
     FpDewar         = fp_dewar;
     ActualDay0      = actual_day0;

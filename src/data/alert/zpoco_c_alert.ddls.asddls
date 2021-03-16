@@ -11,7 +11,7 @@ define root view entity zpoco_c_alert
           ranking: #HIGH,
           fuzzinessThreshold: 0.8
       }
-      NvsId,
+  key NvsId,
       @Search: {
           defaultSearchElement: true,
           ranking: #HIGH,

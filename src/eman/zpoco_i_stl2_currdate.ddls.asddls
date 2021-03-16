@@ -3,7 +3,6 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Status L2 with current date'
-
 define view zpoco_i_STL2_currdate
   as select from zpoco_i_order
 {

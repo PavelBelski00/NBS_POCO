@@ -85,7 +85,6 @@ annotate view zpoco_c_order with
   @UI.hidden: true
   OrderUuid;
 
-  @UI.selectionField: [{ position: 10 }]
   @UI.lineItem:       [{ position: 10, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
   NvsId;
@@ -95,7 +94,6 @@ annotate view zpoco_c_order with
   @UI.fieldGroup:     [{ position: 10, qualifier: 'TherapyData' }]
   Therapy;
   
-  @UI.selectionField: [{ position: 30 }]
   @UI.lineItem:       [{ position: 30, importance: #HIGH  }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
   CountryId;
@@ -110,7 +108,6 @@ annotate view zpoco_c_order with
   @UI.fieldGroup:     [{ position: 20, qualifier: 'TherapyData' }]    
   TherapyTypeId;
 
-  @UI.selectionField: [{ position: 60 }]
   @UI.lineItem:       [{ position: 60, importance: #MEDIUM}]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'Day0Data' }]      
   OrderCreatedDay;
@@ -130,15 +127,13 @@ annotate view zpoco_c_order with
   @UI.fieldGroup:     [{ position: 20, qualifier: 'StatusData' }]     
   StatusL2Id;
   
-  @UI.selectionField: [{ position: 100 }]
   @UI.lineItem:       [{ position: 100, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 100, qualifier: 'BasicData' }]   
   OrderingSiteId;
   
-  @UI.selectionField: [{ position: 103 }]
   @UI.lineItem:       [{ position: 103, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 13,  qualifier: 'OOSData' }]
-  OosDetailsID;
+  OosId;
   
   @UI.hidden: true
   OosDetails;
@@ -147,10 +142,9 @@ annotate view zpoco_c_order with
   @UI.fieldGroup:     [{ position: 10,  qualifier: 'OOSData' }]   
   Oos;
   
-  @UI.selectionField: [{ position: 110 }]
   @UI.lineItem:       [{ position: 120, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 20,  qualifier: 'OOSData' }]   
-  OosDescription;
+  OosDescriptionId;
   
   @UI.lineItem:       [{ position: 130, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 20,  qualifier: 'Others' }]  
@@ -160,6 +154,11 @@ annotate view zpoco_c_order with
   @UI.fieldGroup:     [{ position: 10,  qualifier: 'Others' }]  
   FpDewar;
   
+  @UI.selectionField: [{ position: 122 }]
+  @UI.lineItem:       [{ position: 143, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 13,  qualifier: 'Others' }]
+  UpdatedDate;
+ 
   @UI.lineItem:       [{ position: 150, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 30,  qualifier: 'Day0Data' }]  
   ActualDay0;

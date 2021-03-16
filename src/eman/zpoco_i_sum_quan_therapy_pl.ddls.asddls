@@ -8,7 +8,7 @@ define view zpoco_i_sum_quan_therapy_pl
 {
   key MfgPlantId,
       PlantName,
-      sum(Therapy_Quantity) as TherapyQuantitySum
+      sum(TherapyQuantity) as TherapyQuantitySum
 }
 group by
   MfgPlantId,

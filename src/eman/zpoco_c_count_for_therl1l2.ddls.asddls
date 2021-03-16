@@ -2,7 +2,7 @@
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
-@EndUserText.label: 'Therapy aggregation by L1 & L2 staus'
+@EndUserText.label: 'Order Status L1 and L2'
 
 define view zpoco_c_count_for_therl1l2
   as select from zpoco_i_order
@@ -10,7 +10,6 @@ define view zpoco_c_count_for_therl1l2
   key Therapy,
       StatusL1Id,
       StatusL2Id,
-
       count( * ) as TherapyQuantity,
 
       /* Associations */

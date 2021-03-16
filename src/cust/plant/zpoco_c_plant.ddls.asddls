@@ -20,13 +20,9 @@ define root view entity zpoco_c_plant
       }
       PlantName,
       PlantImage,
-
-      @Consumption.filter.hidden: true
+ 
       CreatedBy,
-      @Consumption.filter.hidden: true
       CreatedAt,
-      @Consumption.filter.hidden: true
       LastChangedBy,
-      @Consumption.filter.hidden: true
       LastChangedAt
 }

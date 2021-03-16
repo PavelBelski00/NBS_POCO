@@ -26,16 +26,7 @@ define root view entity zpoco_i_capacity
       @EndUserText.label : 'Last Changed At'
       @Semantics.systemDateTime.lastChangedAt: true
       last_changed_at as LastChangedAt,
-      
-       case cons_slots
-       when 'X' then 1
-       else 0
-       end            as CountYes,
-
-      case cons_slots
-        when '' then 1
-        else 0
-        end           as CountNo,
+      $session.system_date as Today,
         
       _TType,
       _Country,

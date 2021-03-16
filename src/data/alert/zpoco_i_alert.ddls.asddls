@@ -4,7 +4,7 @@ define root view entity zpoco_i_alert
   as select from zpoco_d_alert_a
 {
   key alert_uuid      as AlertUuid,
-      nvs_id          as NvsId,
+  key nvs_id          as NvsId,
       alert_message   as AlertMessage,
       updated_date    as UpdatedDate,
       @Semantics.user.createdBy: true
@@ -16,5 +16,6 @@ define root view entity zpoco_i_alert
       last_changed_by as LastChangedBy,
       @EndUserText.label : 'Last Changed At'
       @Semantics.systemDateTime.lastChangedAt: true
-      last_changed_at as LastChangedAt
+      last_changed_at as LastChangedAt,
+      $session.system_date as Today
 }

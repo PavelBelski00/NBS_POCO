@@ -4,9 +4,10 @@ define root view entity zpoco_i_alert_wi
   as select from zpoco_d_alerwi_a
 {
   key alert_wi_uuid   as AlertWorkItemUuid,
-      nvs_id          as NvsId,
+  key nvs_id          as NvsId,
       alert_message   as AlertMessage,
       updated_date    as UpdatedDate,
+      $session.system_date as Today,
       @Semantics.user.createdBy: true
       created_by      as CreatedBy,
       @EndUserText.label : 'Created At'

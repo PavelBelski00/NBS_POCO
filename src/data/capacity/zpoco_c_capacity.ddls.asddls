@@ -43,14 +43,10 @@ define root view entity zpoco_c_capacity
       
       NvsId,
       CountryAllocation,
-      
-      @Consumption.filter.hidden: true
+       
       CreatedBy,
-      @Consumption.filter.hidden: true
       CreatedAt,
-      @Consumption.filter.hidden: true
       LastChangedBy,
-      @Consumption.filter.hidden: true
       LastChangedAt,
 
       _Country,

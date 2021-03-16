@@ -15,6 +15,7 @@ define root view entity zpoco_c_label
       @Search: { defaultSearchElement: true,
                  ranking: #HIGH,
                  fuzzinessThreshold: 0.8 }
+      @Consumption.semanticObject: 'NBS_POC_OVP_PLANT'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_PLANT',   element: 'MfgPlantId'} }]
       @ObjectModel.text.element: ['PlantName']
       MfgPlantId,
@@ -23,6 +24,7 @@ define root view entity zpoco_c_label
       @Search: { defaultSearchElement: true,
                  ranking: #HIGH,
                  fuzzinessThreshold: 0.8 }
+      @Consumption.semanticObject: 'NBS_POC_OVP_TTYPE'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'ZPOCO_I_TTYPE',   element: 'TherapyTypeId'} }]
       @ObjectModel.text.element: ['TherapyTypeName']
       TherapyTypeId,

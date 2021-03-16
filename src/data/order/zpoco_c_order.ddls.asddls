@@ -28,18 +28,19 @@ define root view entity zpoco_c_order
           ranking: #HIGH,
           fuzzinessThreshold: 0.8
       }
-//      @Consumption.semanticObject: 'NBS_POC_OVP_COUNTRY'
+      @Consumption.semanticObject: 'NBS_POC_OVP_COUNTRY'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_country', element: 'CountryId'} }]
       @ObjectModel.text.element: ['CountryName']
       CountryId,
       _Country.CountryName   as CountryName,
       
-//      @Consumption.semanticObject: 'NBS_POC_OVP_PLANT'
+      @Consumption.semanticObject: 'NBS_POC_OVP_PLANT'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_plant',   element: 'MfgPlantId'} }]
       @ObjectModel.text.element: ['PlantName']
       MfgPlantId,
       _Plant.PlantName       as PlantName,
-
+      
+      @Consumption.semanticObject: 'NBS_POC_OVP_TTYPE'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_ttype',   element: 'TherapyTypeId'} }]
       @ObjectModel.text.element: ['TherapyTypeName']
       TherapyTypeId,
@@ -49,29 +50,50 @@ define root view entity zpoco_c_order
       OrderCreatedDay,
       @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
       Day0,
-
+      
+      @Consumption.semanticObject: 'NBS_POC_OVP_STSL1'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_stsl1',   element: 'StatusL1Id'} }]
       @ObjectModel.text.element: ['StatusL1Name']
       StatusL1Id,
       _StatusL1.StatusL1Name as StatusL1Name,
-
+      
+      @Consumption.semanticObject: 'NBS_POC_OVP_STSL2'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_stsl2',   element: 'StatusL2Id'} }]
       @ObjectModel.text.element: ['StatusL2Name']
       StatusL2Id,
       _StatusL2.StatusL2Name as StatusL2Name,
-
+     
+     
+      @Consumption.semanticObject: 'NBS_POC_OVP_SITE'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_site',    element: 'OrderingSiteId'} }]
       @ObjectModel.text.element: ['OrderingSiteName']
       OrderingSiteId,
       _Site.OrderingSiteName as OrderingSiteName,
       
+      @Consumption.semanticObject: 'NBS_POC_OVP_OOS'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_oos', element: 'OosId' }}]
       @ObjectModel.text.element: ['OosDetails']
-      OosDetailsID,
-      _OOS.OosDetails as OosDetails,
+      OosId,
+      _OOSDetails.OosDetails as OosDetails,
       
       Oos,
-      OosDescription,
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_oos_descr', element: 'OosDescriptionId' }}]
+      @ObjectModel.text.element: ['OosDescription']
+      OosDescriptionId,
+      _OOSDescription.OosDescription as OosDescription,
+      
+//      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
+//      @EndUserText.label: 'Alert Updated Date'
+//      AlertUpdateDate,
+      
+//      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
+//      @EndUserText.label: 'Work Item Updated Date'
+//      AlertWIUpdateDate,
+      
+      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
+      @EndUserText.label: 'Alerts Updated Date'
+      UpdatedDate,
+      
       AphDewar,
       FpDewar,
       ActualDay0,
@@ -85,5 +107,7 @@ define root view entity zpoco_c_order
       _StatusL2,
       _Country,
       _Site,
-      _OOS
+      _OOSDetails,
+      _OOSDescription
+      
 }

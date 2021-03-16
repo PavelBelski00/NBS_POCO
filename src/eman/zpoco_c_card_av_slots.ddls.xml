@@ -5,7 +5,7 @@
    <DDLS>
     <DDLNAME>ZPOCO_C_CARD_AV_SLOTS</DDLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DDTEXT>Available slots by dates</DDTEXT>
+    <DDTEXT>Card: Available slots (Decades)</DDTEXT>
     <SOURCE_TYPE>V</SOURCE_TYPE>
    </DDLS>
   </asx:values>

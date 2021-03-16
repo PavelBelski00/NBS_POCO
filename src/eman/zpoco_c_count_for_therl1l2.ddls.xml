@@ -5,7 +5,7 @@
    <DDLS>
     <DDLNAME>ZPOCO_C_COUNT_FOR_THERL1L2</DDLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DDTEXT>Therapy aggregation by L1 &amp; L2 staus</DDTEXT>
+    <DDTEXT>Order Status L1 and L2</DDTEXT>
     <SOURCE_TYPE>V</SOURCE_TYPE>
    </DDLS>
   </asx:values>

@@ -5,6 +5,7 @@
                   typeName: 'Plant', 
                   typeNamePlural: 'Plants'
                 }  
+
 annotate view zpoco_c_plant with
 {
   @UI.facet: [
@@ -51,7 +52,7 @@ annotate view zpoco_c_plant with
   
   @UI.hidden: true
   PlantImage;
-  
+
   @UI.lineItem:       [{ position: 30 }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]
   CreatedBy;

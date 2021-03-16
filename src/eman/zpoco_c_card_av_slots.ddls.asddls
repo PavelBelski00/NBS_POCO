@@ -2,70 +2,74 @@
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
-@EndUserText.label: 'Available slots by dates'
+@EndUserText.label: 'Available slots (Decades)'
 
 @UI.chart: [
             {
               title:      'Available slots in 1st decade',
               qualifier:  'Dec1',
               chartType:  #COLUMN_STACKED,
-              dimensions: ['PlantID'],
-              measures:   ['decade_1st'],
-              dimensionAttributes: [{ dimension:  'PlantID',  
+              dimensions: ['MfgPlantId'],
+              measures:   ['Decade1st'],
+              dimensionAttributes: [{ dimension:  'MfgPlantId',
                                       role:       #CATEGORY }],
-              measureAttributes:   [{ measure:    'decade_1st', 
-                                      role:        #AXIS_1, 
+              measureAttributes:   [{ measure:    'Decade1st',
+                                      role:        #AXIS_1,
                                       asDataPoint: true }]
             },
             { title:     'Available slots in 2nd decade',
               qualifier: 'Dec2',
               chartType:  #COLUMN_STACKED,
-              dimensions: ['PlantID'],
-              measures:   ['decade_2nd'],
-              dimensionAttributes: [{ dimension: 'PlantID',
+              dimensions: ['MfgPlantId'],
+              measures:   ['Decade2nd'],
+              dimensionAttributes: [{ dimension: 'MfgPlantId',
                                       role: #CATEGORY }],
-              measureAttributes:   [{ measure:   'decade_2nd', 
+              measureAttributes:   [{ measure:   'Decade2nd',
                                       role: #AXIS_1,
                                       asDataPoint: true }]
             },
             { title:      'Available slots in 3rd decade',
               qualifier:  'Dec3',
               chartType:  #COLUMN_STACKED,
-              dimensions: ['PlantID'],
-              measures:   ['decade_3rd'],
-              dimensionAttributes: [{ dimension: 'PlantID',   
+              dimensions: ['MfgPlantId'],
+              measures:   ['Decade3rd'],
+              dimensionAttributes: [{ dimension: 'MfgPlantId',
                                       role: #CATEGORY }],
-              measureAttributes:   [{ measure:   'decade_3rd', 
-                                      role: #AXIS_1, 
+              measureAttributes:   [{ measure:   'Decade3rd',
+                                      role: #AXIS_1,
                                       asDataPoint: true }]
             }
            ]
 
 define view zpoco_c_card_av_slots
   as select from zpoco_capac_1decade
-  
-  association [1..1] to ZPOCO_CAPAC_2DECADE 
-    as _2Decade on $projection.PlantID = _2Decade.PlantID
-  association [1..1] to ZPOCO_CAPAC_3DECADE 
-    as _3Decade on $projection.PlantID = _3Decade.PlantID
-  
-{      
+
+  association [1..1] to zpoco_capac_2decade as _2Decade on  $projection.MfgPlantId    = _2Decade.MfgPlantId
+                                                        and $projection.ConsumedSlots = _2Decade.ConsumedSlots
+  association [1..1] to zpoco_capac_3decade as _3Decade on  $projection.MfgPlantId    = _3Decade.MfgPlantId
+                                                        and $projection.ConsumedSlots = _3Decade.ConsumedSlots
+
+{
+      @Consumption.semanticObject: 'NBS_POC_OVP_CAPACITY'
+      @UI.identification: [{ semanticObjectAction: 'manage',
+                             type: #FOR_INTENT_BASED_NAVIGATION }]
       @ObjectModel.text.element: ['PlantName']
-  key PlantID,
-      _Plant.PlantName,
-     
+  key MfgPlantId,
+  key ConsumedSlots,
+      _Plant.PlantName            as PlantName,
+
       @UI.dataPoint.visualization: #NUMBER
       @EndUserText.label: '1st Decade'
-      QuanAvailableSlots          as decade_1st,
-      
+      QuanAvailableSlots          as Decade1st,
+
       @UI.dataPoint.visualization: #NUMBER
       @EndUserText.label: '2nt Decade'
-      _2Decade.QuanAvailableSlots as decade_2nd,
-      
+      _2Decade.QuanAvailableSlots as Decade2nd,
+
       @UI.dataPoint.visualization: #NUMBER
       @EndUserText.label: '3rd Decade'
-      _3Decade.QuanAvailableSlots as decade_3rd,
-      
+      _3Decade.QuanAvailableSlots as Decade3rd,
+
       /* Associations */
       _Plant,
       _2Decade,
