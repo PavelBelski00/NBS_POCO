@@ -26,7 +26,7 @@
               measureAttributes:   [{ measure:   'Last3Months',   role: #AXIS_1 }]
             },
             {
-              title:       'Data for the next 1 month',
+              title:       'Data for the Last 1 Month',
               qualifier:   'LastOneMonth',
               chartType:   #COLUMN_STACKED,
               dimensions: ['Therapy', 'TherapyTypeId'],
@@ -36,7 +36,7 @@
               measureAttributes:   [{ measure:   'LastMonth',     role: #AXIS_1 }]
             },
             {
-              title:       'Data for the next 3 months',
+              title:       'Data for the Last 10 Days',
               qualifier:   'LastTenDays',
               chartType:   #COLUMN_STACKED,
               dimensions: ['Therapy', 'TherapyTypeId'],

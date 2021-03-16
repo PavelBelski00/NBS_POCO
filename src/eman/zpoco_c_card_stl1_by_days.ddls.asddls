@@ -6,7 +6,7 @@
 
 @UI.chart: [
             {
-              title:      'Data for the last 10 days',
+              title:      'Data for the Last 10 Days',
               qualifier:  'Last10Days',
               chartType:  #DONUT,
               dimensions: ['StatusL1Id'],
@@ -18,7 +18,7 @@
                                       asDataPoint: true }]
             },
             {
-              title:     'Data for the last 30 days',
+              title:     'Data for the Last 1 Month',
               qualifier: 'Last1Month',
               chartType:  #DONUT,
               dimensions: ['StatusL1Id'],
@@ -30,7 +30,7 @@
                                       asDataPoint: true }]
             },
             {
-              title:     'Data for the last 3 months',
+              title:     'Data for the Last 3 Months',
               qualifier: 'Last3Months',
               chartType:  #DONUT,
               dimensions: ['StatusL1Id'],
@@ -42,7 +42,7 @@
                                       asDataPoint: true }]
             },
             {
-              title:      'Data for the last year',
+              title:      'Data for the Last 1 Year',
               qualifier:  'LastYear',
               chartType:  #DONUT,
               dimensions: ['StatusL1Id'],
@@ -54,7 +54,7 @@
                                       asDataPoint: true }]
             },
             {
-              title:      'Data for the last year',
+              title:      'Data for the Last 10 Days',
               qualifier:  'D0Last10Days',
               chartType:  #DONUT,
               dimensions: ['StatusL1Id'],
@@ -66,7 +66,7 @@
                                       asDataPoint: true }]
             },
             {
-              title:      'Data for the last year',
+              title:      'Data for the last 15 days',
               qualifier:  'D0Last15Days',
               chartType:  #DONUT,
               dimensions: ['StatusL1Id'],
@@ -78,7 +78,7 @@
                                       asDataPoint: true }]
             },
             {
-              title:      'D0 Data for the last year',
+              title:      'D0 Data for the Last 1 Month',
               qualifier:  'D0Last1Month',
               chartType:  #DONUT,
               dimensions: ['StatusL1Id'],
