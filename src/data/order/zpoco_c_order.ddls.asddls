@@ -91,7 +91,7 @@ define root view entity zpoco_c_order
 //      AlertWIUpdateDate,
       
       @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
-      @EndUserText.label: 'Alerts Updated Date'
+      @EndUserText.label: 'Alerts and Work Items Updated Date'
       UpdatedDate,
       
       AphDewar,
