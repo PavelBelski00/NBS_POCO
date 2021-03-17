@@ -61,7 +61,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
     lt_create  = VALUE #(
     ( therapy         = 'CCTL019G2201J'
       mfg_plant_id    = 'PL1'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57868'
       printed_labels  = '3'
       used_labels     = '2'
@@ -73,7 +73,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CCTL019G2201J'
       mfg_plant_id    = 'PL1'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57870'
       printed_labels  = '3'
       used_labels     = '1'
@@ -181,7 +181,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CYTB323A12106'
       mfg_plant_id    = 'PL2'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57865'
       printed_labels  = '3'
       used_labels     = '1'
@@ -193,7 +193,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CYTB323A12107'
       mfg_plant_id    = 'PL2'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57866'
       printed_labels  = '3'
       used_labels     = '1'
@@ -205,7 +205,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CYTB323A12108'
       mfg_plant_id    = 'PL2'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57867'
       printed_labels  = '3'
       used_labels     = '3'
@@ -277,7 +277,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CCTL019G2201J'
       mfg_plant_id    = 'PL3'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57869'
       printed_labels  = '3'
       used_labels     = '1'
@@ -529,7 +529,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CYTB323A12101'
       mfg_plant_id    = 'PL5'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57860'
       printed_labels  = '3'
       used_labels     = '2'
@@ -541,7 +541,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CYTB323A12102'
       mfg_plant_id    = 'PL5'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57861'
       printed_labels  = '3'
       used_labels     = '2'
@@ -553,7 +553,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CYTB323A12103'
       mfg_plant_id    = 'PL5'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57862'
       printed_labels  = '3'
       used_labels     = '3'
@@ -565,7 +565,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CYTB323A12104'
       mfg_plant_id    = 'PL5'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57863'
       printed_labels  = '3'
       used_labels     = '2'
@@ -577,7 +577,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
     ( therapy         = 'CYTB323A12105'
       mfg_plant_id    = 'PL5'
-      ttype_id        = 'Clinic'
+      ttype_id        = 'Clinical'
       nvs_id          = 'NT57864'
       printed_labels  = '3'
       used_labels     = '3'
@@ -738,7 +738,7 @@ VALUE #( ( client ='100' stsl2_id ='ST1' stsl2_name ='ADF Approved' created_by =
     DATA: lt_ttype TYPE TABLE OF zpoco_c_ttype_a.
 
     lt_ttype =
-VALUE #( ( client ='100' therapy_type_id ='Clinic' therapy_type_name ='Clinic' created_by ='CB0000000723' created_at ='20210219140611.2182460 ' last_changed_by ='CB0000000723' last_changed_at ='20210219140611.2182460 '  )
+VALUE #( ( client ='100' therapy_type_id ='Clinical' therapy_type_name ='Clinical' created_by ='CB0000000723' created_at ='20210219140611.2182460 ' last_changed_by ='CB0000000723' last_changed_at ='20210219140611.2182460 '  )
  ( client ='100' therapy_type_id ='Commercial' therapy_type_name ='Commercial' created_by ='CB0000000723' created_at ='20210219140627.8502050 ' last_changed_by ='CB0000000723' last_changed_at ='20210219140627.8502050 '  )
  ).
 
@@ -755,75 +755,75 @@ VALUE #( ( client ='100' therapy_type_id ='Clinic' therapy_type_name ='Clinic' c
 VALUE #( ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872541CAC7' mfg_plant_id ='PL1' mfg_start_date ='20210301' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='IT' nvs_id ='' country_alloc =''
 created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872541EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210304' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872541EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210304' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725420AC7' mfg_plant_id ='PL1' mfg_start_date ='20210304' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725420AC7' mfg_plant_id ='PL1' mfg_start_date ='20210304' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725422AC7' mfg_plant_id ='PL1' mfg_start_date ='20210304' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725422AC7' mfg_plant_id ='PL1' mfg_start_date ='20210304' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725424AC7' mfg_plant_id ='PL1' mfg_start_date ='20210305' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725424AC7' mfg_plant_id ='PL1' mfg_start_date ='20210305' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725426AC7' mfg_plant_id ='PL1' mfg_start_date ='20210306' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725426AC7' mfg_plant_id ='PL1' mfg_start_date ='20210306' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725428AC7' mfg_plant_id ='PL1' mfg_start_date ='20210306' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725428AC7' mfg_plant_id ='PL1' mfg_start_date ='20210306' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872542AAC7' mfg_plant_id ='PL1' mfg_start_date ='20210307' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872542AAC7' mfg_plant_id ='PL1' mfg_start_date ='20210307' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872542CAC7' mfg_plant_id ='PL1' mfg_start_date ='20210308' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872542CAC7' mfg_plant_id ='PL1' mfg_start_date ='20210308' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872542EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210308' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872542EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210308' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725430AC7' mfg_plant_id ='PL1' mfg_start_date ='20210309' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725430AC7' mfg_plant_id ='PL1' mfg_start_date ='20210309' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725432AC7' mfg_plant_id ='PL1' mfg_start_date ='20210311' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725432AC7' mfg_plant_id ='PL1' mfg_start_date ='20210311' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725434AC7' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725434AC7' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725436AC7' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725436AC7' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725438AC7' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725438AC7' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872543AAC7' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872543AAC7' mfg_plant_id ='PL1' mfg_start_date ='20210312' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872543CAC7' mfg_plant_id ='PL1' mfg_start_date ='20210313' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872543CAC7' mfg_plant_id ='PL1' mfg_start_date ='20210313' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872543EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210313' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872543EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210313' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725440AC7' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725440AC7' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725442AC7' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725442AC7' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725444AC7' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725444AC7' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725446AC7' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725446AC7' mfg_plant_id ='PL1' mfg_start_date ='20210314' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725448AC7' mfg_plant_id ='PL1' mfg_start_date ='20210315' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725448AC7' mfg_plant_id ='PL1' mfg_start_date ='20210315' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872544AAC7' mfg_plant_id ='PL1' mfg_start_date ='20210315' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872544AAC7' mfg_plant_id ='PL1' mfg_start_date ='20210315' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872544CAC7' mfg_plant_id ='PL1' mfg_start_date ='20210316' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872544CAC7' mfg_plant_id ='PL1' mfg_start_date ='20210316' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872544EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872544EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725450AC7' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725450AC7' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725452AC7' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725452AC7' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725454AC7' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725454AC7' mfg_plant_id ='PL1' mfg_start_date ='20210317' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725456AC7' mfg_plant_id ='PL1' mfg_start_date ='20210318' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725456AC7' mfg_plant_id ='PL1' mfg_start_date ='20210318' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725458AC7' mfg_plant_id ='PL1' mfg_start_date ='20210319' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725458AC7' mfg_plant_id ='PL1' mfg_start_date ='20210319' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872545AAC7' mfg_plant_id ='PL1' mfg_start_date ='20210320' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872545AAC7' mfg_plant_id ='PL1' mfg_start_date ='20210320' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872545CAC7' mfg_plant_id ='PL1' mfg_start_date ='20210323' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872545CAC7' mfg_plant_id ='PL1' mfg_start_date ='20210323' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872545EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210325' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872545EAC7' mfg_plant_id ='PL1' mfg_start_date ='20210325' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725460AC7' mfg_plant_id ='PL1' mfg_start_date ='20210325' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725460AC7' mfg_plant_id ='PL1' mfg_start_date ='20210325' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725462AC7' mfg_plant_id ='PL1' mfg_start_date ='20210326' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725462AC7' mfg_plant_id ='PL1' mfg_start_date ='20210326' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725464AC7' mfg_plant_id ='PL1' mfg_start_date ='20210326' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -839,11 +839,11 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725470AC7' mfg_plant_id ='PL1' mfg_start_date ='20210329' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725472AC7' mfg_plant_id ='PL1' mfg_start_date ='20210330' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725472AC7' mfg_plant_id ='PL1' mfg_start_date ='20210330' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725474AC7' mfg_plant_id ='PL1' mfg_start_date ='20210330' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725476AC7' mfg_plant_id ='PL1' mfg_start_date ='20210331' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725476AC7' mfg_plant_id ='PL1' mfg_start_date ='20210331' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725478AC7' mfg_plant_id ='PL1' mfg_start_date ='20210331' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -853,11 +853,11 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872547EAC7' mfg_plant_id ='PL2' mfg_start_date ='20210302' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725480AC7' mfg_plant_id ='PL2' mfg_start_date ='20210304' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725480AC7' mfg_plant_id ='PL2' mfg_start_date ='20210304' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725482AC7' mfg_plant_id ='PL2' mfg_start_date ='20210304' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725484AC7' mfg_plant_id ='PL2' mfg_start_date ='20210304' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725484AC7' mfg_plant_id ='PL2' mfg_start_date ='20210304' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725486AC7' mfg_plant_id ='PL2' mfg_start_date ='20210305' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -873,7 +873,7 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725492AC7' mfg_plant_id ='PL2' mfg_start_date ='20210310' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725494AC7' mfg_plant_id ='PL2' mfg_start_date ='20210310' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725494AC7' mfg_plant_id ='PL2' mfg_start_date ='20210310' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725496AC7' mfg_plant_id ='PL2' mfg_start_date ='20210311' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -887,63 +887,63 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254A0AC7' mfg_plant_id ='PL2' mfg_start_date ='20210313' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254A2AC7' mfg_plant_id ='PL2' mfg_start_date ='20210314' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254A2AC7' mfg_plant_id ='PL2' mfg_start_date ='20210314' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254A4AC7' mfg_plant_id ='PL2' mfg_start_date ='20210314' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254A6AC7' mfg_plant_id ='PL2' mfg_start_date ='20210314' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254A6AC7' mfg_plant_id ='PL2' mfg_start_date ='20210314' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254A8AC7' mfg_plant_id ='PL2' mfg_start_date ='20210315' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254A8AC7' mfg_plant_id ='PL2' mfg_start_date ='20210315' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254AAAC7' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254AAAC7' mfg_plant_id ='PL2' mfg_start_date ='20210417' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254ACAC7' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254ACAC7' mfg_plant_id ='PL2' mfg_start_date ='20210417' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254AEAC7' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254AEAC7' mfg_plant_id ='PL2' mfg_start_date ='20210417' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254B0AC7' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254B2AC7' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254B2AC7' mfg_plant_id ='PL2' mfg_start_date ='20210317' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254B4AC7' mfg_plant_id ='PL2' mfg_start_date ='20210318' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254B4AC7' mfg_plant_id ='PL2' mfg_start_date ='20210418' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254B6AC7' mfg_plant_id ='PL2' mfg_start_date ='20210319' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254B6AC7' mfg_plant_id ='PL2' mfg_start_date ='20210419' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254B8AC7' mfg_plant_id ='PL2' mfg_start_date ='20210319' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254B8AC7' mfg_plant_id ='PL2' mfg_start_date ='20210419' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254BAAC7' mfg_plant_id ='PL2' mfg_start_date ='20210319' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254BAAC7' mfg_plant_id ='PL2' mfg_start_date ='20210419' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254BCAC7' mfg_plant_id ='PL2' mfg_start_date ='20210320' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254BCAC7' mfg_plant_id ='PL2' mfg_start_date ='20210420' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254BEAC7' mfg_plant_id ='PL2' mfg_start_date ='20210320' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254BEAC7' mfg_plant_id ='PL2' mfg_start_date ='20210420' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254C0AC7' mfg_plant_id ='PL2' mfg_start_date ='20210320' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254C0AC7' mfg_plant_id ='PL2' mfg_start_date ='20210320' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254C2AC7' mfg_plant_id ='PL2' mfg_start_date ='20210321' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254C2AC7' mfg_plant_id ='PL2' mfg_start_date ='20210321' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254C4AC7' mfg_plant_id ='PL2' mfg_start_date ='20210322' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254C4AC7' mfg_plant_id ='PL2' mfg_start_date ='20210322' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254C6AC7' mfg_plant_id ='PL2' mfg_start_date ='20210322' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254C8AC7' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254C8AC7' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254CAAC7' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254CAAC7' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254CCAC7' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254CCAC7' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254CEAC7' mfg_plant_id ='PL2' mfg_start_date ='20210323' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D0AC7' mfg_plant_id ='PL2' mfg_start_date ='20210324' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D0AC7' mfg_plant_id ='PL2' mfg_start_date ='20210324' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D2AC7' mfg_plant_id ='PL2' mfg_start_date ='20210324' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D2AC7' mfg_plant_id ='PL2' mfg_start_date ='20210324' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D4AC7' mfg_plant_id ='PL2' mfg_start_date ='20210325' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D4AC7' mfg_plant_id ='PL2' mfg_start_date ='20210325' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D6AC7' mfg_plant_id ='PL2' mfg_start_date ='20210325' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D6AC7' mfg_plant_id ='PL2' mfg_start_date ='20210325' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D8AC7' mfg_plant_id ='PL2' mfg_start_date ='20210326' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254D8AC7' mfg_plant_id ='PL2' mfg_start_date ='20210326' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254DAAC7' mfg_plant_id ='PL2' mfg_start_date ='20210327' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254DAAC7' mfg_plant_id ='PL2' mfg_start_date ='20210327' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254DCAC7' mfg_plant_id ='PL2' mfg_start_date ='20210328' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -955,73 +955,73 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254E4AC7' mfg_plant_id ='PL2' mfg_start_date ='20210331' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254E6AC7' mfg_plant_id ='PL3' mfg_start_date ='20210301' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254E6AC7' mfg_plant_id ='PL3' mfg_start_date ='20210401' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254E8AC7' mfg_plant_id ='PL3' mfg_start_date ='20210301' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254E8AC7' mfg_plant_id ='PL3' mfg_start_date ='20210401' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254EAAC7' mfg_plant_id ='PL3' mfg_start_date ='20210302' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='IT' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254EAAC7' mfg_plant_id ='PL3' mfg_start_date ='20210402' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='IT' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254ECAC7' mfg_plant_id ='PL3' mfg_start_date ='20210302' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254ECAC7' mfg_plant_id ='PL3' mfg_start_date ='20210402' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254EEAC7' mfg_plant_id ='PL3' mfg_start_date ='20210302' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254EEAC7' mfg_plant_id ='PL3' mfg_start_date ='20210402' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F0AC7' mfg_plant_id ='PL3' mfg_start_date ='20210303' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F0AC7' mfg_plant_id ='PL3' mfg_start_date ='20210403' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F2AC7' mfg_plant_id ='PL3' mfg_start_date ='20210303' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F2AC7' mfg_plant_id ='PL3' mfg_start_date ='20210403' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F4AC7' mfg_plant_id ='PL3' mfg_start_date ='20210303' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='IT' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F4AC7' mfg_plant_id ='PL3' mfg_start_date ='20210403' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='IT' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F6AC7' mfg_plant_id ='PL3' mfg_start_date ='20210304' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F6AC7' mfg_plant_id ='PL3' mfg_start_date ='20210404' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F8AC7' mfg_plant_id ='PL3' mfg_start_date ='20210304' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254F8AC7' mfg_plant_id ='PL3' mfg_start_date ='20210404' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254FAAC7' mfg_plant_id ='PL3' mfg_start_date ='20210304' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254FAAC7' mfg_plant_id ='PL3' mfg_start_date ='20210404' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254FCAC7' mfg_plant_id ='PL3' mfg_start_date ='20210304' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254FCAC7' mfg_plant_id ='PL3' mfg_start_date ='20210404' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254FEAC7' mfg_plant_id ='PL3' mfg_start_date ='20210305' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687254FEAC7' mfg_plant_id ='PL3' mfg_start_date ='20210405' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725500AC7' mfg_plant_id ='PL3' mfg_start_date ='20210306' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725500AC7' mfg_plant_id ='PL3' mfg_start_date ='20210406' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725502AC7' mfg_plant_id ='PL3' mfg_start_date ='20210307' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725502AC7' mfg_plant_id ='PL3' mfg_start_date ='20210407' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725504AC7' mfg_plant_id ='PL3' mfg_start_date ='20210307' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725504AC7' mfg_plant_id ='PL3' mfg_start_date ='20210407' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725506AC7' mfg_plant_id ='PL3' mfg_start_date ='20210308' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725506AC7' mfg_plant_id ='PL3' mfg_start_date ='20210408' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725508AC7' mfg_plant_id ='PL3' mfg_start_date ='20210308' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725508AC7' mfg_plant_id ='PL3' mfg_start_date ='20210408' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='DE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872550AAC7' mfg_plant_id ='PL3' mfg_start_date ='20210309' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872550AAC7' mfg_plant_id ='PL3' mfg_start_date ='20210409' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872550CAC7' mfg_plant_id ='PL3' mfg_start_date ='20210309' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872550CAC7' mfg_plant_id ='PL3' mfg_start_date ='20210409' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872550EAC7' mfg_plant_id ='PL3' mfg_start_date ='20210310' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872550EAC7' mfg_plant_id ='PL3' mfg_start_date ='20210410' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725510AC7' mfg_plant_id ='PL3' mfg_start_date ='20210314' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725510AC7' mfg_plant_id ='PL3' mfg_start_date ='20210414' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725512AC7' mfg_plant_id ='PL3' mfg_start_date ='20210314' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725512AC7' mfg_plant_id ='PL3' mfg_start_date ='20210414' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725514AC7' mfg_plant_id ='PL3' mfg_start_date ='20210315' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725514AC7' mfg_plant_id ='PL3' mfg_start_date ='20210415' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725516AC7' mfg_plant_id ='PL3' mfg_start_date ='20210315' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725516AC7' mfg_plant_id ='PL3' mfg_start_date ='20210415' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725518AC7' mfg_plant_id ='PL3' mfg_start_date ='20210316' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725518AC7' mfg_plant_id ='PL3' mfg_start_date ='20210416' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872551AAC7' mfg_plant_id ='PL3' mfg_start_date ='20210316' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872551AAC7' mfg_plant_id ='PL3' mfg_start_date ='20210416' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872551CAC7' mfg_plant_id ='PL3' mfg_start_date ='20210317' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872551CAC7' mfg_plant_id ='PL3' mfg_start_date ='20210317' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872551EAC7' mfg_plant_id ='PL3' mfg_start_date ='20210317' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872551EAC7' mfg_plant_id ='PL3' mfg_start_date ='20210317' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725520AC7' mfg_plant_id ='PL3' mfg_start_date ='20210318' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725520AC7' mfg_plant_id ='PL3' mfg_start_date ='20210318' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725522AC7' mfg_plant_id ='PL3' mfg_start_date ='20210318' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725524AC7' mfg_plant_id ='PL3' mfg_start_date ='20210319' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725524AC7' mfg_plant_id ='PL3' mfg_start_date ='20210319' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725526AC7' mfg_plant_id ='PL3' mfg_start_date ='20210319' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725526AC7' mfg_plant_id ='PL3' mfg_start_date ='20210319' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725528AC7' mfg_plant_id ='PL3' mfg_start_date ='20210319' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725528AC7' mfg_plant_id ='PL3' mfg_start_date ='20210319' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872552AAC7' mfg_plant_id ='PL3' mfg_start_date ='20210319' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -1031,7 +1031,7 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725530AC7' mfg_plant_id ='PL3' mfg_start_date ='20210321' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725532AC7' mfg_plant_id ='PL3' mfg_start_date ='20210323' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725532AC7' mfg_plant_id ='PL3' mfg_start_date ='20210323' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725534AC7' mfg_plant_id ='PL3' mfg_start_date ='20210324' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -1045,17 +1045,17 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872553EAC7' mfg_plant_id ='PL3' mfg_start_date ='20210326' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725540AC7' mfg_plant_id ='PL3' mfg_start_date ='20210327' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725540AC7' mfg_plant_id ='PL3' mfg_start_date ='20210327' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725542AC7' mfg_plant_id ='PL3' mfg_start_date ='20210327' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725542AC7' mfg_plant_id ='PL3' mfg_start_date ='20210327' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725544AC7' mfg_plant_id ='PL3' mfg_start_date ='20210327' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725544AC7' mfg_plant_id ='PL3' mfg_start_date ='20210327' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725546AC7' mfg_plant_id ='PL3' mfg_start_date ='20210328' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725546AC7' mfg_plant_id ='PL3' mfg_start_date ='20210328' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725548AC7' mfg_plant_id ='PL3' mfg_start_date ='20210329' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725548AC7' mfg_plant_id ='PL3' mfg_start_date ='20210329' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872554AAC7' mfg_plant_id ='PL3' mfg_start_date ='20210329' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872554AAC7' mfg_plant_id ='PL3' mfg_start_date ='20210329' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872554CAC7' mfg_plant_id ='PL4' mfg_start_date ='20210301' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -1071,7 +1071,7 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725558AC7' mfg_plant_id ='PL4' mfg_start_date ='20210303' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='NO' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872555AAC7' mfg_plant_id ='PL4' mfg_start_date ='20210303' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872555AAC7' mfg_plant_id ='PL4' mfg_start_date ='20210303' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872555CAC7' mfg_plant_id ='PL4' mfg_start_date ='20210303' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -1079,7 +1079,7 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725560AC7' mfg_plant_id ='PL4' mfg_start_date ='20210305' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725562AC7' mfg_plant_id ='PL4' mfg_start_date ='20210305' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725562AC7' mfg_plant_id ='PL4' mfg_start_date ='20210305' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725564AC7' mfg_plant_id ='PL4' mfg_start_date ='20210306' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -1093,7 +1093,7 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872556EAC7' mfg_plant_id ='PL4' mfg_start_date ='20210307' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725570AC7' mfg_plant_id ='PL4' mfg_start_date ='20210307' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725570AC7' mfg_plant_id ='PL4' mfg_start_date ='20210307' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725572AC7' mfg_plant_id ='PL4' mfg_start_date ='20210307' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -1101,11 +1101,11 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725576AC7' mfg_plant_id ='PL4' mfg_start_date ='20210307' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725578AC7' mfg_plant_id ='PL4' mfg_start_date ='20210307' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725578AC7' mfg_plant_id ='PL4' mfg_start_date ='20210307' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872557AAC7' mfg_plant_id ='PL4' mfg_start_date ='20210307' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872557CAC7' mfg_plant_id ='PL4' mfg_start_date ='20210308' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872557CAC7' mfg_plant_id ='PL4' mfg_start_date ='20210308' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872557EAC7' mfg_plant_id ='PL4' mfg_start_date ='20210308' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -1117,51 +1117,51 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725586AC7' mfg_plant_id ='PL4' mfg_start_date ='20210309' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725588AC7' mfg_plant_id ='PL4' mfg_start_date ='20210309' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725588AC7' mfg_plant_id ='PL4' mfg_start_date ='20210309' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872558AAC7' mfg_plant_id ='PL4' mfg_start_date ='20210309' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872558CAC7' mfg_plant_id ='PL4' mfg_start_date ='20210310' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872558EAC7' mfg_plant_id ='PL4' mfg_start_date ='20210310' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872558EAC7' mfg_plant_id ='PL4' mfg_start_date ='20210310' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725590AC7' mfg_plant_id ='PL4' mfg_start_date ='20210310' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725590AC7' mfg_plant_id ='PL4' mfg_start_date ='20210410' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725592AC7' mfg_plant_id ='PL4' mfg_start_date ='20210311' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725592AC7' mfg_plant_id ='PL4' mfg_start_date ='20210411' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725594AC7' mfg_plant_id ='PL4' mfg_start_date ='20210311' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725594AC7' mfg_plant_id ='PL4' mfg_start_date ='20210411' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725596AC7' mfg_plant_id ='PL4' mfg_start_date ='20210311' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725596AC7' mfg_plant_id ='PL4' mfg_start_date ='20210411' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725598AC7' mfg_plant_id ='PL4' mfg_start_date ='20210312' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E81668725598AC7' mfg_plant_id ='PL4' mfg_start_date ='20210412' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872559AAC7' mfg_plant_id ='PL4' mfg_start_date ='20210312' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872559AAC7' mfg_plant_id ='PL4' mfg_start_date ='20210412' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872559CAC7' mfg_plant_id ='PL4' mfg_start_date ='20210313' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='NO' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872559CAC7' mfg_plant_id ='PL4' mfg_start_date ='20210413' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='NO' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872559EAC7' mfg_plant_id ='PL4' mfg_start_date ='20210313' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E8166872559EAC7' mfg_plant_id ='PL4' mfg_start_date ='20210413' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A0AC7' mfg_plant_id ='PL4' mfg_start_date ='20210313' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A0AC7' mfg_plant_id ='PL4' mfg_start_date ='20210413' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A2AC7' mfg_plant_id ='PL4' mfg_start_date ='20210313' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A2AC7' mfg_plant_id ='PL4' mfg_start_date ='20210413' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A4AC7' mfg_plant_id ='PL4' mfg_start_date ='20210313' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A4AC7' mfg_plant_id ='PL4' mfg_start_date ='20210413' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A6AC7' mfg_plant_id ='PL4' mfg_start_date ='20210313' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A6AC7' mfg_plant_id ='PL4' mfg_start_date ='20210413' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A8AC7' mfg_plant_id ='PL4' mfg_start_date ='20210313' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255A8AC7' mfg_plant_id ='PL4' mfg_start_date ='20210413' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255AAAC7' mfg_plant_id ='PL4' mfg_start_date ='20210314' cons_slots ='Consumed' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255AAAC7' mfg_plant_id ='PL4' mfg_start_date ='20210414' cons_slots ='Available' priority ='H' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255ACAC7' mfg_plant_id ='PL4' mfg_start_date ='20210314' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255ACAC7' mfg_plant_id ='PL4' mfg_start_date ='20210414' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255AEAC7' mfg_plant_id ='PL4' mfg_start_date ='20210314' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255AEAC7' mfg_plant_id ='PL4' mfg_start_date ='20210414' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255B0AC7' mfg_plant_id ='PL4' mfg_start_date ='20210315' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255B0AC7' mfg_plant_id ='PL4' mfg_start_date ='20210415' cons_slots ='Available' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255B2AC7' mfg_plant_id ='PL4' mfg_start_date ='20210315' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255B2AC7' mfg_plant_id ='PL4' mfg_start_date ='20210415' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255B4AC7' mfg_plant_id ='PL4' mfg_start_date ='20210315' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255B4AC7' mfg_plant_id ='PL4' mfg_start_date ='20210315' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255B6AC7' mfg_plant_id ='PL4' mfg_start_date ='20210315' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='US' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
@@ -1179,15 +1179,15 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255C4AC7' mfg_plant_id ='PL4' mfg_start_date ='20210318' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='BE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255C6AC7' mfg_plant_id ='PL4' mfg_start_date ='20210318' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255C6AC7' mfg_plant_id ='PL4' mfg_start_date ='20210318' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255C8AC7' mfg_plant_id ='PL4' mfg_start_date ='20210318' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='BE' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255CAAC7' mfg_plant_id ='PL4' mfg_start_date ='20210318' cons_slots ='Consumed' priority ='N' prot_subject_id ='' ttype_id ='Commercial' country_id ='FR' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255CCAC7' mfg_plant_id ='PL4' mfg_start_date ='20210318' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255CCAC7' mfg_plant_id ='PL4' mfg_start_date ='20210318' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
- ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255CEAC7' mfg_plant_id ='PL4' mfg_start_date ='20210323' cons_slots ='Available' priority ='Clin' prot_subject_id ='' ttype_id ='Clinic' country_id ='' nvs_id ='' country_alloc ='' created_by =
+ ( client ='100' capacity_uuid ='02E81366251E1EDB9E816687255CEAC7' mfg_plant_id ='PL4' mfg_start_date ='20210323' cons_slots ='Consumed' priority ='Clin' prot_subject_id ='' ttype_id ='Clinical' country_id ='' nvs_id ='' country_alloc ='' created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ).
 
@@ -1201,94 +1201,128 @@ created_by =
 
     lt_order =
     VALUE #(
-     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDDC' nvs_id ='NT57853' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDDC' nvs_id ='NT57853' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210315' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
        oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '  )
-     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAA' nvs_id ='NT57854' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST4' stsl2_id ='ST6' ord_site_id ='OS22'
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAA' nvs_id ='NT57854' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210315' stsl1_id ='ST4' stsl2_id ='ST6' ord_site_id ='OS22'
        oos_id ='OOS2' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '  )
-     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAB' nvs_id ='NT57855' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS17'
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAB' nvs_id ='NT57855' therapy ='CYTB323A12106' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210315' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS17'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '  )
-     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAC' nvs_id ='NT57856' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210302' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS10'
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAC' nvs_id ='NT57856' therapy ='CCTL019G2201J' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210315' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS10'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222132523.6762670 '  )
-     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAD' nvs_id ='NT57857' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210305' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS6'
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAD' nvs_id ='NT57857' therapy ='CCTL019G2201J' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210316' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS6'
        oos_id ='OOS3' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222132637.9875340 '  )
-     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAE' nvs_id ='NT57858' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210307' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='S13'
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAE' nvs_id ='NT57858' therapy ='CCTL019G2201J' country_id ='US' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210316' stsl1_id ='ST4' stsl2_id ='ST8' ord_site_id ='S13'
        oos_id ='OOS7' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222132932.6862670 '  )
-     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAF' nvs_id ='NT57859' therapy ='KYMRIAH - DLBCL US' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20210307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS17'
+     ( client ='100' order_uuid ='02E7896636F21EEB9DA1D237FB80DDAF' nvs_id ='NT57859' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinical' day0 ='20210316' stsl1_id ='ST3' stsl2_id ='ST9' ord_site_id ='OS17'
        oos_id ='OOS4' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222133019.4930520 '  )
-     ( client ='100' order_uuid ='02605AA74F061EDB9DA55861D2EC40A8' nvs_id ='NT57864' therapy ='CYTB323A12105' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200505' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS10'
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA55861D2EC40A8' nvs_id ='NT57864' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinical' day0 ='20200505' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS10'
        oos_id ='OOS5' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222162650.4264010 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061045.1308330 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA5483368A5040E' nvs_id ='NT57860' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200513' stsl1_id ='ST3' stsl2_id ='ST11' ord_site_id ='S13'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA5483368A5040E' nvs_id ='NT57860' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20200513' stsl1_id ='ST3' stsl2_id ='ST11' ord_site_id ='S13'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162312.0491520 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061118.8777470 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA54CBCFCE0C413' nvs_id ='NT57861' therapy ='CYTB323A12102' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200505' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS17'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA54CBCFCE0C413' nvs_id ='NT57861' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinical' day0 ='20200505' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS17'
        oos_id ='OOS7' oos ='X' oos_descr_id ='2' aph_dewar = 'X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222162412.4398340 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061126.2087560 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA55083D71F0419' nvs_id ='NT57862' therapy ='CYTB323A12103' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200513' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS6'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA55083D71F0419' nvs_id ='NT57862' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20200513' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS6'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162503.1346070 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061132.7135560 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA554E92755E41E' nvs_id ='NT57863' therapy ='CYTB323A12104' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinic' day0 ='20200507' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='S13'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA554E92755E41E' nvs_id ='NT57863' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL5' ttype_id ='Clinical' day0 ='20200507' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='S13'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222162602.0834220 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061138.5204720 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA55BB58CE6042E' nvs_id ='NT57865' therapy ='CYTB323A12106' country_id ='FR' mfg_plant_id ='PL2' ttype_id ='Clinic' day0 ='20200513' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS12'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA55BB58CE6042E' nvs_id ='NT57865' therapy ='CYTB323A12106' country_id ='FR' mfg_plant_id ='PL2' ttype_id ='Clinical' day0 ='20200513' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS12'
        oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162733.4585450 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061143.9841030 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA55F1F1413C433' nvs_id ='NT57866' therapy ='CYTB323A12107' country_id ='DE' mfg_plant_id ='PL2' ttype_id ='Clinic' day0 ='20200509' stsl1_id ='ST1' stsl2_id ='' ord_site_id ='OS24'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA55F1F1413C433' nvs_id ='NT57866' therapy ='CYTB323A12107' country_id ='DE' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200509' stsl1_id ='ST1' stsl2_id ='ST4' ord_site_id ='OS24'
        oos_id ='OOS3' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162819.1758290 ' last_changed_by ='CB0000000723' last_changed_at ='20210222162819.1758290 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA56252C8FFC437' nvs_id ='NT57867' therapy ='CYTB323A12108' country_id ='IT' mfg_plant_id ='PL2' ttype_id ='Clinic' day0 ='20200507' stsl1_id ='ST1' stsl2_id ='' ord_site_id ='OS11'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA56252C8FFC437' nvs_id ='NT57867' therapy ='CYTB323A12108' country_id ='IT' mfg_plant_id ='PL2' ttype_id ='Clinical' day0 ='20200507' stsl1_id ='ST1' stsl2_id ='ST7' ord_site_id ='OS11'
        oos_id ='OOS6' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162902.1542680 ' last_changed_by ='CB0000000723' last_changed_at ='20210223061152.3715920 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA56674D405C43D' nvs_id ='NT57868' therapy ='CCTL019G2201J' country_id ='DE' mfg_plant_id ='PL1' ttype_id ='Clinic' day0 ='20200512' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS4'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA56674D405C43D' nvs_id ='NT57868' therapy ='KYMRIAH - Pediatric ALL US' country_id ='DE' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200512' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS4'
        oos_id ='OOS3' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222162957.6241430 ' last_changed_by ='CB0000000723' last_changed_at ='20210222162957.6241430 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA569AB5112C442' nvs_id ='NT57869' therapy ='CCTL019G2201J' country_id ='FR' mfg_plant_id ='PL3' ttype_id ='Clinic' day0 ='20200505' stsl1_id ='ST3' stsl2_id ='ST10' ord_site_id ='OS20'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA569AB5112C442' nvs_id ='NT57869' therapy ='CCTL019G2201J' country_id ='FR' mfg_plant_id ='PL3' ttype_id ='Clinical' day0 ='20200505' stsl1_id ='ST3' stsl2_id ='ST10' ord_site_id ='OS20'
        oos_id ='OOS4' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222163040.7463750 ' last_changed_by ='CB0000000723' last_changed_at ='20210222163040.7463750 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA56D366D064446' nvs_id ='NT57870' therapy ='CCTL019G2201J' country_id ='AU' mfg_plant_id ='PL1' ttype_id ='Clinic' day0 ='20200503' stsl1_id ='ST4' stsl2_id ='ST6' ord_site_id ='OS25'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA56D366D064446' nvs_id ='NT57870' therapy ='CCTL019G2201J' country_id ='AU' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200503' stsl1_id ='ST4' stsl2_id ='ST6' ord_site_id ='OS25'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222163128.3080710 ' last_changed_by ='CB0000000723' last_changed_at ='20210222163128.3080710 '  )
      ( client ='100' order_uuid ='02605AA74F061EDB9DA5ABE17B93412D' nvs_id ='NT57871' therapy ='KYMRIAH - Pediatric ALL US' country_id ='AT' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200506' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS25'
        oos_id ='OOS3' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164529.9611200 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164529.9611200 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA5AFB5DDF504D1' nvs_id ='NT57872' therapy ='KYMRIAH - Pediatric ALL US' country_id ='ES' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200506' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS15'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA5AFB5DDF504D1' nvs_id ='NT57872' therapy ='KYMRIAH - Pediatric ALL US' country_id ='ES' mfg_plant_id ='PL1' ttype_id ='Clinical' day0 ='20200506' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS15'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164620.8244810 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164620.8244810 '  )
-     ( client ='100' order_uuid ='02605AA74F061EDB9DA5B2DB27880133' nvs_id ='NT57873' therapy ='KYMRIAH - Pediatric ALL US' country_id ='ES' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200505' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS15'
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5B2DB27880133' nvs_id ='NT57873' therapy ='KYMRIAH - Pediatric ALL US' country_id ='ES' mfg_plant_id ='PL1' ttype_id ='Clinical' day0 ='20200505' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS15'
        oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164703.0496320 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164703.0496320 '  )
      ( client ='100' order_uuid ='02605AA74F061EDB9DA5B61D7615C146' nvs_id ='NT57874' therapy ='KYMRIAH - Pediatric ALL US' country_id ='CZ' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200501' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='OS3'
        oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164746.7868270 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164746.7868270 '  )
-     ( client ='100' order_uuid ='02605AA74F061EDB9DA5B8DDA427414A' nvs_id ='NT57875' therapy ='KYMRIAH - Pediatric ALL US' country_id ='CZ' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200512' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS3'
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5B8DDA427414A' nvs_id ='NT57875' therapy ='KYMRIAH - Pediatric ALL US' country_id ='CZ' mfg_plant_id ='PL1' ttype_id ='Clinical' day0 ='20200512' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS3'
        oos_id ='OOS4' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222164823.7057140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164823.7057140 '  )
      ( client ='100' order_uuid ='02E7896636F21EDB9DA5BBB25F6B04E3' nvs_id ='NT57876' therapy ='KYMRIAH - Pediatric ALL US' country_id ='HU' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200512' stsl1_id ='ST3' stsl2_id ='ST11' ord_site_id ='OS9'
        oos_id ='OOS3' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222164901.7047570 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164901.7047570 '  )
-     ( client ='100' order_uuid ='02605AA74F061EDB9DA5BE7DA94B814E' nvs_id ='NT57877' therapy ='KYMRIAH - Pediatric ALL US' country_id ='RO' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200305' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS1'
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5BE7DA94B814E' nvs_id ='NT57877' therapy ='CCTL019G2201J' country_id ='RO' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200505' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS1'
        oos_id ='OOS3' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222164939.2093330 ' last_changed_by ='CB0000000723' last_changed_at ='20210222164939.2093330 '  )
      ( client ='100' order_uuid ='02605AA74F061EDB9DA5C14F40E34152' nvs_id ='NT57878' therapy ='KYMRIAH - Pediatric ALL US' country_id ='RO' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200509' stsl1_id ='ST3' stsl2_id ='ST3' ord_site_id ='OS1'
        oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222165017.0352140 ' last_changed_by ='CB0000000723' last_changed_at ='20210222165017.0352140 '  )
-     ( client ='100' order_uuid ='02605AA74F061EDB9DA5C465803A8155' nvs_id ='NT57879' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200513' stsl1_id ='ST3' stsl2_id ='ST3' ord_site_id ='OS21'
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA5C465803A8155' nvs_id ='NT57879' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20200613' stsl1_id ='ST3' stsl2_id ='ST3' ord_site_id ='OS21'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222165059.2628540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222165059.2628540 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA5C76F1DA304F5' nvs_id ='NT57880' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200505' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='OS21'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA5C76F1DA304F5' nvs_id ='NT57880' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL1' ttype_id ='Clinical' day0 ='20200605' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='OS21'
        oos_id ='OOS6' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222165139.2421510 ' last_changed_by ='CB0000000723' last_changed_at ='20210222165139.2421510 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA6045048D34568' nvs_id ='NT57881' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200507' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS21'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA6045048D34568' nvs_id ='NT57881' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20200607' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS21'
        oos_id ='OOS4' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170516.3565410 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170516.3565410 '  )
-     ( client ='100' order_uuid ='02605AA74F061EDB9DA60793B8F801C5' nvs_id ='NT57882' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='IT' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200507' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS7'
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA60793B8F801C5' nvs_id ='NT57882' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='IT' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200607' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS7'
        oos_id ='OOS4' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170600.1702630 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170600.1702630 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA60A7E52FE456F' nvs_id ='NT57883' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='IT' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS18'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA60A7E52FE456F' nvs_id ='NT57883' therapy ='CCTL019G2201J' country_id ='IT' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200607' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS18'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170639.2949900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170639.2949900 '  )
-     ( client ='100' order_uuid ='02605AA74F061EDB9DA60E9B241B81D7' nvs_id ='NT57884' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='GR' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200504' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS5'
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA60E9B241B81D7' nvs_id ='NT57884' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='GR' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200604' stsl1_id ='ST4' stsl2_id ='ST7' ord_site_id ='OS5'
        oos_id ='OOS5' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170735.6021510 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170735.6021510 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA611085DC1057E' nvs_id ='NT57885' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='GR' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200507' stsl1_id ='ST1' stsl2_id ='' ord_site_id ='OS5'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA611085DC1057E' nvs_id ='NT57885' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='GR' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200607' stsl1_id ='ST1' stsl2_id ='ST4' ord_site_id ='OS5'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222170807.0629640 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170807.0629640 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA6140318554582' nvs_id ='NT57886' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200507' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS1'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA6140318554582' nvs_id ='NT57886' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20200707' stsl1_id ='ST3' stsl2_id ='ST4' ord_site_id ='OS1'
        oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222170847.0525320 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170847.0525320 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA61750C77E8583' nvs_id ='NT57887' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200506' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS1'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA61750C77E8583' nvs_id ='NT57887' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20200706' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS1'
        oos_id ='OOS4' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222170931.3884000 ' last_changed_by ='CB0000000723' last_changed_at ='20210222170931.3884000 '  )
-     ( client ='100' order_uuid ='02605AA74F061EDB9DA61A4C641F81E3' nvs_id ='NT57888' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='UK' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200506' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS14'
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA61A4C641F81E3' nvs_id ='NT57888' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='UK' mfg_plant_id ='PL1' ttype_id ='Clinical' day0 ='20200706' stsl1_id ='ST2' stsl2_id ='ST9' ord_site_id ='OS14'
        oos_id ='OOS6' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222171011.4305710 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171011.4305710 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA61E6C7B4B058E' nvs_id ='NT57889' therapy ='KYMRIAH - DLBCL EU' country_id ='DE' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS19'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA61E6C7B4B058E' nvs_id ='NT57889' therapy ='KYMRIAH - DLBCL EU' country_id ='DE' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200707' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS19'
        oos_id ='OOS4' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222171106.7934310 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171106.7934310 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA62107BE358593' nvs_id ='NT57890' therapy ='KYMRIAH - DLBCL EU' country_id ='DE' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200507' stsl1_id ='ST3' stsl2_id ='ST2' ord_site_id ='OS4'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA62107BE358593' nvs_id ='NT57890' therapy ='KYMRIAH - DLBCL EU' country_id ='DE' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200807' stsl1_id ='ST3' stsl2_id ='ST2' ord_site_id ='OS4'
        oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171141.7781010 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171141.7781010 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA623483121C5A0' nvs_id ='NT57891' therapy ='KYMRIAH - DLBCL EU' country_id ='FR' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200509' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS20'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA623483121C5A0' nvs_id ='NT57891' therapy ='KYMRIAH - DLBCL EU' country_id ='FR' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20210125' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS20'
        oos_id ='OOS7' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171212.0004840 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171212.0004840 '  )
-     ( client ='100' order_uuid ='02605AA74F061EDB9DA626BEC21481F9' nvs_id ='NT57892' therapy ='KYMRIAH - DLBCL EU' country_id ='FR' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20200307' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS16'
+     ( client ='100' order_uuid ='02605AA74F061EDB9DA626BEC21481F9' nvs_id ='NT57892' therapy ='KYMRIAH - DLBCL EU' country_id ='FR' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20210123' stsl1_id ='ST2' stsl2_id ='ST8' ord_site_id ='OS16'
        oos_id ='OOS4' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222171258.6508880 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171258.6508880 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA62A744502C5A9' nvs_id ='NT57893' therapy ='KYMRIAH - DLBCL EU' country_id ='NO' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20200311' stsl1_id ='ST3' stsl2_id ='ST2' ord_site_id ='OS2'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA62A744502C5A9' nvs_id ='NT57893' therapy ='KYMRIAH - DLBCL EU' country_id ='NO' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20210122' stsl1_id ='ST3' stsl2_id ='ST2' ord_site_id ='OS2'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171348.3249220 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171348.3249220 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA62D5C6303C5AC' nvs_id ='NT57894' therapy ='KYMRIAH - DLBCL EU' country_id ='NO' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20200511' stsl1_id ='ST3' stsl2_id ='ST10' ord_site_id ='OS2'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA62D5C6303C5AC' nvs_id ='NT57894' therapy ='KYMRIAH - DLBCL EU' country_id ='NO' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20210211' stsl1_id ='ST3' stsl2_id ='ST10' ord_site_id ='OS2'
        oos_id ='' oos ='X' oos_descr_id ='1' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171427.2762910 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171427.2762910 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA62FE3E82945B0' nvs_id ='NT57895' therapy ='KYMRIAH - DLBCL EU' country_id ='BE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200514' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS8'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA62FE3E82945B0' nvs_id ='NT57895' therapy ='KYMRIAH - DLBCL EU' country_id ='BE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210214' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS8'
        oos_id ='OOS2' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171501.2250100 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171501.2250100 '  )
-     ( client ='100' order_uuid ='02E7896636F21EDB9DA63202ED9D05B3' nvs_id ='NT57896' therapy ='KYMRIAH - DLBCL EU' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20200510' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+     ( client ='100' order_uuid ='02E7896636F21EDB9DA63202ED9D05B3' nvs_id ='NT57896' therapy ='KYMRIAH - DLBCL EU' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210210' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
        oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+
+     ( client ='100' order_uuid ='02E7896636F21EDB9DY63203ED9D05B3' nvs_id ='NT57897' therapy ='CCTL019G2201J' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='03E7896636F21EDB9DY63203ED9D05B4' nvs_id ='NT57898' therapy ='KYMRIAH - DLBCL EU' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='04E7896636F26EDB9DY63203ED9D05B5' nvs_id ='NT57899' therapy ='CYTB323A12106' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='05E7896636F21EDB9DY63203ED9D05B6' nvs_id ='NT57900' therapy ='CYTB323A12101' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='06E7896636F23EDB9DY63203ED9D05B7' nvs_id ='NT57901' therapy ='CYTB323A12108' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='12E7896636F51EDB9DY63203ED9D05B8' nvs_id ='NT57902' therapy ='CCTL019G2201J' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='22E3896636F51EDB0DY63205ED9D05B8' nvs_id ='NT57903' therapy ='KYMRIAH - DLBCL EU' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='32E3896636F51EDB0DY63205ED9F05B8' nvs_id ='NT57904' therapy ='CYTB323A12107' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='42E3896636F43EDB0DY65205ED9F05B9' nvs_id ='NT57905' therapy ='CCTL019G2201J' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='5213896636F43EDB1DY652041D9C05B9' nvs_id ='NT57907' therapy ='CYTB323A12101' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+
+
+     ( client ='100' order_uuid ='5213896736F43EDC8DY652041D9C05B9' nvs_id ='NT57908' therapy ='KYMRIAH - Pediatric ALL US' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='5213896730F43EDC8DY652041D9C05B0' nvs_id ='NT57909' therapy ='KYMRIAH - Pediatric ALL EU' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+     ( client ='100' order_uuid ='5213896730F23EDC8DY652041D9C15B0' nvs_id ='NT57910' therapy ='KYMRIAH - Pediatric ALL ISR' country_id ='SE' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210317' stsl1_id ='ST3' stsl2_id ='ST1' ord_site_id ='OS23'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )
+
+
+
+
+
 
      ( client ='100' order_uuid ='02E81366251E1EEB9F9A21B79635A2D1' nvs_id ='NTSKD12' therapy ='' country_id ='' mfg_plant_id ='' ttype_id ='' day0 ='' stsl1_id ='' stsl2_id ='' ord_site_id =''
        oos_id ='' oos ='' oos_descr_id ='' aph_dewar ='' fp_dewar ='' actual_day0 ='' created_by ='CB0000000723' created_at ='20210222171529.7050900 ' last_changed_by ='CB0000000723' last_changed_at ='20210222171529.7050900 '  )

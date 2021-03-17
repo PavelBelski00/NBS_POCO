@@ -5,7 +5,7 @@
 @EndUserText.label: 'Card: Max Quantity Order-Therapy-Plant'
 
 @UI.chart: [{
-              title: 'Data by Plants',
+              title: 'For the Last Year',
               chartType: #LINE,
               dimensions: ['MfgPlantId'],
               measures: ['MaxQuantity'],

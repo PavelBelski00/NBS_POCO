@@ -24,7 +24,7 @@ define root view entity zpoco_i_order
       mfg_plant_id                        as MfgPlantId,
       ttype_id                            as TherapyTypeId,
       @EndUserText.label : 'Order Created Day'
-      dats_add_days(day0, -10, 'INITIAL') as OrderCreatedDay,
+      dats_add_days(day0, -5, 'INITIAL')  as OrderCreatedDay,
       day0                                as Day0,
       stsl1_id                            as StatusL1Id,
       stsl2_id                            as StatusL2Id,

@@ -6,7 +6,7 @@
 
 @UI.chart: [
             {
-              title: 'Therapy quantity by L1 Status',
+              title: 'By L1 Status for the Last Year',
               qualifier: 'quantityByL1',
               chartType: #DONUT,
               dimensions: ['StatusL1Id'],
@@ -14,7 +14,7 @@
               dimensionAttributes: [{ dimension: 'StatusL1Id',  role: #CATEGORY }],
               measureAttributes:   [{ measure:   'SumTherapyQuantity', role: #AXIS_1, asDataPoint: true }]
             },
-            { title: 'Therapy quantity by L2 Status',
+            { title: 'By L2 Status for the Last Year',
               qualifier: 'quantityByL2',
               chartType: #DONUT,
               dimensions: ['StatusL2Id'],

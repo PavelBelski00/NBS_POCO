@@ -16,6 +16,8 @@ define view zpoco_c_count_for_therl1l2
       _StatusL1,
       _StatusL2
 }
+where OrderCreatedDay >= dats_add_months(Today, - 12, 'INITIAL')
+  and OrderCreatedDay <= Today
 group by
   Therapy,
   StatusL1Id,

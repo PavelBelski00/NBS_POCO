@@ -6,7 +6,7 @@
 
 @UI.chart: [
             {
-              title:      'Available slots in 1st decade',
+              title:      'Of the current month',
               qualifier:  'Dec1',
               chartType:  #COLUMN_STACKED,
               dimensions: ['MfgPlantId'],
@@ -17,7 +17,7 @@
                                       role:        #AXIS_1,
                                       asDataPoint: true }]
             },
-            { title:     'Available slots in 2nd decade',
+            { title:     'Of the current month',
               qualifier: 'Dec2',
               chartType:  #COLUMN_STACKED,
               dimensions: ['MfgPlantId'],
@@ -28,7 +28,7 @@
                                       role: #AXIS_1,
                                       asDataPoint: true }]
             },
-            { title:      'Available slots in 3rd decade',
+            { title:      'Of the current month',
               qualifier:  'Dec3',
               chartType:  #COLUMN_STACKED,
               dimensions: ['MfgPlantId'],
@@ -63,7 +63,7 @@ define view zpoco_c_card_av_slots
       QuanAvailableSlots          as Decade1st,
 
       @UI.dataPoint.visualization: #NUMBER
-      @EndUserText.label: '2nt Decade'
+      @EndUserText.label: '2nd Decade'
       _2Decade.QuanAvailableSlots as Decade2nd,
 
       @UI.dataPoint.visualization: #NUMBER

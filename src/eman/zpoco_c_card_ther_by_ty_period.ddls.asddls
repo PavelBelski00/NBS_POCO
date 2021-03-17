@@ -50,10 +50,14 @@
 define view zpoco_c_card_ther_by_ty_period
   as select from zpoco_c_therclcom_quan1year
 
-  association [1..1] to zpoco_c_therclcom_quan3months as _Last3Months on $projection.Therapy = _Last3Months.Therapy
-  association [1..1] to zpoco_c_therclcom_quan1month  as _Last1Month  on $projection.Therapy = _Last1Month.Therapy
-  association [1..1] to zpoco_c_therclcom_quan10days  as _Last10Days  on $projection.Therapy = _Last10Days.Therapy
-
+  association [1..1] to zpoco_c_therclcom_quan3months as _Last3Months on $projection.Therapy       = _Last3Months.Therapy
+                                                                     and $projection.TherapyTypeId = _Last3Months.TherapyTypeId
+  
+  association [1..1] to zpoco_c_therclcom_quan1month  as _Last1Month  on $projection.Therapy       = _Last1Month.Therapy
+                                                                     and $projection.TherapyTypeId = _Last1Month.TherapyTypeId
+  
+  association [1..1] to zpoco_c_therclcom_quan10days  as _Last10Days  on $projection.Therapy       = _Last10Days.Therapy
+                                                                     and $projection.TherapyTypeId = _Last10Days.TherapyTypeId
 {
       @Consumption.semanticObject: 'NBS_POC_OVP_ORDER'
       @UI.identification: [{ semanticObjectAction: 'manage',
@@ -63,18 +67,22 @@ define view zpoco_c_card_ther_by_ty_period
 
       @UI.dataPoint.visualization: #NUMBER
       @EndUserText.label: 'For Last Year'
+      @Aggregation.default: #SUM
       QuanThTyLastYear                 as LastYear,
 
       @UI.dataPoint.visualization: #NUMBER
       @EndUserText.label: 'For Last 3 Months'
+      @Aggregation.default: #SUM
       _Last3Months.QuanThTyLast3Months as Last3Months,
 
       @UI.dataPoint.visualization: #NUMBER
       @EndUserText.label: 'For Last Month'
+      @Aggregation.default: #SUM
       _Last1Month.QuanThTyLast1Month   as LastMonth,
 
       @UI.dataPoint.visualization: #NUMBER
       @EndUserText.label: 'For Last 10 Days'
+      @Aggregation.default: #SUM
       _Last10Days.QuanThTyLast10Days   as Last10Days,
 
       /*associations*/
@@ -82,3 +90,11 @@ define view zpoco_c_card_ther_by_ty_period
       _Last1Month,
       _Last10Days
 }
+group by 
+Therapy,
+TherapyTypeId,
+QuanThTyLastYear,
+_Last3Months.QuanThTyLast3Months,
+_Last1Month.QuanThTyLast1Month,
+_Last10Days.QuanThTyLast10Days
+

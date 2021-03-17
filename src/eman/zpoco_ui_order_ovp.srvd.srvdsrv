@@ -37,8 +37,8 @@ define service zpoco_ui_order_ovp {
   expose zpoco_i_order_day0_l10days as OrderL1D0Last10Days;
   expose zpoco_i_order_day0_l15days as OrderL1D0Last15Days;
   expose zpoco_i_order_day0_l1month as OrderL1D0Last1Month;
-  expose zpoco_c_Stl1_10days as OrderL110Days;
-  expose zpoco_c_Stl1_30days as OrderL130Days;
+  expose zpoco_c_stl1_10days as OrderL110Days;
+  expose zpoco_c_stl1_30days as OrderL130Days;
   expose zpoco_c_card_stl2_by_days as CardStL2Days;
   expose zpoco_c_order_l2_3months_back as OrderL2Last3Months;
   expose zpoco_c_order_l2_1month_back as OrderL2Last1Month;
@@ -48,5 +48,4 @@ define service zpoco_ui_order_ovp {
   expose zpoco_c_order_l2_10days_D0back as OrderL2D0Last10Days;
   expose zpoco_c_card_sum_quan_therapy as CardTherapyDateSum;
   expose zpoco_c_card_ther_by_ty_period as CardThByTyPeriods;
-  expose zpoco_c_plant as CardPlant;
 }

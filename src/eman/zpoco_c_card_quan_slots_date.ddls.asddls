@@ -59,9 +59,9 @@ define view zpoco_c_card_quan_slots_date
                                                                 and $projection.ConsumedSlots = _Next1Month.ConsumedSlots
 
 {
-      @Consumption.semanticObject: 'NBS_POC_OVP_CAPACITY'
-      @UI.identification: [{ semanticObjectAction: 'manage',
-                             type: #FOR_INTENT_BASED_NAVIGATION }]
+//      @Consumption.semanticObject: 'NBS_POC_OVP_CAPACITY'
+//      @UI.identification: [{ semanticObjectAction: 'manage',
+//                             type: #FOR_INTENT_BASED_NAVIGATION }]
   key MfgStartDate,
   key ConsumedSlots,
 

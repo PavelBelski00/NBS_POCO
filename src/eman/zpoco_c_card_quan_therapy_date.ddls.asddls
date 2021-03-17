@@ -4,14 +4,13 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Card: Quantity Order-Therapy-Date'
 @UI.presentationVariant: [{ qualifier: 'Default',
-                            sortOrder: [{by: 'TherapyQuantity', direction: #DESC }] }]
+                            sortOrder: [{by: 'TherapyQuantity', direction: #DESC}]
+                         }]
 
 define view zpoco_c_card_quan_therapy_date
   as select from zpoco_i_order
 {
       @UI.lineItem: [{ position: 10, importance: #HIGH }]
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_c_therapy_vh',
-                                                     element: 'Therapy'} }]
   key Therapy,
 
       @UI.lineItem: [{ position: 20, importance: #HIGH }]
@@ -21,7 +20,7 @@ define view zpoco_c_card_quan_therapy_date
       @UI.lineItem: [{ position: 30, importance: #HIGH }]
       _Plant.PlantName as PlantName,
 
-      @UI.lineItem: [{ position: 35, importance: #HIGH, label: 'Last Update'  }]
+      @UI.lineItem: [{ position: 35, importance: #HIGH  }]
       Day0,
 
       @UI.lineItem: [{ type:   #AS_DATAPOINT,      importance: #HIGH,
@@ -38,6 +37,9 @@ define view zpoco_c_card_quan_therapy_date
 }
 where
   Therapy is not initial
+  and OrderCreatedDay >= dats_add_months(Today, - 12, 'INITIAL')
+  and OrderCreatedDay <= Today
+  
 group by
   Therapy,
   Day0,

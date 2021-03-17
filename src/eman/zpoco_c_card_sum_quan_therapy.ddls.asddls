@@ -5,8 +5,7 @@
 @EndUserText.label: 'Card: Sum Quantity Order-Therapy-Date'
 
 @UI.presentationVariant: [{ qualifier:      'Default',
-                            groupBy:        ['TherapyName'],
-                            sortOrder:      [{by: 'TherapyName', direction: #ASC }],
+                            sortOrder:      [{by: 'TherapyQuantityMax', direction: #DESC }],
                             visualizations: [{ element: 'TherapyQuantityMax' }] } ]
 
 define view zpoco_c_card_sum_quan_therapy
@@ -24,8 +23,8 @@ define view zpoco_c_card_sum_quan_therapy
       @UI.dataPoint: { minimumValue: 0,
                        maximumValue: 15,
                        criticalityCalculation: { improvementDirection:    #MAXIMIZE,
-                                                 toleranceRangeLowValue:  8,
-                                                 deviationRangeLowValue:  5 },
+                                                 toleranceRangeLowValue:  2,
+                                                 deviationRangeLowValue:  1 },
                        trendCalculation: { referenceValue:'TherapyQuantity' ,
                                            downDifference: 0,
                                            upDifference: 0 } }

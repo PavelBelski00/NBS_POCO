@@ -21,11 +21,12 @@ define view zpoco_c_card_alert_filter
       _Alert.AlertMessage as AlertMessage,
 
       @UI.lineItem: [{ position: 30 }]
-      @EndUserText.label: 'Last Update'
+      @EndUserText.label: 'Creation Date'
       UpdatedDate,
 
       /* Associations */
       _Alert
 }
 where
-  AlertUpdateDate is not initial
+  AlertUpdateDate is not initial and
+  UpdatedDate <= Today
