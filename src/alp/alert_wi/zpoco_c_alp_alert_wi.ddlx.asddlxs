@@ -1,0 +1,146 @@
+@Metadata.layer: #CORE
+
+@UI.selectionPresentationVariant: [
+                                   {   //kpi
+                                       qualifier: 'KPIOrdersQuantity',
+                                       presentationVariantQualifier: 'pvKPIOrdersQuantity',
+                                       selectionVariantQualifier: 'svKPIOrdersQuantity'
+                                   },
+                                   {  //chart and table
+                                       qualifier: 'Default',
+                                       presentationVariantQualifier: 'Default',
+                                       selectionVariantQualifier: 'Default'
+                                   }
+                                  ]
+
+@UI.presentationVariant: [
+                          { //kpi
+                            qualifier:     'pvKPIOrdersQuantity',
+                            text:          'KPI: Orders Quantity',
+                            visualizations: [{
+                                               type: #AS_CHART,
+                                               qualifier: 'cqKPIOrdersQuantity'
+                                             },
+                                             {
+                                               type: #AS_DATAPOINT,
+                                               qualifier: 'OrdersQuantity'
+                                            }]
+                          },
+                          
+                          
+                          { //visual filter
+                            qualifier:     'pvFilterByAlertMessages',
+                            text:          'Filter: Alert Messages',
+                            sortOrder:      [{ by: 'AlertWIMessage', direction: #ASC }] ,
+                            visualizations: [{ 
+                                               type: #AS_CHART, 
+                                               qualifier: 'ChartFilterAlertMessages' 
+                                            }]
+                          },
+                          { //visual filter
+                            qualifier:     'pvFilterByAlertMonth',
+                            text:          'Filter: Alert Month',
+                            sortOrder:      [{ by: 'AlertWIMonth', direction: #ASC }] ,
+                            visualizations: [{ 
+                                               type: #AS_CHART, 
+                                               qualifier: 'ChartFilterAlertMonth' 
+                                            }]
+                          },
+                          { //visual filter
+                            qualifier:     'pvAlertQuarter',
+                            text:          'Filter:  Alert Quarter',
+                            sortOrder:      [{ by: 'AlertWIQuarter', direction: #DESC }] ,
+                            visualizations: [{                 
+                                               type:       #AS_CHART,                 
+                                               qualifier: 'ChartFilterAlertQuarter'                 
+                                            }]                 
+                          },                 
+                          
+                          { //main area chart                 
+                            qualifier:     'Default',                 
+                            sortOrder:      [{ by: 'UpdatedDate' , direction: #ASC }] ,                 
+                            visualizations: [{                 
+                                               type: #AS_CHART,                 
+                                               qualifier: 'ChartDefault'                 
+                                            }]                 
+                          }                 
+                         ] 
+
+@UI.chart: [
+            { //kpi
+              qualifier: 'cqKPIOrdersQuantity',
+              chartType: #COLUMN,
+              dimensions:  [ 'AlertWIMessage' ],
+              measures:    [ 'OrdersQuantity' ],
+              dimensionAttributes: [{ dimension: 'AlertWIMessage', role: #CATEGORY }],
+              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+            },
+            
+            
+            { //visual filter
+              qualifier: 'ChartFilterAlertMessages',
+              chartType: #LINE,
+              dimensions:  [ 'AlertWIMessage' ],
+              measures:    [ 'OrdersQuantity' ],
+              dimensionAttributes: [{ dimension: 'AlertWIMessage', role: #CATEGORY }],
+              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+            },
+            { //visual filter
+              qualifier: 'ChartFilterAlertMonth',
+              chartType: #BAR,
+              dimensions:  [ 'AlertWIMonth' ],
+              measures:    [ 'OrdersQuantity' ],
+              dimensionAttributes: [{ dimension: 'AlertWIMonth', role: #CATEGORY }],
+              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+            },
+            { //visual filter
+              qualifier: 'ChartFilterAlertQuarter',
+              chartType: #DONUT,
+              dimensions:  [ 'AlertWIQuarter' ],
+              measures:    [ 'OrdersQuantity' ],
+              dimensionAttributes: [{ dimension: 'AlertWIQuarter', role: #CATEGORY }],
+              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+            },
+                        
+            { //main area chart
+              qualifier: 'ChartDefault',
+              chartType: #COLUMN,
+              dimensions:  [ 'AlertWIMessage' ],
+              measures:    [ 'OrdersQuantity' ],
+              dimensionAttributes: [{ dimension: 'AlertWIMessage', role: #SERIES }],
+              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+            }
+           ]
+
+
+annotate view zpoco_c_alp_alert_wi with
+{
+  @UI.lineItem: [{ position: 10 }]
+  UpdatedDate;               
+  
+  @UI.lineItem: [{ position: 20 }]
+  OrderNumber;               
+  
+  @UI.lineItem: [{ position: 30 }]
+  @UI.selectionField: [{ position: 10 }]
+  AlertWIMessage;            
+  
+  @UI.lineItem: [{ position: 40 }]
+  AlertWIDay;                
+  
+  @UI.lineItem: [{ position: 50 }]
+  @UI.selectionField: [{ position: 20 }]
+  AlertWIMonth;              
+  
+  @UI.lineItem: [{ position: 60 }]
+  AlertWIYear;               
+  
+  @UI.lineItem: [{ position: 70 }]
+  @UI.selectionField: [{ position: 30 }]
+  AlertWIQuarter;            
+  
+  @UI.lineItem: [{ position: 80 }]
+  @UI.dataPoint:{ title: 'OrdQ', criticalityValue: #NEGATIVE, qualifier: 'OrdersQuantity' }
+  OrdersQuantity;
+
+}

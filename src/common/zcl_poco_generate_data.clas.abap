@@ -1381,11 +1381,12 @@ created_by =
     DATA: lt_alert TYPE TABLE OF zpoco_d_alert_a.
 
     lt_alert =
-VALUE #( ( client ='100' alert_uuid ='02E81366251E1EEB9F9A21B79635A2D1' nvs_id ='NTSKD12' alert_message ='Planned FP shipment date for Novartis Batch R6YZR is before Actual PP batch disposition date' updated_date ='20210305' created_by ='CB0000000723'
+VALUE #(
+ ( client ='100' alert_uuid ='02E81366251E1EEB9F9A21B79635A2D1' nvs_id ='NTSKD12' alert_message ='Planned FP shipment date for Novartis Batch R6YZR is before Actual PP batch disposition date' updated_date ='20210305' created_by ='CB0000000723'
 created_at ='20210304100449.6129440 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100449.6129440 '  )
  ( client ='100' alert_uuid ='02E81366251E1EEB9F9A225BD32182D2' nvs_id ='NTGDH23' alert_message ='POD for Novartis Batch Novartis Batch T1SIX, Shipment ID FP00001142 is posted before shipment' updated_date ='20210304' created_by ='CB0000000723'
 created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
- ( client ='100' alert_uuid ='02E81366251E1EEB9F9A22CF903D02D2' nvs_id ='NTKORD1' alert_message ='"Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US "' updated_date ='20210312' created_by ='CB0000000723' created_at =
+ ( client ='100' alert_uuid ='02E81366251E1EEB9F9A22CF903D02D2' nvs_id ='NTKORD1' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210312' created_by ='CB0000000723' created_at =
 '20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
  ( client ='100' alert_uuid ='02E81366251E1EEB9F9A238E532A42D3' nvs_id ='NTJDKS2' alert_message ='Treatment for Novartis Batch ID NTJDKS2 is cancelled' updated_date ='20210320' created_by ='CB0000000723' created_at ='20210304100513.8755750 '
 last_changed_by ='CB0000000723' last_changed_at ='20210304100513.8755750 '  )
@@ -1401,6 +1402,140 @@ last_changed_by ='CB0000000723' last_changed_at ='20210304100548.2598960 '  )
 '20210304100556.1401130 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100556.1401130 '  )
  ( client ='100' alert_uuid ='02E81366251E1EEB9F9A276EB84B42F2' nvs_id ='NT66547' alert_message ='Manufacturing run for Novartis Batch NT66547 is terminated, US33, CA' updated_date ='20210328' created_by ='CB0000000723' created_at =
 '20210304100605.3424570 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100605.3424570 '  )
+
+ ( client ='100' alert_uuid ='12E81366251E00EB9F9A21B79235C2D1' nvs_id ='NTFKD17' alert_message ='Planned FP shipment date for Novartis Batch R6YZR is before Actual PP batch disposition date' updated_date ='20210205' created_by ='CB0000000723'
+created_at ='20210304100449.6129440 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100449.6129440 '  )
+ ( client ='100' alert_uuid ='12E91366251E00EB9F9A21B79235C2D1' nvs_id ='NTFKD18' alert_message ='Planned FP shipment date for Novartis Batch R6YZR is before Actual PP batch disposition date' updated_date ='20210205' created_by ='CB0000000723'
+created_at ='20210304100449.6129440 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100449.6129440 '  )
+ ( client ='100' alert_uuid ='12E71366251E00EB9F9A21B79235C2D1' nvs_id ='NTFKD19' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210205' created_by ='CB0000000723'
+created_at ='20210304100449.6129440 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100449.6129440 '  )
+ ( client ='100' alert_uuid ='12E61366251E00EB9F9A21B79235C2D1' nvs_id ='NTFKD20' alert_message ='Planned FP shipment date for Novartis Batch R6YZR is before Actual PP batch disposition date' updated_date ='20210205' created_by ='CB0000000723'
+created_at ='20210304100449.6129440 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100449.6129440 '  )
+ ( client ='100' alert_uuid ='12E51366251E00EB9F9A21B79235C2D1' nvs_id ='NTFKD21' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210205' created_by ='CB0000000723'
+created_at ='20210304100449.6129440 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100449.6129440 '  )
+
+ ( client ='100' alert_uuid ='22E81366251E1EEB9F9A225BD32182C2' nvs_id ='NTFDH26' alert_message ='POD for Novartis Batch Novartis Batch T1SIX, Shipment ID FP00001142 is posted before shipment' updated_date ='20210204' created_by ='CB0000000723'
+created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
+ ( client ='100' alert_uuid ='23E81366252E1EEB9F9A225BD32182C3' nvs_id ='NTFDH27' alert_message ='APH Collection for Novartis Batch ID NT88843 requires additional dewars, US33, US' updated_date ='20210204' created_by ='CB0000000723'
+created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
+ ( client ='100' alert_uuid ='24E81366253E1EEB9F9A225BD32182C4' nvs_id ='NTFDH29' alert_message ='APH Collection for Novartis Batch ID NT88843 requires additional dewars, US33, US' updated_date ='20210204' created_by ='CB0000000723'
+created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
+ ( client ='100' alert_uuid ='25E81366254E1EEB9F9A225BD32182C5' nvs_id ='NTFDH30' alert_message ='APH Collection for Novartis Batch ID NT88843 requires additional dewars, US33, US' updated_date ='20210204' created_by ='CB0000000723'
+created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
+ ( client ='100' alert_uuid ='26E81366255E1EEB9F9A225BD32182C6' nvs_id ='NTFDH31' alert_message ='POD for Novartis Batch Novartis Batch T1SIX, Shipment ID FP00001142 is posted before shipment' updated_date ='20210204' created_by ='CB0000000723'
+created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
+ ( client ='100' alert_uuid ='27E81366256E1EEB9F9A225BD32182C7' nvs_id ='NTFDH32' alert_message ='POD for Novartis Batch Novartis Batch T1SIX, Shipment ID FP00001142 is posted before shipment' updated_date ='20210204' created_by ='CB0000000723'
+created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
+ ( client ='100' alert_uuid ='28E81366257E1EEB9F9A225BD32182C8' nvs_id ='NTFDH33' alert_message ='POD for Novartis Batch Novartis Batch T1SIX, Shipment ID FP00001142 is posted before shipment' updated_date ='20210204' created_by ='CB0000000723'
+created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
+ ( client ='100' alert_uuid ='29E81366258E1EEB9F9A225BD32182C9' nvs_id ='NTFDH34' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled' updated_date ='20210204' created_by ='CB0000000723'
+created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
+ ( client ='100' alert_uuid ='30E81366259E1EEB9F9A225BD32182C0' nvs_id ='NTFDH35' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled' updated_date ='20210204' created_by ='CB0000000723'
+created_at ='20210304100457.3204190 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100457.3204190 '  )
+
+ ( client ='100' alert_uuid ='32E81366351E1EEB9F9A22CF903D02F2' nvs_id ='NTFORD5' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled, US33, US' updated_date ='20210212' created_by ='CB0000000723' created_at =
+'20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='33E81366352E1EEB9F9A22CF903D02F3' nvs_id ='NTFORD6' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210212' created_by ='CB0000000723' created_at =
+'20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='34E81366353E1EEB9F9A22CF903D02F4' nvs_id ='NTFORD7' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210212' created_by ='CB0000000723' created_at =
+'20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='35E81366354E1EEB9F9A22CF903D02F5' nvs_id ='NTFORD8' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210212' created_by ='CB0000000723' created_at =
+'20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='36E81366355E1EEB9F9A22CF903D02F6' nvs_id ='NTFORD9' alert_message ='Planned FP shipment date for Novartis Batch R6YZR is before Actual PP batch disposition date' updated_date ='20210212' created_by =
+'CB0000000723' created_at = '20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='37E81366356E1EEB9F9A22CF903D02F7' nvs_id ='NTFORY1' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled' updated_date ='20210212' created_by ='CB0000000723' created_at =
+'20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='38E81366357E1EEB9F9A22CF903D02F8' nvs_id ='NTFORY2' alert_message ='Planned FP shipment date for Novartis Batch R6YZR is before Actual PP batch disposition date' updated_date ='20210212' created_by =
+'CB0000000723' created_at ='20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='39E81366358E1EEB9F9A22CF903D02F9' nvs_id ='NTFORY3' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210212' created_by ='CB0000000723' created_at =
+'20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='40E81366359E1EEB9F9A22CF903D02Y1' nvs_id ='NTFORY4' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210212' created_by ='CB0000000723' created_at =
+'20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='41E81366361E1EEB9F9A22CF903D02Y2' nvs_id ='NTFORY5' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210212' created_by ='CB0000000723' created_at =
+'20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+ ( client ='100' alert_uuid ='42E81366362E1EEB9F9A22CF903D02Y3' nvs_id ='NTFORY6' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled' updated_date ='20210212' created_by ='CB0000000723' created_at =
+'20210304100504.3240500 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100504.3240500 '  )
+
+ ( client ='100' alert_uuid ='81E81366251E1EEB9F9A238E532A42V3' nvs_id ='NTFDKK1' alert_message ='Treatment for Novartis Batch ID NTJDKS2 is cancelled' updated_date ='20210320' created_by ='CB0000000723' created_at ='20210304100513.8755750 '
+last_changed_by ='CB0000000723' last_changed_at ='20210304100513.8755750 '  )
+ ( client ='100' alert_uuid ='82E81366252E1EEB9F9A238E532A42V3' nvs_id ='NTFDKK2' alert_message ='Treatment for Novartis Batch ID NTJDKS2 is cancelled' updated_date ='20210320' created_by ='CB0000000723' created_at ='20210304100513.8755750 '
+last_changed_by ='CB0000000723' last_changed_at ='20210304100513.8755750 '  )
+ ( client ='100' alert_uuid ='83E81366253E1EEB9F9A238E532A42V3' nvs_id ='NTFDKK3' alert_message ='Manufacturing run for Novartis Batch NTKORD1 is terminated, US33, US' updated_date ='20210320' created_by ='CB0000000723' created_at =
+'20210304100513.8755750 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100513.8755750 '  )
+ ( client ='100' alert_uuid ='84E81366254E1EEB9F9A238E532A42V3' nvs_id ='NTFDKK4' alert_message ='Shipping of OOS order with Novartis Batch NTJSKL2 is requested' updated_date ='20210320' created_by ='CB0000000723' created_at =
+'20210304100513.8755750 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100513.8755750 '  )
+ ( client ='100' alert_uuid ='85E81366255E1EEB9F9A238E532A42V3' nvs_id ='NTFDKK5' alert_message ='Shipping of OOS order with Novartis Batch NTJSKL2 is requested' updated_date ='20210320' created_by ='CB0000000723' created_at =
+'20210304100513.8755750 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100513.8755750 '  )
+ ( client ='100' alert_uuid ='86E81366256E1EEB9F9A238E532A42V3' nvs_id ='NTFDKK6' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled' updated_date ='20210320' created_by ='CB0000000723' created_at =
+'20210304100513.8755750 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100513.8755750 '  )
+ ( client ='100' alert_uuid ='87E81366257E1EEB9F9A238E532A42V3' nvs_id ='NTFDKK7' alert_message ='Treatment for Novartis Batch ID NTJDKS2 is cancelled' updated_date ='20210320' created_by ='CB0000000723' created_at =
+'20210304100513.8755750 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100513.8755750 '  )
+
+ ( client ='100' alert_uuid ='52E82366251E1EEB9F9A2446E80902D1' nvs_id ='NTFYKL1' alert_message ='Shipping of OOS order with Novartis Batch NTJSKL2 is requested' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+ ( client ='100' alert_uuid ='53E82366252E1EEB9F9A2446E80902D2' nvs_id ='NTFYKL2' alert_message ='Shipping of OOS order with Novartis Batch NTJSKL2 is requested' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+ ( client ='100' alert_uuid ='54E82366253E1EEB9F9A2446E80902D3' nvs_id ='NTFYKL3' alert_message ='Treatment for Novartis Batch ID NTJDKS2 is cancelled' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+ ( client ='100' alert_uuid ='55E82366254E1EEB9F9A2446E80902D4' nvs_id ='NTFYKL4' alert_message ='Treatment for Novartis Batch ID NTJDKS2 is cancelled' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+ ( client ='100' alert_uuid ='56E82366255E1EEB9F9A2446E80902D5' nvs_id ='NTFYKL5' alert_message ='Treatment for Novartis Batch ID NTJDKS2 is cancelled' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+ ( client ='100' alert_uuid ='57E82366256E1EEB9F9A2446E80902D6' nvs_id ='NTFYKL6' alert_message ='Shipping of OOS order with Novartis Batch NTJSKL2 is requested' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+ ( client ='100' alert_uuid ='58E82366257E1EEB9F9A2446E80902D7' nvs_id ='NTFYKL7' alert_message ='Shipping of OOS order with Novartis Batch NTJSKL2 is requested' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+ ( client ='100' alert_uuid ='59E82366258E1EEB9F9A2446E80902D8' nvs_id ='NTFYKL8' alert_message ='Shipping of OOS order with Novartis Batch NTJSKL2 is requested' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+ ( client ='100' alert_uuid ='60E82366259E1EEB9F9A2446E80902D9' nvs_id ='NTFYKL9' alert_message ='Shipping of OOS order with Novartis Batch NTJSKL2 is requested' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+ ( client ='100' alert_uuid ='61E82366250E1EEB9F9A2446E80901D0' nvs_id ='NTFYKL8' alert_message ='Shipping of OOS order with Novartis Batch NTJSKL2 is requested' updated_date ='20210228' created_by ='CB0000000723' created_at =
+'20210304100523.0219780 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100523.0219780 '  )
+
+
+
+
+ ( client ='100' alert_uuid ='62Z81366251E1EEB9F9A24D7AB3202P1' nvs_id ='NTFL386' alert_message ='Request for subsequent shipment FP99231 has been received for Novartis Batch NT74382' updated_date ='20210217' created_by ='CB0000000723' created_at =
+'20210304100530.6963520 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100530.6963520 '  )
+ ( client ='100' alert_uuid ='63Z81366251E1EEB9F9A24D7AB3202P2' nvs_id ='NTFL387' alert_message ='APH Collection for Novartis Batch ID NT88843 requires additional dewars, US33, US' updated_date ='20210217' created_by ='CB0000000723' created_at =
+'20210304100530.6963520 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100530.6963520 '  )
+ ( client ='100' alert_uuid ='64Z81366251E1EEB9F9A24D7AB3202P3' nvs_id ='NTFL388' alert_message ='APH Collection for Novartis Batch ID NT88843 requires additional dewars, US33, US' updated_date ='20210217' created_by ='CB0000000723' created_at =
+'20210304100530.6963520 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100530.6963520 '  )
+ ( client ='100' alert_uuid ='65Z81366251E1EEB9F9A24D7AB3202P4' nvs_id ='NTFL389' alert_message ='Request for subsequent shipment FP99231 has been received for Novartis Batch NT74382' updated_date ='20210217' created_by ='CB0000000723' created_at =
+'20210304100530.6963520 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100530.6963520 '  )
+ ( client ='100' alert_uuid ='66Z81366251E1EEB9F9A24D7AB3202P5' nvs_id ='NTFL390' alert_message ='Request for subsequent shipment FP99231 has been received for Novartis Batch NT74382' updated_date ='20210217' created_by ='CB0000000723' created_at =
+'20210304100530.6963520 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100530.6963520 '  )
+ ( client ='100' alert_uuid ='67Z81366251E1EEB9F9A24D7AB3202P6' nvs_id ='NTFL391' alert_message ='Novartis Batch NT34243 is flagged as OOS' updated_date ='20210217' created_by ='CB0000000723' created_at =
+'20210304100530.6963520 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100530.6963520 '  )
+ ( client ='100' alert_uuid ='68Z81366251E1EEB9F9A24D7AB3202P7' nvs_id ='NTFL392' alert_message ='Novartis Batch NT34243 is flagged as OOS' updated_date ='20210217' created_by ='CB0000000723' created_at =
+'20210304100530.6963520 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100530.6963520 '  )
+ ( client ='100' alert_uuid ='69Z81366251E1EEB9F9A24D7AB3202P8' nvs_id ='NTFL393' alert_message ='Novartis Batch NT34243 is flagged as OOS' updated_date ='20210217' created_by ='CB0000000723' created_at =
+'20210304100530.6963520 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100530.6963520 '  )
+
+
+ ( client ='100' alert_uuid ='72F8EF213CCE1EDB9F9A25595815F7O4' nvs_id ='NTF4246' alert_message ='Novartis Batch NT34243 is flagged as OOS' updated_date ='20210206' created_by ='CB0000000723' created_at ='20210304100538.3672300 ' last_changed_by =
+'CB0000000723' last_changed_at ='20210304100538.3672300 '  )
+ ( client ='100' alert_uuid ='73F8EF213CCE1ED90F9A25595815F7O5' nvs_id ='NTF4247' alert_message ='Novartis Batch NT34243 is flagged as OOS' updated_date ='20210206' created_by ='CB0000000723' created_at ='20210304100538.3672300 ' last_changed_by =
+'CB0000000723' last_changed_at ='20210304100538.3672300 '  )
+ ( client ='100' alert_uuid ='74F8EF213CCE1EDB9F9A25595815F7O6' nvs_id ='NTF4248' alert_message ='Novartis Batch NT34243 is flagged as OOS' updated_date ='20210206' created_by ='CB0000000723' created_at ='20210304100538.3672300 ' last_changed_by =
+'CB0000000723' last_changed_at ='20210304100538.3672300 '  )
+ ( client ='100' alert_uuid ='75F8EF213CCE1EDB9F9A25595815F7O7' nvs_id ='NTF4249' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled' updated_date ='20210206' created_by ='CB0000000723' created_at =
+ '20210304100538.3672300 ' last_changed_by ='CB0000000723' last_changed_at ='20210304100538.3672300 '  )
+ ( client ='100' alert_uuid ='76F8EF213CCE1EDB9F9A25595815F7O8' nvs_id ='NTF4250' alert_message ='Novartis Batch NT34243 is flagged as OOS' updated_date ='20210206' created_by ='CB0000000723' created_at ='20210304100538.3672300 ' last_changed_by =
+'CB0000000723' last_changed_at ='20210304100538.3672300 '  )
+
+
+ ( client ='100' alert_uuid ='82E81366251E1EEB9F9A2628749402O1' nvs_id ='NTF3274' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled' updated_date ='20210210' created_by ='CB0000000723' created_at ='20210304100548.2598960 '
+last_changed_by ='CB0000000723' last_changed_at ='20210304100548.2598960 '  )
+ ( client ='100' alert_uuid ='83E81366251E1EEB9F9A2628749402O2' nvs_id ='NTF3275' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled' updated_date ='20210210' created_by ='CB0000000723' created_at ='20210304100548.2598960 '
+last_changed_by ='CB0000000723' last_changed_at ='20210304100548.2598960 '  )
+ ( client ='100' alert_uuid ='84E81366251E1EEB9F9A2628749402O3' nvs_id ='NTF3276' alert_message ='Novartis Batch NT34243 is flagged as OOS' updated_date ='20210210' created_by ='CB0000000723' created_at ='20210304100548.2598960 '
+last_changed_by ='CB0000000723' last_changed_at ='20210304100548.2598960 '  )
+ ( client ='100' alert_uuid ='85E81366251E1EEB9F9A2628749402O4' nvs_id ='NTF3277' alert_message ='Novartis Batch NT34243 is flagged as OOS' updated_date ='20210210' created_by ='CB0000000723' created_at ='20210304100548.2598960 '
+last_changed_by ='CB0000000723' last_changed_at ='20210304100548.2598960 '  )
+ ( client ='100' alert_uuid ='86E81366251E1EEB9F9A2628749402O5' nvs_id ='NTF3274' alert_message ='Treatment for Novartis Batch ID NT43278 is cancelled' updated_date ='20210210' created_by ='CB0000000723' created_at ='20210304100548.2598960 '
+last_changed_by ='CB0000000723' last_changed_at ='20210304100548.2598960 '  )
+
  ).
 
     DELETE FROM zpoco_d_alert_a.

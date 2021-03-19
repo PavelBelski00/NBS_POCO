@@ -23,7 +23,7 @@
               measures:   ['SlotsNext15Days'],
               dimensionAttributes: [{ dimension: 'MfgStartDate',    role: #CATEGORY },
                                     { dimension: 'ConsumedSlots',   role: #SERIES   } ],
-              measureAttributes:   [{ measure:   'SlotsNext15Days', role: #AXIS_1 }]
+              measureAttributes:   [{ measure:   'SlotsNext15Days', role: #AXIS_2 }]
             },
             {
               title:      'Data for the next 1 month',
@@ -33,7 +33,7 @@
               measures:   ['SlotsNext1Month'],
               dimensionAttributes: [{ dimension: 'MfgStartDate',    role: #CATEGORY },
                                     { dimension: 'ConsumedSlots',   role: #SERIES   } ],
-              measureAttributes:   [{ measure:   'SlotsNext1Month', role: #AXIS_1 }]
+              measureAttributes:   [{ measure:   'SlotsNext1Month', role: #AXIS_3 }]
             },
             {
               title:      'Data for the next 3 months',
@@ -43,7 +43,7 @@
               measures:   ['SlotsNext3Months'],
               dimensionAttributes: [{ dimension: 'MfgStartDate',     role: #CATEGORY },
                                     { dimension: 'ConsumedSlots',    role: #SERIES   } ],
-              measureAttributes:   [{ measure:   'SlotsNext3Months', role: #AXIS_1 }]
+              measureAttributes:   [{ measure:   'SlotsNext3Months', role: #AXIS_3 }]
             }
 
 ]
@@ -51,11 +51,11 @@
 define view zpoco_c_card_quan_slots_date
   as select from zpoco_c_capacity_n3months as _Next3Months
 
-  association [1..1] to zpoco_c_capacity_n3days  as _Next3Days  on  $projection.MfgStartDate  = _Next3Days.MfgStartDate
+  association [1..1] to zpoco_c_capacity_n3days  as _Next3Days   on $projection.MfgStartDate  = _Next3Days.MfgStartDate
                                                                 and $projection.ConsumedSlots = _Next3Days.ConsumedSlots
-  association [1..1] to zpoco_c_capacity_n15days as _Next15Days on  $projection.MfgStartDate  = _Next15Days.MfgStartDate
+  association [1..1] to zpoco_c_capacity_n15days as _Next15Days  on $projection.MfgStartDate  = _Next15Days.MfgStartDate
                                                                 and $projection.ConsumedSlots = _Next15Days.ConsumedSlots
-  association [1..1] to zpoco_c_capacity_n1month as _Next1Month on  $projection.MfgStartDate  = _Next1Month.MfgStartDate
+  association [1..1] to zpoco_c_capacity_n1month as _Next1Month  on $projection.MfgStartDate  = _Next1Month.MfgStartDate 
                                                                 and $projection.ConsumedSlots = _Next1Month.ConsumedSlots
 
 {

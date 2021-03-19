@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Definition: ALP Capacity'
+define service Zpoco_ui_alp_capacity {
+  expose zpoco_c_alp_capacity as ALPCapacity;
+  expose zpoco_i_country as Country;
+  expose zpoco_i_ttype as TType;
+  expose zpoco_i_plant as Plant;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition: ALP Alert WI'
+define service zpoco_ui_alp_alert_wi {
+  expose zpoco_c_alp_alert_wi as AlpAlertWI;
+}

@@ -88,7 +88,20 @@
               measureAttributes:   [{ measure:    'Last1MonthD0',
                                       role:        #AXIS_1,
                                       asDataPoint: true }]
-            } ]
+            }, 
+            {
+              title:      'Data for the last month',
+              qualifier:  'D0LastYear',
+              chartType:  #DONUT,
+              dimensions: ['StatusL2Id'],
+              measures:   ['Last1YearD0'],
+              dimensionAttributes: [{ dimension:  'StatusL2Id',
+                                      role:        #CATEGORY }],
+              measureAttributes:   [{ measure:    'Last1YearD0',
+                                      role:        #AXIS_1,
+                                      asDataPoint: true }]
+            } 
+           ]
 
 define view zpoco_c_card_stl2_by_days
   as select from zpoco_c_order_l2_1year_back
@@ -100,6 +113,7 @@ define view zpoco_c_card_stl2_by_days
   association [1..1] to zpoco_c_order_l2_1month_D0back as _Last1MonthD0 on $projection.StatusL2Id = _Last1MonthD0.StatusL2Id
   association [1..1] to zpoco_c_order_l2_15days_D0back as _Last15DaysD0 on $projection.StatusL2Id = _Last15DaysD0.StatusL2Id
   association [1..1] to zpoco_c_order_l2_10days_D0back as _Last10DaysD0 on $projection.StatusL2Id = _Last10DaysD0.StatusL2Id
+  association [1..1] to zpoco_c_order_l2_1year_D0back  as _Last1YearD0  on $projection.StatusL2Id = _Last1YearD0.StatusL2Id
 
 {
       @Consumption.semanticObject: 'NBS_POC_OVP_ORDER'
@@ -123,20 +137,24 @@ define view zpoco_c_card_stl2_by_days
 
 
       @UI.dataPoint.visualization: #NUMBER
-      @EndUserText.label: 'D0 For last 10 days'
+      @EndUserText.label: 'Day 0 For last 10 days'
       _Last10Days.StatusL2Quantity10Days     as Last10Days,
 
       @UI.dataPoint.visualization: #NUMBER
-      @EndUserText.label: 'D0 For last Month'
+      @EndUserText.label: 'Day 0 For last Month'
       _Last1MonthD0.StatusL2Quantity1MonthD0 as Last1MonthD0,
 
       @UI.dataPoint.visualization: #NUMBER
-      @EndUserText.label: 'D0 For last 15 days'
+      @EndUserText.label: 'Day 0 For last 15 days'
       _Last15DaysD0.StatusL2Quantity10DaysD0 as Last15DaysD0,
 
       @UI.dataPoint.visualization: #NUMBER
-      @EndUserText.label: 'D0 For last 10 days'
+      @EndUserText.label: 'Day 0 For last 10 days'
       _Last10DaysD0.StatusL2Quantity10DaysD0 as Last10DaysD0,
+      
+      @UI.dataPoint.visualization: #NUMBER
+      @EndUserText.label: 'Day 0 For last Year'
+      _Last1YearD0.StatusL2Quantity1YearD0   as Last1YearD0,
 
       /*Associations*/
       _Last3Months,
@@ -145,6 +163,7 @@ define view zpoco_c_card_stl2_by_days
 
       _Last1MonthD0,
       _Last15DaysD0,
-      _Last10DaysD0
+      _Last10DaysD0,
+      _Last1YearD0
 
 }

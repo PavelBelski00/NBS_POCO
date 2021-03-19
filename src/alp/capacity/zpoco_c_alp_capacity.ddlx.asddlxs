@@ -1,0 +1,195 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeName: 'Capacity',
+                  typeNamePlural: 'Capacity' }
+@UI.selectionPresentationVariant:[ 
+    {  //chart and table
+        qualifier: 'Default',
+        presentationVariantQualifier: 'Default',
+        selectionVariantQualifier: 'Default'
+    }
+]
+@UI.presentationVariant:[
+    { //main area chart
+        qualifier: 'Default',
+        sortOrder: [{ by: 'MfgStartDateYear'    , direction: #DESC },
+                    { by: 'MfgStartDateQuarter' , direction: #ASC },
+                    { by: 'MfgStartDateMonth'   , direction: #ASC },
+                    { by: 'MfgStartDate'        , direction: #ASC }], 
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartDefault'
+        }]
+    },
+    {   //visual filter
+        qualifier: 'pvFilterByTherapyType',
+        text: 'Filter: by TherapyType',
+        sortOrder: [{ by: 'TherapyTypeId', direction: #ASC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByTherapyType'
+        }]
+    },
+    {   //visual filter
+        qualifier: 'pvFilterByConsumedSlots',
+        text: 'Filter: by ConsumedSlots',
+        sortOrder: [{ by: 'ConsumedSlots', direction: #ASC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByConsumedSlots'
+        }]
+    } 
+   
+]
+@UI.selectionVariant:[
+    { //main area
+        qualifier: 'Default',
+        text: 'Default'
+    }
+]
+@UI.chart: [
+    {
+        qualifier: 'ChartDefault',
+        chartType: #COLUMN,
+        dimensions:  [ 'MfgPlantId' ],
+        measures:  [ 'Quantity' ],
+        dimensionAttributes: [{
+            dimension: 'MfgPlantId',
+            role: #SERIES
+        }],
+        measureAttributes: [
+        {   measure: 'Quantity',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterByTherapyType',
+        chartType: #COLUMN,
+        dimensions:  [ 'TherapyTypeId' ],
+        measures:  [ 'Quantity' ],
+        dimensionAttributes: [{
+            dimension: 'TherapyTypeId',
+            role: #CATEGORY
+        }],
+        measureAttributes: [
+        {   measure: 'Quantity',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterByConsumedSlots',
+        chartType: #DONUT,
+        dimensions:  [ 'ConsumedSlots' ],
+        measures:  [ 'Quantity' ],
+        dimensionAttributes: [{
+            dimension: 'ConsumedSlots',
+            role: #CATEGORY
+        }],
+        measureAttributes: [
+        {   measure: 'Quantity',
+            role: #AXIS_1
+        }]
+    }
+]
+annotate view zpoco_c_alp_capacity with
+{
+  @UI.facet: [
+          {
+                id:                 'GeneralInformation',
+                type:               #COLLECTION,
+                label:              'General Information',
+                position:           10
+          },
+          {
+                id:                 'AdminDataCollection',
+                type:               #COLLECTION,
+                label:              'Admin Data',
+                position:           20
+          },
+          {
+                 id:                'BasicData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Basic Data',
+                 position:          10,
+                 targetQualifier:   'BasicData'
+          },
+          {
+                 id:                'AdminData',
+                 purpose:           #STANDARD ,
+                 parentId:          'AdminDataCollection',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Admin Data',
+                 position:          20,
+                 targetQualifier:   'AdminData'
+           } ]
+
+  @UI.hidden: true
+  CapacityUuid;
+
+  @UI.selectionField: [{ position: 5 }]
+  @UI.lineItem:       [{ position: 5, importance: #HIGH }]
+  MfgStartDateYear;
+
+  @UI.selectionField: [{ position: 6 }]
+  @UI.lineItem:       [{ position: 6, importance: #HIGH }]
+  MfgStartDateQuarter;
+
+  @UI.selectionField: [{ position: 7 }]
+  @UI.lineItem:       [{ position: 7, importance: #HIGH }]
+  MfgStartDateMonth;
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem:       [{ position: 10, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]  
+  MfgStartDate;  
+
+  @UI.lineItem:       [{ position: 20, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'BasicData' }]    
+  NvsId;
+  
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem:       [{ position: 30, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
+  MfgPlantId;
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem:       [{ position: 30, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]     
+  CountryId;
+  
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem:       [{ position: 40, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData' }]   
+  TherapyTypeId;
+    
+  @UI.selectionField: [{ position: 50 }]
+  @UI.lineItem:       [{ position: 50, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 50, qualifier: 'BasicData' }]    
+  ConsumedSlots;
+
+  @UI.lineItem:       [{ position: 53, importance: #HIGH }]
+  Quantity;
+  
+  @UI.fieldGroup:     [{ position: 60, qualifier: 'BasicData' }]    
+  Priority;
+  
+  @UI.fieldGroup:     [{ position: 70, qualifier: 'BasicData' }]    
+  ProtocolSubjectId;
+  
+  @UI.fieldGroup:     [{ position: 80, qualifier: 'BasicData' }]    
+  CountryAllocation;
+  
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]  
+  CreatedBy;
+  
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'AdminData' }]  
+  CreatedAt;
+  
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'AdminData' }]  
+  LastChangedBy;
+
+  @UI.fieldGroup:     [{ position: 40, qualifier: 'AdminData' }]  
+  LastChangedAt;  
+
+}

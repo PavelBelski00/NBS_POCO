@@ -1,0 +1,330 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeName: 'Order',
+                  typeNamePlural: 'Orders' }
+@UI.selectionPresentationVariant:[
+    {  //chart and table
+        qualifier: 'Default',
+        presentationVariantQualifier: 'Default',
+        selectionVariantQualifier: 'Default'
+    },
+    {   //kpi
+        qualifier: 'KPINvsIdQuantiybyYear',
+        presentationVariantQualifier: 'pvKPINvsIdQuantiybyYear',
+        selectionVariantQualifier: 'svKPINvsIdQuantiybyYear'
+    }
+]
+@UI.presentationVariant:[
+    { //main area chart
+        qualifier: 'Default',
+        sortOrder: [{ by: 'Day0Year'    , direction: #DESC },
+                    { by: 'Day0Quarter' , direction: #ASC },
+                    { by: 'Day0Month'   , direction: #ASC },
+                    { by: 'Day0'        , direction: #ASC }],
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartDefault'
+        }]
+    },
+    {   //visual filter
+        qualifier: 'pvFilterByStatusL1',
+        text: 'Filter: Orders by Status L1',
+        sortOrder: [{ by: 'StatusL1Id', direction: #ASC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByStatusL1'
+        }]
+    },
+    {   //visual filter
+        qualifier: 'pvFilterByStatusL2',
+        text: 'Filter: Orders by Status L2',
+        sortOrder: [{ by: 'StatusL2Id', direction: #ASC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByStatusL2'
+        }]
+    },
+    {   //visual filter
+        qualifier: 'pvFilterByCountry',
+        text: 'Filter: Orders by Country',
+        sortOrder: [{ by: 'CountryId', direction: #ASC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByCountry'
+        }]
+    },
+    {   //kpi
+        qualifier: 'pvKPINvsIdQuantiybyYear',
+        text: 'KPI Order Quantity by Year',
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'cqKPINvsIdQuantiybyYear'
+        },{
+            type: #AS_DATAPOINT,
+            qualifier: 'NvsIdQuantitybyYear'
+        }]
+    }
+]
+@UI.selectionVariant:[
+    { //main area
+        qualifier: 'Default',
+        text: 'Default'
+    },
+    { //kpi
+        qualifier: 'svKPINvsIdQuantiybyYear',
+        text: 'KPI Order Quantity by Year'
+    }
+]
+@UI.chart: [
+{
+        qualifier: 'ChartDefault',
+        chartType: #BAR,
+        dimensions:  [ 'MfgPlantId' ],
+        measures:  [ 'NvsIdQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'MfgPlantId',
+            role: #SERIES
+        }],
+        measureAttributes: [{
+            measure: 'NvsIdQuantity',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterByStatusL1',
+        chartType: #DONUT,
+        dimensions:  [ 'StatusL1Id' ],
+        measures:  [ 'NvsIdQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'StatusL1Id',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'NvsIdQuantity',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterByStatusL2',
+        chartType: #DONUT,
+        dimensions:  [ 'StatusL2Id' ],
+        measures:  [ 'NvsIdQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'StatusL2Id',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'NvsIdQuantity',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterByCountry',
+        chartType: #BAR,
+        dimensions:  [ 'CountryId' ],
+        measures:  [ 'NvsIdQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'CountryId',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'NvsIdQuantity',
+            role: #AXIS_1
+        }]
+    },
+    { //kpi
+        qualifier: 'cqKPINvsIdQuantiybyYear',
+        chartType: #COLUMN,
+        dimensions:  [ 'Day0Year' ],
+        measures:  [ 'NvsIdQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'Day0Year',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'NvsIdQuantity',
+            role: #AXIS_1
+        }]
+    }
+]
+annotate view zpoco_c_alp_order with
+{
+  @UI.facet: [
+          {
+                id:                 'GeneralInformation',
+                type:               #COLLECTION,
+                label:              'General Information',
+                position:           10
+          },
+          {
+                id:                 'AdminDataCollection',
+                type:               #COLLECTION,
+                label:              'Admin Data',
+                position:           20
+          },
+          {
+                 id:                'BasicData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Basic Data',
+                 position:          10,
+                 targetQualifier:   'BasicData'
+          },
+          {
+                 id:                'TherapyData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Therapy Data',
+                 position:          20,
+                 targetQualifier:   'TherapyData'
+          },
+          {
+                 id:                'StatusData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Status Data',
+                 position:          30,
+                 targetQualifier:   'StatusData'
+          },
+          {
+                 id:                'Day0Data',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Day 0 Data',
+                 position:          40,
+                 targetQualifier:   'Day0Data'
+          },
+          {
+                 id:                'OOSData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'OOS Data',
+                 position:          50,
+                 targetQualifier:   'OOSData'
+          },
+          {
+                 id:                'Others',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Others',
+                 position:          60,
+                 targetQualifier:   'Others'
+          },
+          {
+                 id:                'AdminData',
+                 purpose:           #STANDARD ,
+                 parentId:          'AdminDataCollection',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Admin Data',
+                 position:          20,
+                 targetQualifier:   'AdminData'
+           }
+  ]
+
+  @UI.hidden: true
+  OrderUuid;
+
+  @UI.selectionField: [{ position: 5 }]
+  @UI.lineItem:       [{ position: 5, importance: #HIGH }]
+  Day0Year;
+
+  @UI.selectionField: [{ position: 6 }]
+  @UI.lineItem:       [{ position: 6, importance: #HIGH }]
+  Day0Quarter;
+
+  @UI.selectionField: [{ position: 7 }]
+  @UI.lineItem:       [{ position: 7, importance: #HIGH }]
+  Day0Month;
+
+  @UI.selectionField: [{ position: 8 }]
+  @UI.lineItem:       [{ position: 8, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 8, qualifier: 'Day0Data' }]
+  Day0;
+
+  @UI.lineItem:       [{ position: 10, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
+  NvsId;
+
+  @UI.selectionField: [{ position: 15 }]
+  @UI.lineItem:       [{ position: 20, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'TherapyData' }]
+  Therapy;
+
+  @UI.lineItem:       [{ position: 30, importance: #HIGH  }]
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
+  CountryId;
+
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem:       [{ position: 40, importance: #HIGH}]
+  @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData' }]
+  MfgPlantId;
+
+  @UI.selectionField: [{ position: 50 }]
+  @UI.lineItem:       [{ position: 50, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'TherapyData' }]
+  TherapyTypeId;
+
+  @UI.lineItem:       [{ position: 60, importance: #MEDIUM}]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'Day0Data' }]
+  OrderCreatedDay;
+
+  @UI.selectionField: [{ position: 80 }]
+  @UI.lineItem:       [{ position: 80, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'StatusData' }]
+  StatusL1Id;
+
+  @UI.selectionField: [{ position: 90 }]
+  @UI.lineItem:       [{ position: 80, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'StatusData' }]
+  StatusL2Id;
+
+  @UI.lineItem:       [{ position: 100, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 100, qualifier: 'BasicData' }]
+  OrderingSiteId;
+
+  @UI.lineItem:       [{ position: 103, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 13,  qualifier: 'OOSData' }]
+  OosId;
+
+  @UI.fieldGroup:     [{ position: 10,  qualifier: 'OOSData' }]
+  Oos;
+
+  @UI.lineItem:       [{ position: 120, importance: #MEDIUM }]
+  @UI.fieldGroup:     [{ position: 20,  qualifier: 'OOSData' }]
+  OosDescriptionId;
+
+  @UI.fieldGroup:     [{ position: 20,  qualifier: 'Others' }]
+  AphDewar;
+
+  @UI.fieldGroup:     [{ position: 10,  qualifier: 'Others' }]
+  FpDewar;
+
+  @UI.dataPoint: {
+       qualifier: 'NvsIdQuantitybyYear',
+       title: 'Order Quantity',
+       criticalityCalculation: {
+       improvementDirection: #MAXIMIZE,
+       deviationRangeHighValue: 10,
+       toleranceRangeHighValue: 20
+  }}
+
+  @UI.lineItem:       [{ position: 150, importance: #HIGH }]
+  NvsIdQuantity;
+
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]
+  CreatedBy;
+
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'AdminData' }]
+  CreatedAt;
+
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'AdminData' }]
+  LastChangedBy;
+
+  @UI.fieldGroup:     [{ position: 40, qualifier: 'AdminData' }]
+  LastChangedAt;
+}

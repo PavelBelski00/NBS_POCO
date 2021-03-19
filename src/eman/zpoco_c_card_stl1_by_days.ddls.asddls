@@ -88,7 +88,20 @@
               measureAttributes:   [{ measure:    'D0Last1Month',
                                       role:        #AXIS_1,
                                       asDataPoint: true }]
-            } ]
+            }, 
+            {
+              title:      'D0 Data for the Last 1 Year',
+              qualifier:  'D0Last1Year',
+              chartType:  #DONUT,
+              dimensions: ['StatusL1Id'],
+              measures:   ['D0Last1Year'],
+              dimensionAttributes: [{ dimension:  'StatusL1Id',
+                                      role:        #CATEGORY }],
+              measureAttributes:   [{ measure:    'D0Last1Year',
+                                      role:        #AXIS_1,
+                                      asDataPoint: true }]
+            }
+           ]
 define view zpoco_c_card_stl1_by_days
   as select from zpoco_c_Stl1_365days
 
@@ -103,6 +116,7 @@ define view zpoco_c_card_stl1_by_days
   association [1..1] to zpoco_i_order_day0_l10days  as _D0Last10Days on $projection.StatusL1Id = _D0Last10Days.StatusL1Id
   association [1..1] to zpoco_i_order_day0_l15days  as _D0Last15Days on $projection.StatusL1Id = _D0Last15Days.StatusL1Id
   association [1..1] to zpoco_i_order_day0_l1month  as _D0Last1Month on $projection.StatusL1Id = _D0Last1Month.StatusL1Id
+  association [1..1] to zpoco_i_order_day0_l1year   as _D0Last1Year  on $projection.StatusL1Id = _D0Last1Year.StatusL1Id
 
 {
       @Consumption.semanticObject: 'NBS_POC_OVP_ORDER'
@@ -129,16 +143,20 @@ define view zpoco_c_card_stl1_by_days
       _Last1Year.QuanSTL1_1year     as LastYear,
 
       @UI.dataPoint.visualization: #NUMBER
-      @EndUserText.label: 'D0 For last 10 days'
+      @EndUserText.label: 'Day 0 For last 10 days'
       _D0Last10Days.QuanSTL1_10days as D0Last10Days,
 
       @UI.dataPoint.visualization: #NUMBER
-      @EndUserText.label: 'D0 For last 15 days'
+      @EndUserText.label: 'Day 0 For last 15 days'
       _D0Last15Days.QuanSTL1_15days as D0Last15Days,
 
       @UI.dataPoint.visualization: #NUMBER
-      @EndUserText.label: 'D0 For last Month'
+      @EndUserText.label: 'Day 0 For last Month'
       _D0Last1Month.QuanSTL1_1Month as D0Last1Month,
+      
+      @UI.dataPoint.visualization: #NUMBER
+      @EndUserText.label: 'Day 0 For last Year'
+      _D0Last1Year.QuanSTL1_1Year   as D0Last1Year,
 
       /*associations*/
       _30Days,
@@ -151,5 +169,6 @@ define view zpoco_c_card_stl1_by_days
 
       _D0Last10Days,
       _D0Last15Days,
-      _D0Last1Month
+      _D0Last1Month,
+      _D0Last1Year
 }

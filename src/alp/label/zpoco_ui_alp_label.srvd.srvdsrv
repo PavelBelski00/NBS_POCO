@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition: ALP Label'
+define service zpoco_ui_alp_label {
+  expose zpoco_c_alp_label as Label;
+  expose zpoco_i_plant as Plant;
+  expose zpoco_i_ttype as TType;
+}

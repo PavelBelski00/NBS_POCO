@@ -17,6 +17,12 @@ define root view entity zpoco_c_alert
           ranking: #HIGH,
           fuzzinessThreshold: 0.8
       }
+      @Consumption.valueHelpDefinition: [{ 
+                                          entity:  { 
+                                                     name: 'zpoco_i_alp_alert', 
+                                                     element: 'AlertMessage'
+                                                    } 
+                                        }]
       AlertMessage,
       
       @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
