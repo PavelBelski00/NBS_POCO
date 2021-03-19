@@ -21,8 +21,8 @@ CLASS zcl_poco_generate_data DEFINITION
       fill_order,
       fill_alertwi,
       fill_alert,
-      fill_oos
-      .
+      fill_oos,
+      fill_calendar.
 
 ENDCLASS.
 
@@ -45,7 +45,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
     me->fill_label( ).
     me->fill_alert( ).
     me->fill_alertwi( ).
-
+    me->fill_calendar(  ).
 
   ENDMETHOD.
 
@@ -1191,6 +1191,40 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ).
 
+    DATA lt_capacity_02 type table of zpoco_d_capact_a.
+
+    lt_capacity_02 = lt_capacity.
+
+
+    LOOP AT lt_capacity_02 ASSIGNING FIELD-SYMBOL(<ls_capacity>).
+      TRY.
+          CALL METHOD cl_system_uuid=>if_system_uuid_static~create_uuid_x16
+            RECEIVING
+              uuid = DATA(lv_id).
+        CATCH cx_uuid_error .
+      ENDTRY.
+      <ls_capacity>-capacity_uuid = lv_id.
+      <ls_capacity>-mfg_start_date+4(2) = '02'.
+    ENDLOOP.
+    APPEND LINES OF lt_capacity_02 TO lt_capacity.
+
+    DATA lt_capacity_03 type table of zpoco_d_capact_a.
+
+    lt_capacity_03 = lt_capacity.
+
+
+    LOOP AT lt_capacity_03 ASSIGNING <ls_capacity>.
+      TRY.
+          CALL METHOD cl_system_uuid=>if_system_uuid_static~create_uuid_x16
+            RECEIVING
+              uuid = DATA(lv_id3).
+        CATCH cx_uuid_error .
+      ENDTRY.
+      <ls_capacity>-capacity_uuid = lv_id3.
+      <ls_capacity>-mfg_start_date+4(2) = '01'.
+    ENDLOOP.
+    APPEND LINES OF lt_capacity_03 TO lt_capacity.
+
     DELETE FROM zpoco_d_capact_a.
     INSERT zpoco_d_capact_a FROM TABLE @lt_capacity.
 
@@ -1370,6 +1404,137 @@ created_by =
      )
      .
 
+    DATA: lt_order_02 TYPE TABLE OF zpoco_d_order_a.
+    lt_order_02 =
+    VALUE #(
+    ( nvs_id ='NT33100' therapy ='CYTB323A12101' country_id ='US' mfg_plant_id ='PL1' ttype_id ='Clinical' day0 ='20201215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33101' therapy ='CYTB323A12102' country_id ='US' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20201215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33102' therapy ='CYTB323A12103' country_id ='FR' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20201215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33103' therapy ='CYTB323A12104' country_id ='FR' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20201215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33104' therapy ='CYTB323A12105' country_id ='FR' mfg_plant_id ='PL1' ttype_id ='Clinical' day0 ='20201215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33105' therapy ='CYTB323A12106' country_id ='FR' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20201215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33106' therapy ='CYTB323A12107' country_id ='FR' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20201215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33107' therapy ='CYTB323A12108' country_id ='FR' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33108' therapy ='CYTB323A12109' country_id ='FR' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33109' therapy ='CYTB323A12110' country_id ='DE' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33110' therapy ='CYTB323A12111' country_id ='DE' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33111' therapy ='CYTB323A12112' country_id ='DE' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33112' therapy ='CYTB323A12113' country_id ='DE' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33113' therapy ='CYTB323A12114' country_id ='DE' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33114' therapy ='CYTB323A12115' country_id ='AU' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33115' therapy ='CYTB323A12116' country_id ='AU' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33116' therapy ='CYTB323A12117' country_id ='AU' mfg_plant_id ='PL1' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33117' therapy ='CYTB323A12118' country_id ='AU' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20201115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33118' therapy ='CYTB323A12119' country_id ='AU' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33119' therapy ='CYTB323A12120' country_id ='AU' mfg_plant_id ='PL4' ttype_id ='Commercial' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33120' therapy ='CYTB323A12121' country_id ='ES' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33121' therapy ='CYTB323A12122' country_id ='ES' mfg_plant_id ='PL3' ttype_id ='Commercial' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33122' therapy ='CYTB323A12123' country_id ='ES' mfg_plant_id ='PL2' ttype_id ='Commercial' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33123' therapy ='CYTB323A12124' country_id ='CZ' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33124' therapy ='CYTB323A12125' country_id ='CZ' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33125' therapy ='CYTB323A12126' country_id ='CZ' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33126' therapy ='CYTB323A12127' country_id ='CZ' mfg_plant_id ='PL5' ttype_id ='Commercial' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33127' therapy ='CYTB323A12128' country_id ='CZ' mfg_plant_id ='PL5' ttype_id ='Clinical' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33128' therapy ='CYTB323A12129' country_id ='IL' mfg_plant_id ='PL5' ttype_id ='Clinical' day0 ='20201015' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33129' therapy ='CYTB323A12130' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33130' therapy ='CYTB323A12131' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33131' therapy ='CYTB323A12132' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33132' therapy ='CYTB323A12133' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210215' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33133' therapy ='CYTB323A12134' country_id ='IL' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33134' therapy ='CYTB323A12135' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33135' therapy ='CYTB323A12136' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33136' therapy ='CYTB323A12137' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33137' therapy ='CYTB323A12138' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ( nvs_id ='NT33138' therapy ='CYTB323A12139' country_id ='RO' mfg_plant_id ='PL4' ttype_id ='Clinical' day0 ='20210115' stsl1_id ='ST4' stsl2_id ='ST5' ord_site_id ='S13'
+       oos_id ='OOS1' oos ='X' oos_descr_id ='2' aph_dewar ='X' fp_dewar ='X' actual_day0 ='X' created_by ='CB0000000723' created_at ='20210222130500.0912540 ' last_changed_by ='CB0000000723' last_changed_at ='20210222130500.0912540 '
+    )
+    ).
+    LOOP AT lt_order_02 ASSIGNING FIELD-SYMBOL(<ls_order>) WHERE order_uuid IS INITIAL.
+      TRY.
+          CALL METHOD cl_system_uuid=>if_system_uuid_static~create_uuid_x16
+            RECEIVING
+              uuid = DATA(lv_id).
+        CATCH cx_uuid_error .
+      ENDTRY.
+      <ls_order>-order_uuid = lv_id.
+    ENDLOOP.
+    APPEND LINES OF lt_order_02 TO lt_order.
 
     DELETE FROM zpoco_d_order_a.
     INSERT zpoco_d_order_a FROM TABLE @lt_order.
@@ -1639,6 +1804,54 @@ last_changed_at ='20210304114623.8753210 '  )
       ).
 
     INSERT zpoco_c_oos_a FROM TABLE @lt_oos.
+
+  ENDMETHOD.
+
+  METHOD fill_calendar.
+
+*** YEAR ***
+    DATA: lt_year TYPE TABLE OF zpoco_c_year_a.
+
+    DELETE FROM zpoco_c_year_a.
+
+    lt_year = VALUE #( ( calendar_year = '2020' )
+                       ( calendar_year = '2021' )      ).
+
+    INSERT zpoco_c_year_a FROM TABLE @lt_year.
+
+*** QUARTER ***
+    DATA: lt_quarter TYPE TABLE OF zpoco_c_quart_a.
+
+    DELETE FROM zpoco_c_quart_a.
+
+    lt_quarter = VALUE #( ( calendar_quarter = '1' )
+                          ( calendar_quarter = '2' )
+                          ( calendar_quarter = '3' )
+                          ( calendar_quarter = '4' )
+                        ).
+
+    INSERT zpoco_c_quart_a FROM TABLE @lt_quarter.
+
+*** MONTH ***
+    DATA: lt_month TYPE TABLE OF zpoco_c_month_a.
+
+    DELETE FROM zpoco_c_month_a.
+
+    lt_month = VALUE #( ( calendar_month_id = '01' calendar_month_name = 'January' )
+                        ( calendar_month_id = '02' calendar_month_name = 'February' )
+                        ( calendar_month_id = '03' calendar_month_name = 'March' )
+                        ( calendar_month_id = '04' calendar_month_name = 'April' )
+                        ( calendar_month_id = '05' calendar_month_name = 'May' )
+                        ( calendar_month_id = '06' calendar_month_name = 'June' )
+                        ( calendar_month_id = '07' calendar_month_name = 'July' )
+                        ( calendar_month_id = '08' calendar_month_name = 'August' )
+                        ( calendar_month_id = '09' calendar_month_name = 'September' )
+                        ( calendar_month_id = '10' calendar_month_name = 'October' )
+                        ( calendar_month_id = '11' calendar_month_name = 'November' )
+                        ( calendar_month_id = '12' calendar_month_name = 'December' )
+                        ).
+
+    INSERT zpoco_c_month_a FROM TABLE @lt_month.
 
   ENDMETHOD.
 
