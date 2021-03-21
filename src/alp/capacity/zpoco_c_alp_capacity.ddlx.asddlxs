@@ -37,7 +37,16 @@
             type: #AS_CHART,
             qualifier: 'ChartFilterByConsumedSlots'
         }]
-    } 
+    },
+    {   //visual filter
+        qualifier: 'pvFilterByCountry',
+        text: 'Filter: by Country',
+        sortOrder: [{ by: 'CountryId', direction: #ASC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByCountry'
+        }]
+    }  
    
 ]
 @UI.selectionVariant:[
@@ -82,6 +91,20 @@
         measures:  [ 'Quantity' ],
         dimensionAttributes: [{
             dimension: 'ConsumedSlots',
+            role: #CATEGORY
+        }],
+        measureAttributes: [
+        {   measure: 'Quantity',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterByCountry',
+        chartType: #DONUT,
+        dimensions:  [ 'CountryId' ],
+        measures:  [ 'Quantity' ],
+        dimensionAttributes: [{
+            dimension: 'CountryId',
             role: #CATEGORY
         }],
         measureAttributes: [

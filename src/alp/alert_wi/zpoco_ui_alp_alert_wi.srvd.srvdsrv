@@ -1,4 +1,6 @@
 @EndUserText.label: 'Service Definition: ALP Alert WI'
 define service zpoco_ui_alp_alert_wi {
   expose zpoco_c_alp_alert_wi as AlpAlertWI;
+  expose zpoco_i_quarter as CalendarQuarter;
+  expose zpoco_i_month as CalendarMonth;
 }

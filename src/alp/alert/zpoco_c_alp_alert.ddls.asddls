@@ -20,22 +20,25 @@ define view zpoco_c_alp_alert
                  ranking: #HIGH,
                  fuzzinessThreshold: 0.8
                }
-      @Consumption.valueHelpDefinition: [{ 
-                                           entity: { name: 'zpoco_i_alp_alert', element: 'AlertMessage'} 
-                                        }]
       AlertMessage,
-     
+      
+      @EndUserText.label: 'Alert Day'
       AlertDay,
       
-      @EndUserText.label: 'Month'
+      @EndUserText.label: 'Alert Month Number'
       @ObjectModel.text.element: ['MonthNames']
       AlertMonth,
       
+      @EndUserText.label: 'Alert Month'
       MonthNames,
       
+      @Consumption.valueHelpDefinition: [{ 
+                                           entity: { name: 'zpoco_i_year', element: 'CalendarYear'} 
+                                        }]
+      @EndUserText.label: 'Alert Year'
       AlertYear,
       
-      @EndUserText.label: 'Quarter'
+      @EndUserText.label: 'Alert Quarter'
       AlertQuarter,
       
       @Aggregation.default: #SUM

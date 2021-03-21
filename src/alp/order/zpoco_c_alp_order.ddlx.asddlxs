@@ -68,6 +68,7 @@
     { //main area
         qualifier: 'Default',
         text: 'Default'
+
     },
     { //kpi
         qualifier: 'svKPINvsIdQuantiybyYear',
@@ -255,6 +256,7 @@ annotate view zpoco_c_alp_order with
   @UI.fieldGroup:     [{ position: 10, qualifier: 'TherapyData' }]
   Therapy;
 
+  @UI.selectionField: [{ position: 30 }]
   @UI.lineItem:       [{ position: 30, importance: #HIGH  }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
   CountryId;
@@ -279,21 +281,24 @@ annotate view zpoco_c_alp_order with
   StatusL1Id;
 
   @UI.selectionField: [{ position: 90 }]
-  @UI.lineItem:       [{ position: 80, importance: #HIGH }]
+  @UI.lineItem:       [{ position: 90, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 20, qualifier: 'StatusData' }]
   StatusL2Id;
 
+  @UI.selectionField: [{ position: 100 }]
   @UI.lineItem:       [{ position: 100, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 100, qualifier: 'BasicData' }]
   OrderingSiteId;
 
-  @UI.lineItem:       [{ position: 103, importance: #MEDIUM }]
+  @UI.selectionField: [{ position: 110 }]
+  @UI.lineItem:       [{ position: 110, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 13,  qualifier: 'OOSData' }]
   OosId;
 
   @UI.fieldGroup:     [{ position: 10,  qualifier: 'OOSData' }]
   Oos;
 
+  @UI.selectionField: [{ position: 120 }]
   @UI.lineItem:       [{ position: 120, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 20,  qualifier: 'OOSData' }]
   OosDescriptionId;
@@ -306,12 +311,13 @@ annotate view zpoco_c_alp_order with
 
   @UI.dataPoint: {
        qualifier: 'NvsIdQuantitybyYear',
-       title: 'Order Quantity',
+       title: 'Year Order Quantity',
        criticalityCalculation: {
-       improvementDirection: #MAXIMIZE,
-       deviationRangeHighValue: 10,
-       toleranceRangeHighValue: 20
-  }}
+           improvementDirection: #MAXIMIZE,
+           toleranceRangeLowValue:  50,
+           toleranceRangeHighValue: 100
+        }
+  }
 
   @UI.lineItem:       [{ position: 150, importance: #HIGH }]
   NvsIdQuantity;

@@ -10,4 +10,7 @@ define service zpoco_ui_alp_order {
   expose zpoco_i_oos as OOSDetails;
   expose zpoco_i_oos_descr as OOSDescription;
   expose zpoco_c_therapy_vh as TherapyValueHelp;
+  expose zpoco_i_year as CalendarYear;
+  expose zpoco_i_quarter as CalendarQuarter;
+  expose zpoco_i_month as CalendarMonth;
 }

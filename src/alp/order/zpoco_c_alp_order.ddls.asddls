@@ -17,13 +17,21 @@ define view zpoco_c_alp_order
 
       @EndUserText.label: 'Year'
       @Consumption.filter.defaultValue: '2021'
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_year',
+                                                     element: 'CalendarYear'} }]
       Day0Year,
 
       @EndUserText.label: 'Quarter'
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_quarter',
+                                                     element: 'CalendarQuarter'} }]
       Day0Quarter,
 
       @EndUserText.label: 'Month'
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_month',
+                                                     element: 'CalendarMonthId'} }]
+      @ObjectModel.text.element: ['CalendarMonthName']
       Day0Month,
+      _CalendarMonth.CalendarMonthName as CalendarMonthName,
 
       @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
       Day0,
@@ -32,49 +40,46 @@ define view zpoco_c_alp_order
 
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_c_therapy_vh',   element: 'Therapy'} }]
       Therapy,
-
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_country', element: 'CountryId'} }]
+      
       @ObjectModel.text.element: ['CountryName']
       CountryId,
-      _Country.CountryName           as CountryName,
+      _Country.CountryName             as CountryName,
 
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_plant',   element: 'MfgPlantId'} }]
       @ObjectModel.text.element: ['PlantName']
       MfgPlantId,
-      _Plant.PlantName               as PlantName,
+      _Plant.PlantName                 as PlantName,
 
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_ttype',   element: 'TherapyTypeId'} }]
       @ObjectModel.text.element: ['TherapyTypeName']
       TherapyTypeId,
-      _TType.TherapyTypeName         as TherapyTypeName,
+      _TType.TherapyTypeName           as TherapyTypeName,
 
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_stsl1',   element: 'StatusL1Id'} }]
       @ObjectModel.text.element: ['StatusL1Name']
       StatusL1Id,
-      _StatusL1.StatusL1Name         as StatusL1Name,
+      _StatusL1.StatusL1Name           as StatusL1Name,
 
-      @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_stsl2',   element: 'StatusL2Id'} }]
       @ObjectModel.text.element: ['StatusL2Name']
       StatusL2Id,
-      _StatusL2.StatusL2Name         as StatusL2Name,
+      _StatusL2.StatusL2Name           as StatusL2Name,
 
 
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_site',    element: 'OrderingSiteId'} }]
       @ObjectModel.text.element: ['OrderingSiteName']
       OrderingSiteId,
-      _Site.OrderingSiteName         as OrderingSiteName,
+      _Site.OrderingSiteName           as OrderingSiteName,
 
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_oos', element: 'OosId' }}]
       @ObjectModel.text.element: ['OosDetails']
       OosId,
-      _OOSDetails.OosDetails         as OosDetails,
+      _OOSDetails.OosDetails           as OosDetails,
 
       Oos,
 
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_oos_descr', element: 'OosDescriptionId' }}]
       @ObjectModel.text.element: ['OosDescription']
       OosDescriptionId,
-      _OOSDescription.OosDescription as OosDescription,
+      _OOSDescription.OosDescription   as OosDescription,
 
       AphDewar,
       FpDewar,
@@ -95,7 +100,11 @@ define view zpoco_c_alp_order
       _Site,
       _StatusL1,
       _StatusL2,
-      _TType
+      _TType,
+      _CalendarYear,
+      _CalendarQuarter,
+      _CalendarMonth
+
 }
 where
-  Day0 is not initial
+  Day0Year is not initial

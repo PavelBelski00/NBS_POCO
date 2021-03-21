@@ -1,17 +1,19 @@
 @Metadata.layer: #CORE
 
 
+@UI.headerInfo: { typeName:       'Alert',
+                  typeNamePlural: 'Alerts' }
 
 @UI.selectionPresentationVariant: [
                                    {   //kpi
-                                       qualifier: 'KPIOrdersQuantity',
+                                       qualifier:                    'KPIOrdersQuantity',
                                        presentationVariantQualifier: 'pvKPIOrdersQuantity',
-                                       selectionVariantQualifier: 'svKPIOrdersQuantity'
+                                       selectionVariantQualifier:    'svKPIOrdersQuantity'
                                    },
                                    {  //chart and table
-                                       qualifier: 'Default',
+                                       qualifier:                    'Default',
                                        presentationVariantQualifier: 'Default',
-                                       selectionVariantQualifier: 'Default'
+                                       selectionVariantQualifier:    'Default'
                                    }
                                   ]
 
@@ -19,17 +21,17 @@
                           { //kpi
                             qualifier:     'pvKPIOrdersQuantity',
                             text:          'KPI: Orders Quantity',
-                            visualizations: [{
+                            visualizations: [
+                                             {
                                                type: #AS_CHART,
                                                qualifier: 'cqKPIOrdersQuantity'
                                              },
                                              {
                                                type: #AS_DATAPOINT,
                                                qualifier: 'OrdersQuantity'
-                                            }]
+                                             }
+                                            ]
                           },
-                          
-                          
                           { //visual filter
                             qualifier:     'pvFilterByAlertMessages',
                             text:          'Filter: Alert Messages',
@@ -57,7 +59,6 @@
                                                qualifier: 'ChartFilterAlertQuarter'                 
                                             }]                 
                           },                 
-                          
                           { //main area chart                 
                             qualifier:     'Default',                 
                             sortOrder:      [{ by: 'UpdatedDate' , direction: #ASC }] ,                 
@@ -68,84 +69,186 @@
                           }                 
                          ] 
 
+@UI.selectionVariant:[
+                      { //kpi
+                        qualifier: 'svKPIOrdersQuantity',
+                        text:      'KPI Ordres Quantity'
+                      },
+                      { //main area
+                        qualifier: 'Default',
+                        text:      'Default'
+                      }
+                     ]
 @UI.chart: [
             { //kpi
               qualifier: 'cqKPIOrdersQuantity',
               chartType: #COLUMN,
               dimensions:  [ 'AlertMessage' ],
               measures:    [ 'OrdersQuantity' ],
-              dimensionAttributes: [{ dimension: 'AlertMessage', role: #CATEGORY }],
-              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+              dimensionAttributes: [{ dimension: 'AlertMessage',   role: #CATEGORY }],
+              measureAttributes:   [{ measure:   'OrdersQuantity', role: #AXIS_1 }]
             },
-            
-            
             { //visual filter
               qualifier: 'ChartFilterAlertMessages',
               chartType: #BAR,
               dimensions:  [ 'AlertMessage' ],
               measures:    [ 'OrdersQuantity' ],
-              dimensionAttributes: [{ dimension: 'AlertMessage', role: #CATEGORY }],
-              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+              dimensionAttributes: [{ dimension: 'AlertMessage',   role: #CATEGORY }],
+              measureAttributes:   [{ measure:   'OrdersQuantity', role: #AXIS_1 }]
             },
             { //visual filter
               qualifier: 'ChartFilterAlertMonth',
               chartType: #DONUT,
               dimensions:  [ 'AlertMonth' ],
               measures:    [ 'OrdersQuantity' ],
-              dimensionAttributes: [{ dimension: 'AlertMonth', role: #CATEGORY }],
-              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+              dimensionAttributes: [{ dimension: 'AlertMonth',     role: #CATEGORY }],
+              measureAttributes:   [{ measure:   'OrdersQuantity', role: #AXIS_1 }]
             },
             { //visual filter
               qualifier: 'ChartFilterAlertQuarter',
               chartType: #DONUT,
               dimensions:  [ 'AlertQuarter' ],
               measures:    [ 'OrdersQuantity' ],
-              dimensionAttributes: [{ dimension: 'AlertQuarter', role: #CATEGORY }],
-              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+              dimensionAttributes: [{ dimension: 'AlertQuarter',   role: #CATEGORY }],
+              measureAttributes:   [{ measure:   'OrdersQuantity', role: #AXIS_1 }]
             },
-                        
             { //main area chart
               qualifier: 'ChartDefault',
               chartType: #COLUMN,
               dimensions:  [ 'AlertMessage' ],
               measures:    [ 'OrdersQuantity' ],
-              dimensionAttributes: [{ dimension: 'AlertMessage', role: #SERIES }],
-              measureAttributes:   [{ measure: 'OrdersQuantity', role: #AXIS_1 }]
+              dimensionAttributes: [{ dimension: 'AlertMessage',   role: #SERIES }],
+              measureAttributes:   [{ measure:   'OrdersQuantity', role: #AXIS_1 }]
             }
            ]
 
 annotate view zpoco_c_alp_alert with
 
 {
-  @UI.lineItem: [{ position: 10 }]
-  UpdatedDate;
+  @UI.facet: [
+---------------------------------------------------------------------
+//                       Header Facet Annotations                        
+              {
+                 id:              'HeaderOrderNumber',
+                 purpose:          #HEADER,
+                 type:             #DATAPOINT_REFERENCE,
+                 targetQualifier: 'OrderNumber',
+                 position: 10
+              },
+              {
+                 id:              'HeaderAlertMessage',
+                 purpose:          #HEADER,
+                 type:             #DATAPOINT_REFERENCE,
+                 targetQualifier: 'AlertMessage',
+                 position: 20
+              },
+                            
+---------------------------------------------------------------------            
+//                       Object Page Tabs                                               
+              {
+                 id:                 'GeneralInformation',
+                 type:               #COLLECTION,
+                 label:              'General Information',
+                 position:           10
+              } ,
+              {
+                 id:                 'DateInformation',
+                 type:               #COLLECTION,
+                 label:              'Date Information',
+                 position:           20
+              },
+ --------------------------------------------------------------------             
+//                      Field Groups              
+              
+              {
+                 id:                'BasicData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Basic Data',
+                 position:          10,
+                 targetQualifier:   'BasicData'
+              },
+              {     
+                 id:                'AdminData',     
+                 purpose:           #STANDARD ,     
+                 parentId:          'DateInformation',     
+                 type:              #FIELDGROUP_REFERENCE,     
+                 label:             'Date Information',     
+                 position:          20,     
+                 targetQualifier:   'DateInfo'     
+              } 
+             ]  
+-----------------------------  
+//  @UI: { 
+//         lineItem:       [ { position: 10 } ]//,
+////         selectionField: [ { position: 10 } ]//,
+////         fieldGroup:     [ { position: 10, qualifier: 'BasicData' } ]
+//       }
+//  UpdatedDate;
     
-  @UI.lineItem: [{ position: 20 }]
+  @UI: { 
+         lineItem:   [ { position: 20 }],
+         fieldGroup: [ { position: 20, qualifier: 'BasicData'}],
+         dataPoint:  { qualifier: 'OrderNumber', title: 'Order Number' }
+       }
   OrderNumber;
   
-  @UI.lineItem: [{ position: 30 }]
-  @UI.selectionField: [{ position: 10 }]
+  @UI: { 
+         lineItem:       [ { position: 30 } ],
+         selectionField: [ { position: 20 } ],
+         fieldGroup:     [ { position: 30, qualifier: 'BasicData' } ],
+         dataPoint:      { qualifier: 'AlertMessage', title: 'Alert Message' }
+       }
   AlertMessage;
   
-  @UI.hidden: true
-  @UI.lineItem: [{ position: 40 }]
+  @UI: { 
+         lineItem:   [ { position: 40 } ],
+         dataPoint:  { 
+                        qualifier: 'OrdersQuantity',
+                        title: 'OrQ',
+                        valueFormat.numberOfFractionalDigits:2,
+                        criticalityCalculation: { 
+                                                  improvementDirection:    #MINIMIZE,
+                                                  toleranceRangeHighValue:  4,
+                                                  deviationRangeHighValue:  6
+                                                }
+                     }
+       
+       }
+  OrdersQuantity;
+-----------------------------  
+  @UI: { 
+         lineItem:   [ { position: 50 } ],
+         fieldGroup: [ { position: 10, qualifier: 'DateInfo' } ]
+       }
   AlertDay;
   
-//  @UI.hidden: true
-  @UI.lineItem: [{ position: 50 }]
-  @UI.selectionField: [{ position: 20 }]
+  @UI: { 
+         lineItem:       [ { position: 60 } ],
+         selectionField: [ { position: 30 } ],
+         fieldGroup:     [ { position: 20, qualifier: 'DateInfo' } ]
+       }
   AlertMonth;
   
-  @UI.hidden: true
-  @UI.lineItem: [{ position: 60 }]
-  AlertYear;
-  
-//  @UI.hidden: true
-  @UI.selectionField: [{ position: 30 }]
+//  @UI: { 
+//         lineItem:       [ { position: 63 } ],
+//         fieldGroup:     [ { position: 23, qualifier: 'DateInfo' } ]
+//       }
+//  MonthNames;
+
+  @UI: { 
+         lineItem:       [ { position: 65 } ],
+         selectionField: [ { position: 35 } ],
+         fieldGroup:     [ { position: 25, qualifier: 'DateInfo'  } ]
+       }
   AlertQuarter;
   
-  @UI.lineItem: [{ position: 80 }]
-  @UI.dataPoint:{ title: 'OrdQ', criticalityValue: #NEGATIVE, qualifier: 'OrdersQuantity' }
-  OrdersQuantity;
-
+  @UI: { 
+         lineItem:       [ { position: 70 } ],
+         selectionField: [ { position: 40 } ],
+         fieldGroup:     [ { position: 30, qualifier: 'DateInfo'  } ]
+       }
+  AlertYear;
+  
 }

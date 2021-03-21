@@ -5,6 +5,9 @@
 @EndUserText.label: 'ALP Order'
 define view zpoco_i_alp_order
   as select from zpoco_i_order
+  association [1..1] to zpoco_i_year    as _CalendarYear    on $projection.Day0Year = _CalendarYear.CalendarYear
+  association [1..1] to zpoco_i_quarter as _CalendarQuarter on $projection.Day0Quarter = _CalendarQuarter.CalendarQuarter
+  association [1..1] to zpoco_i_month   as _CalendarMonth   on $projection.Day0Month = _CalendarMonth.CalendarMonthId
 {
   key OrderUuid,
       NvsId,
@@ -63,5 +66,8 @@ define view zpoco_i_alp_order
       _Site,
       _StatusL1,
       _StatusL2,
-      _TType
+      _TType,
+      _CalendarYear,
+      _CalendarQuarter,
+      _CalendarMonth
 }

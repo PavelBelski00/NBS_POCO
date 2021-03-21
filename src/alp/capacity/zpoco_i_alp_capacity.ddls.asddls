@@ -5,13 +5,16 @@
 @EndUserText.label: 'ALP Capacity'
 define view zpoco_i_alp_capacity
   as select from zpoco_i_capacity
+  association [1..1] to zpoco_i_year    as _CalendarYear    on $projection.MfgStartDateYear = _CalendarYear.CalendarYear
+  association [1..1] to zpoco_i_quarter as _CalendarQuarter on $projection.MfgStartDateQuarter = _CalendarQuarter.CalendarQuarter
+  association [1..1] to zpoco_i_month   as _CalendarMonth   on $projection.MfgStartDateMonth = _CalendarMonth.CalendarMonthId
 {
   key CapacityUuid,
       MfgPlantId,
       NvsId,
-      
-      1 as Quantity,
-      
+
+      1                           as Quantity,
+
       MfgStartDate,
       substring(MfgStartDate,1,4) as MfgStartDateYear,
       case  substring(MfgStartDate,5,2)
@@ -28,10 +31,10 @@ define view zpoco_i_alp_capacity
       when '11' then '4'
       when '12' then '4'
       else ''
-      end                 as MfgStartDateQuarter,
+      end                         as MfgStartDateQuarter,
 
       substring(MfgStartDate,5,2) as MfgStartDateMonth,
-      
+
       ConsumedSlots,
       Priority,
       ProtocolSubjectId,
@@ -43,9 +46,12 @@ define view zpoco_i_alp_capacity
       LastChangedBy,
       LastChangedAt,
       Today,
-      
+
       /* Associations */
       _Country,
       _Plant,
-      _TType
+      _TType,
+      _CalendarYear,
+      _CalendarQuarter,
+      _CalendarMonth
 }

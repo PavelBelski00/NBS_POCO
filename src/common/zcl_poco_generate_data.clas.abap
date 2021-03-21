@@ -1191,39 +1191,45 @@ created_by =
 'CB0000000723' created_at ='20210226081828.0000000 ' last_changed_by ='CB0000000723' last_changed_at ='20210226081828.0000000 '  )
  ).
 
-    DATA lt_capacity_02 type table of zpoco_d_capact_a.
-
-    lt_capacity_02 = lt_capacity.
-
-
-    LOOP AT lt_capacity_02 ASSIGNING FIELD-SYMBOL(<ls_capacity>).
-      TRY.
-          CALL METHOD cl_system_uuid=>if_system_uuid_static~create_uuid_x16
-            RECEIVING
-              uuid = DATA(lv_id).
-        CATCH cx_uuid_error .
-      ENDTRY.
-      <ls_capacity>-capacity_uuid = lv_id.
-      <ls_capacity>-mfg_start_date+4(2) = '02'.
-    ENDLOOP.
-    APPEND LINES OF lt_capacity_02 TO lt_capacity.
-
-    DATA lt_capacity_03 type table of zpoco_d_capact_a.
-
-    lt_capacity_03 = lt_capacity.
-
-
-    LOOP AT lt_capacity_03 ASSIGNING <ls_capacity>.
-      TRY.
-          CALL METHOD cl_system_uuid=>if_system_uuid_static~create_uuid_x16
-            RECEIVING
-              uuid = DATA(lv_id3).
-        CATCH cx_uuid_error .
-      ENDTRY.
-      <ls_capacity>-capacity_uuid = lv_id3.
-      <ls_capacity>-mfg_start_date+4(2) = '01'.
-    ENDLOOP.
-    APPEND LINES OF lt_capacity_03 TO lt_capacity.
+*    DATA lt_capacity_02 TYPE TABLE OF zpoco_d_capact_a.
+*
+*    lt_capacity_02 = lt_capacity.
+*
+*
+*    LOOP AT lt_capacity_02 ASSIGNING FIELD-SYMBOL(<ls_capacity>).
+*      TRY.
+*          CALL METHOD cl_system_uuid=>if_system_uuid_static~create_uuid_x16
+*            RECEIVING
+*              uuid = DATA(lv_id).
+*        CATCH cx_uuid_error .
+*      ENDTRY.
+*      READ TABLE lt_capacity WITH KEY capacity_uuid = lv_id TRANSPORTING NO FIELDS.
+*      IF sy-subrc <> 0.
+*        <ls_capacity>-capacity_uuid = lv_id.
+*        <ls_capacity>-mfg_start_date+4(2) = '02'.
+*      ENDIF.
+*    ENDLOOP.
+*    APPEND LINES OF lt_capacity_02 TO lt_capacity.
+*
+*    DATA lt_capacity_03 TYPE TABLE OF zpoco_d_capact_a.
+*
+*    lt_capacity_03 = lt_capacity.
+*
+*
+*    LOOP AT lt_capacity_03 ASSIGNING <ls_capacity>.
+*      TRY.
+*          CALL METHOD cl_system_uuid=>if_system_uuid_static~create_uuid_x16
+*            RECEIVING
+*              uuid = DATA(lv_id3).
+*        CATCH cx_uuid_error .
+*      ENDTRY.
+*      READ TABLE lt_capacity WITH KEY capacity_uuid = lv_id3 TRANSPORTING NO FIELDS.
+*      IF sy-subrc <> 0.
+*        <ls_capacity>-capacity_uuid = lv_id3.
+*        <ls_capacity>-mfg_start_date+4(2) = '01'.
+*      ENDIF.
+*    ENDLOOP.
+*    APPEND LINES OF lt_capacity_03 TO lt_capacity.
 
     DELETE FROM zpoco_d_capact_a.
     INSERT zpoco_d_capact_a FROM TABLE @lt_capacity.
