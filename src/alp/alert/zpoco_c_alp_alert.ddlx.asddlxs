@@ -82,7 +82,7 @@
 @UI.chart: [
             { //kpi
               qualifier: 'cqKPIOrdersQuantity',
-              chartType: #HORIZONTAL_AREA,
+              chartType: #PIE,
               dimensions:  [ 'AlertMessage' ],
               measures:    [ 'OrdersQuantity' ],
               dimensionAttributes: [{ dimension: 'AlertMessage',   role: #CATEGORY }],
