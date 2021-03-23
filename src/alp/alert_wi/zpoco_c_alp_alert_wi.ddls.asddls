@@ -9,11 +9,14 @@
 define view zpoco_c_alp_alert_wi
   as select from zpoco_i_alp_alert_wi
 {
+      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
   key UpdatedDate,
       
-      OrderNumber,
+      @Consumption.semanticObject: 'NBS_POC_OVP_ALERT_WI'
+      @EndUserText.label:          'Order Number'
+      NvsId,
       
-      @EndUserText.label: 'Message'
+      @EndUserText.label:          'Message'
       AlertWIMessage,
       
       @EndUserText.label: 'Day of the Month'

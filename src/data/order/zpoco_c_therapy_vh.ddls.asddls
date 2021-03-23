@@ -8,5 +8,6 @@ define view zpoco_c_therapy_vh
 {
   key Therapy as Therapy
 }
+where Therapy is not initial
 group by
   Therapy

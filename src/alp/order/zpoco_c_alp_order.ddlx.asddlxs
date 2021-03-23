@@ -11,7 +11,17 @@
         qualifier: 'KPINvsIdQuantiybyYear',
         presentationVariantQualifier: 'pvKPINvsIdQuantiybyYear',
         selectionVariantQualifier: 'svKPINvsIdQuantiybyYear'
-    }
+    },
+   {   //kpi
+        qualifier: 'KPITTCommercialQuantity',
+        presentationVariantQualifier: 'pvKPITTCommercialQuantity',
+        selectionVariantQualifier: 'svKPITTCommercialQuantity'
+    },
+    {   //kpi
+        qualifier: 'KPITTClinicalQuantity',
+        presentationVariantQualifier: 'pvKPITTClinicalQuantity',
+        selectionVariantQualifier: 'svKPINTTClinicalQuantity'
+    } 
 ]
 @UI.presentationVariant:[
     { //main area chart
@@ -25,6 +35,35 @@
             qualifier: 'ChartDefault'
         }]
     },
+    {   //visual filter Year
+        qualifier: 'pvFilterByYear',
+        text: 'Filter: Orders by Year',
+        sortOrder: [{ by: 'Day0Year', direction: #DESC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByYear'
+        }]
+    },    
+    {   //visual filter Quarter
+        qualifier: 'pvFilterByQuarter',
+        text: 'Filter: Orders by Quarter',
+        sortOrder: [{ by: 'Day0Quarter', direction: #ASC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByQuarter'
+        }]
+    },    
+    {   //visual filter Month
+        qualifier: 'pvFilterByMonth',
+        text: 'Filter: Orders by Month',
+        sortOrder: [{ by: 'Day0Month', direction: #ASC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByMonth'
+        }]
+    },    
+    
+    
     {   //visual filter
         qualifier: 'pvFilterByStatusL1',
         text: 'Filter: Orders by Status L1',
@@ -62,7 +101,30 @@
             type: #AS_DATAPOINT,
             qualifier: 'NvsIdQuantitybyYear'
         }]
+    },
+    {   //kpi
+        qualifier: 'pvKPITTClinicalQuantity',
+        text: 'KPI Clinical Therapy Type Quantity',
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'cqKPITTClinicalQuantity'
+        },{
+            type: #AS_DATAPOINT,
+            qualifier: 'TTClinicalQuantity'
+        }]
+    },
+    {   //kpi
+        qualifier: 'pvKPITTCommercialQuantity',
+        text: 'KPI Commericial Therapy Type Quantity',
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'cqKPITTCommericalQuantity'
+        },{
+            type: #AS_DATAPOINT,
+            qualifier: 'TTCommercialQuantity'
+        }]
     }
+    
 ]
 @UI.selectionVariant:[
     { //main area
@@ -73,6 +135,14 @@
     { //kpi
         qualifier: 'svKPINvsIdQuantiybyYear',
         text: 'KPI Order Quantity by Year'
+    },
+    { //kpi
+        qualifier: 'svKPITTClinicalQuantity',
+        text: 'KPI Clinical Therapy Type Quantity'
+    },
+    { //kpi
+        qualifier: 'svKPITTCommercialQuantity',
+        text: 'KPI Commericial Therapy Type Quantity'
     }
 ]
 @UI.chart: [
@@ -132,9 +202,9 @@
             role: #AXIS_1
         }]
     },
-    { //kpi
-        qualifier: 'cqKPINvsIdQuantiybyYear',
-        chartType: #COLUMN,
+    {   //visual filter Year
+        qualifier: 'ChartFilterByYear',
+        chartType: #BAR,
         dimensions:  [ 'Day0Year' ],
         measures:  [ 'NvsIdQuantity' ],
         dimensionAttributes: [{
@@ -145,11 +215,89 @@
             measure: 'NvsIdQuantity',
             role: #AXIS_1
         }]
+    },    
+    {   //visual filter Quarter
+        qualifier: 'ChartFilterByQuarter',
+        chartType: #BAR,
+        dimensions:  [ 'Day0Quarter' ],
+        measures:  [ 'NvsIdQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'Day0Quarter',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'NvsIdQuantity',
+            role: #AXIS_1
+        }]
+    },    
+    {   //visual filter Month
+        qualifier: 'ChartFilterByMonth',
+        chartType: #BAR,
+        dimensions:  [ 'Day0Month' ],
+        measures:  [ 'NvsIdQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'Day0Month',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'NvsIdQuantity',
+            role: #AXIS_1
+        }]
+    },    
+    
+    { //kpi
+        qualifier: 'cqKPINvsIdQuantiybyYear',
+        chartType: #DONUT,
+        dimensions:  [ 'Day0Year' ],
+        measures:  [ 'NvsIdQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'Day0Year',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'NvsIdQuantity',
+            role: #AXIS_1
+        }]
+    },
+    { //kpi
+        qualifier: 'cqKPITTClinicalQuantity',
+        chartType: #COLUMN,
+        dimensions:  [ 'Day0Year' ],
+        measures:  [ 'TherapyTypeClinicalQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'Day0Year',
+            role: #SERIES
+        }],
+        measureAttributes: [{
+            measure: 'TherapyTypeClinicalQuantity',
+            role: #AXIS_1
+        }]
+    },
+    { //kpi
+        qualifier: 'cqKPITTCommericalQuantity',
+        chartType: #COLUMN,
+        dimensions:  [ 'Day0Year' ],
+        measures:  [ 'TherapyTypeCommercialQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'Day0Year',
+            role: #SERIES
+        }],
+        measureAttributes: [{
+            measure: 'TherapyTypeCommercialQuantity',
+            role: #AXIS_1
+        }]
     }
 ]
 annotate view zpoco_c_alp_order with
 {
   @UI.facet: [
+          {     
+                id:                 'HeaderInfo',
+                purpose:            #HEADER,
+                type:               #FIELDGROUP_REFERENCE,
+                targetQualifier:    'HeaderInfo'
+                
+          },
           {
                 id:                 'GeneralInformation',
                 type:               #COLLECTION,
@@ -224,7 +372,21 @@ annotate view zpoco_c_alp_order with
                  label:             'Admin Data',
                  position:          20,
                  targetQualifier:   'AdminData'
-           }
+           },
+          {
+                 id:                'LineItemAlerts',
+                 type:              #LINEITEM_REFERENCE,
+                 label:             'Alerts',
+                 position:          30,
+                 targetElement:     '_OrderAlert'
+           },
+          {
+                 id:                'LineItemWorkItems',
+                 type:              #LINEITEM_REFERENCE,
+                 label:             'Work Items',
+                 position:          40,
+                 targetElement:     '_OrderAlertWorkItem'
+           }              
   ]
 
   @UI.hidden: true
@@ -248,7 +410,7 @@ annotate view zpoco_c_alp_order with
   Day0;
 
   @UI.lineItem:       [{ position: 10, importance: #HIGH }]
-  @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'HeaderInfo' }]
   NvsId;
 
   @UI.selectionField: [{ position: 15 }]
@@ -321,7 +483,29 @@ annotate view zpoco_c_alp_order with
 
   @UI.lineItem:       [{ position: 150, importance: #HIGH }]
   NvsIdQuantity;
-
+  
+  @UI.dataPoint: {
+       qualifier: 'TTCommercialQuantity',
+       title: 'Commercial Therapy Type Quantity',
+       criticalityCalculation: {
+           improvementDirection: #MAXIMIZE,
+           toleranceRangeLowValue:  70,
+           toleranceRangeHighValue: 100
+        }
+  }
+  TherapyTypeCommercialQuantity;  
+  
+  @UI.dataPoint: {
+       qualifier: 'TTClinicalQuantity',
+       title: 'Clinical Therapy Type Quantity',
+       criticalityCalculation: {
+           improvementDirection: #MAXIMIZE,
+           toleranceRangeLowValue:  70,
+           toleranceRangeHighValue: 100
+        }
+  }
+  TherapyTypeClinicalQuantity;  
+  
   @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]
   CreatedBy;
 
@@ -333,4 +517,5 @@ annotate view zpoco_c_alp_order with
 
   @UI.fieldGroup:     [{ position: 40, qualifier: 'AdminData' }]
   LastChangedAt;
+  
 }

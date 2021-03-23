@@ -182,7 +182,7 @@ annotate view zpoco_c_alp_alert_wi with
          fieldGroup: [ { position: 20, qualifier: 'BasicData'}],
          dataPoint:  { qualifier: 'OrderNumber', title: 'Order Number' }
        }
-  OrderNumber;               
+  NvsId;               
   
   @UI: { 
          lineItem:   [ { position: 30 } ],

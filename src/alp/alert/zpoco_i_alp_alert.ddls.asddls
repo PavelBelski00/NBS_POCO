@@ -10,7 +10,7 @@ define view zpoco_i_alp_alert
 
 {
   key UpdatedDate,
-      NvsId                        as OrderNumber,
+      NvsId,
       AlertMessage,
       substring(UpdatedDate, 7, 2) as AlertDay,
       substring(UpdatedDate, 5, 2) as AlertMonth,

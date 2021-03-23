@@ -23,11 +23,6 @@ define root view entity zpoco_c_order
       }
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_c_therapy_vh',   element: 'Therapy'} }]
       Therapy,
-      @Search: {
-          defaultSearchElement: true,
-          ranking: #HIGH,
-          fuzzinessThreshold: 0.8
-      }
 
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_country', element: 'CountryId'} }]
       @ObjectModel.text.element: ['CountryName']

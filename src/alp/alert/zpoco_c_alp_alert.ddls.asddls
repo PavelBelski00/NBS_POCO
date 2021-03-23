@@ -3,23 +3,20 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'ALP Alert'
-@Search.searchable: true
 @Metadata.allowExtensions: true
 
 define view zpoco_c_alp_alert
   as select from zpoco_i_alp_alert
 {
       @EndUserText.label: 'Date of creation'
+      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
   key UpdatedDate,
       
-      OrderNumber,
+      @Consumption.semanticObject: 'NBS_POC_OVP_ALERT'
+      @EndUserText.label: 'Order Number'
+      NvsId,
       
-      @EndUserText.label: 'Message'
-      @Search: {
-                 defaultSearchElement: true,
-                 ranking: #HIGH,
-                 fuzzinessThreshold: 0.8
-               }
+      @EndUserText.label: 'Alert Message'
       AlertMessage,
       
       @EndUserText.label: 'Alert Day'

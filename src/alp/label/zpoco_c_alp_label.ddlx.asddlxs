@@ -7,28 +7,95 @@
         qualifier: 'Default',
         presentationVariantQualifier: 'Default',
         selectionVariantQualifier: 'Default'
-    }
+    },
+    {   //kpi
+        qualifier: 'KPITherapyPrintedLabels',
+        presentationVariantQualifier: 'pvKPITherapyPrintedLabels',
+        selectionVariantQualifier: 'svKPITherapyPrintedLabels'
+    }    
 ]
+
+
 @UI.presentationVariant:[
     { //main area chart
         qualifier: 'Default',
-        sortOrder: [{ by: 'MfgPlantId' , direction: #ASC }] ,
         visualizations: [{
             type: #AS_CHART,
             qualifier: 'ChartDefault'
         }]
-    }
-]
+    },
+    
+    {   //visual filter TherapyTypeId
+        qualifier: 'pvFilterByTherapyTypeID',
+        text: 'Filter: Therapy Type ID',
+        sortOrder: [{ by: 'TherapyTypeId' }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByTherapyTypeID'
+        }]
+    },
+    
+    
+    {   //kpi
+        qualifier: 'pvKPITherapyPrintedLabels',
+        text: 'KPI Printed Labels by Therapy',
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'cqKPITherapyPrintedLabels'
+        },{
+            type: #AS_DATAPOINT,
+            qualifier: 'PrintedLabels'
+        }]
+    }    
+    
+    ]
+
 @UI.selectionVariant:[
     { //main area
         qualifier: 'Default',
         text: 'Default'
+    },
+    
+    { //kpi
+        qualifier: 'svKPITherapyPrintedLabels',
+        text: 'KPI Printed LAbels by Therapy'
     }
 ]
-                  
-//         Charts         
+
+
 @UI.chart: [
-{
+//         Charts
+      { //visual TherapyTypeID
+        qualifier: 'ChartFilterByTherapyTypeID',
+        chartType: #BAR,
+        dimensions:  [ 'TherapyTypeId' ],
+        measures:  [ 'PrintedLabels' ],
+        dimensionAttributes: [{
+            dimension: 'TherapyTypeId',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'PrintedLabels',
+            role: #AXIS_1
+        }]
+      },
+
+      { //kpi Therapy
+        qualifier: 'cqKPITherapyPrintedLabels',
+        chartType: #COLUMN,
+        dimensions:  [ 'Therapy' ],
+        measures:  [ 'PrintedLabels' ],
+        dimensionAttributes: [{
+            dimension: 'Therapy',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'PrintedLabels',
+            role: #AXIS_1
+        }]
+      },
+
+      {
         qualifier: 'ChartDefault',
         chartType: #COLUMN_DUAL,
         dimensions:  [ 'MfgPlantId' ],
@@ -42,7 +109,8 @@
             role: #AXIS_1 },
         {   measure:  'UsedLabels',
             role: #AXIS_2 }]
-        }]
+      }
+  ]
     
     
 annotate view zpoco_c_alp_label with
@@ -95,7 +163,7 @@ annotate view zpoco_c_alp_label with
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]  
   TherapyTypeId  ;    
   
-  @UI.selectionField: [{ position: 40 }]
+//  @UI.selectionField: [{ position: 40 }]
   @UI.lineItem:       [{ position: 40, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData' }]
   NvsId  ;      
@@ -106,6 +174,15 @@ annotate view zpoco_c_alp_label with
 
   @UI.lineItem:       [{ position: 60, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 60, qualifier: 'BasicData' }]
+  @UI.dataPoint: {
+       qualifier: 'PrintedLabels',
+       title: 'Printed Labels',
+       criticalityCalculation: {
+           improvementDirection: #MAXIMIZE,
+           toleranceRangeLowValue:  30,
+           toleranceRangeHighValue: 100
+        }
+  }  
   PrintedLabels;
 
   @UI.lineItem:       [{ position: 70, importance: #HIGH }]

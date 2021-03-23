@@ -82,7 +82,7 @@
 @UI.chart: [
             { //kpi
               qualifier: 'cqKPIOrdersQuantity',
-              chartType: #COLUMN,
+              chartType: #HORIZONTAL_AREA,
               dimensions:  [ 'AlertMessage' ],
               measures:    [ 'OrdersQuantity' ],
               dimensionAttributes: [{ dimension: 'AlertMessage',   role: #CATEGORY }],
@@ -180,19 +180,19 @@ annotate view zpoco_c_alp_alert with
               } 
              ]  
 -----------------------------  
-//  @UI: { 
-//         lineItem:       [ { position: 10 } ]//,
-////         selectionField: [ { position: 10 } ]//,
-////         fieldGroup:     [ { position: 10, qualifier: 'BasicData' } ]
-//       }
-//  UpdatedDate;
+  @UI: { 
+         lineItem:       [ { position: 10 } ],
+         selectionField: [ { position: 10 } ],
+         fieldGroup:     [ { position: 10, qualifier: 'BasicData' } ]
+       }
+  UpdatedDate;
     
   @UI: { 
          lineItem:   [ { position: 20 }],
          fieldGroup: [ { position: 20, qualifier: 'BasicData'}],
          dataPoint:  { qualifier: 'OrderNumber', title: 'Order Number' }
        }
-  OrderNumber;
+  NvsId;
   
   @UI: { 
          lineItem:       [ { position: 30 } ],
@@ -231,12 +231,6 @@ annotate view zpoco_c_alp_alert with
        }
   AlertMonth;
   
-//  @UI: { 
-//         lineItem:       [ { position: 63 } ],
-//         fieldGroup:     [ { position: 23, qualifier: 'DateInfo' } ]
-//       }
-//  MonthNames;
-
   @UI: { 
          lineItem:       [ { position: 65 } ],
          selectionField: [ { position: 35 } ],

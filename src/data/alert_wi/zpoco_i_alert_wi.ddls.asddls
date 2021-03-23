@@ -4,8 +4,11 @@ define root view entity zpoco_i_alert_wi
   as select from zpoco_d_alerwi_a
 {
   key alert_wi_uuid   as AlertWorkItemUuid,
+      @UI.lineItem:   [{ position: 10 }]
   key nvs_id          as NvsId,
+      @UI.lineItem:   [{ position: 20 }]
       alert_message   as AlertMessage,
+      @UI.lineItem:   [{ position: 30 }]
       updated_date    as UpdatedDate,
       $session.system_date as Today,
       @Semantics.user.createdBy: true

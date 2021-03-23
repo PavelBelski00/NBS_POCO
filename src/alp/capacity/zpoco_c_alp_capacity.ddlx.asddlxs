@@ -1,11 +1,21 @@
 @Metadata.layer: #CORE
 @UI.headerInfo: { typeName: 'Capacity',
                   typeNamePlural: 'Capacity' }
-@UI.selectionPresentationVariant:[ 
+@UI.selectionPresentationVariant:[
     {  //chart and table
         qualifier: 'Default',
         presentationVariantQualifier: 'Default',
         selectionVariantQualifier: 'Default'
+    },
+    {   //kpi
+        qualifier: 'KPIConsumedQuantityByYear',
+        presentationVariantQualifier: 'pvKPIConsumedQuantityByYear',
+        selectionVariantQualifier: 'svKPIConsumedQuantityByYear'
+    },
+    {   //kpi
+        qualifier: 'KPIAvailableQuantityByYear',
+        presentationVariantQualifier: 'pvKPIAvailableQuantityByYear',
+        selectionVariantQualifier: 'svKPIAvailableQuantityByYear'
     }
 ]
 @UI.presentationVariant:[
@@ -14,7 +24,7 @@
         sortOrder: [{ by: 'MfgStartDateYear'    , direction: #DESC },
                     { by: 'MfgStartDateQuarter' , direction: #ASC },
                     { by: 'MfgStartDateMonth'   , direction: #ASC },
-                    { by: 'MfgStartDate'        , direction: #ASC }], 
+                    { by: 'MfgStartDate'        , direction: #ASC }],
         visualizations: [{
             type: #AS_CHART,
             qualifier: 'ChartDefault'
@@ -30,12 +40,12 @@
         }]
     },
     {   //visual filter
-        qualifier: 'pvFilterByConsumedSlots',
-        text: 'Filter: by ConsumedSlots',
-        sortOrder: [{ by: 'ConsumedSlots', direction: #ASC }] ,
+        qualifier: 'pvFilterByQuarter',
+        text: 'Filter: by Quarter',
+        sortOrder: [{ by: 'MfgStartDateQuarter', direction: #ASC }] ,
         visualizations: [{
             type: #AS_CHART,
-            qualifier: 'ChartFilterByConsumedSlots'
+            qualifier: 'ChartFilterByQuarter'
         }]
     },
     {   //visual filter
@@ -46,13 +56,43 @@
             type: #AS_CHART,
             qualifier: 'ChartFilterByCountry'
         }]
-    }  
-   
+    },
+    {   //kpi
+        qualifier: 'pvKPIConsumedQuantityByYear',
+        text: 'KPI Consumed Quantity By Year',
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'cqKPIConsumedQuantityByYear'
+        },{
+            type: #AS_DATAPOINT,
+            qualifier: 'ConsumedQuantity'
+        }]
+    },
+    {   //kpi
+        qualifier: 'pvKPIAvailableQuantityByYear',
+        text: 'KPI Available Quantity By Year',
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'cqKPIAvailableQuantityByYear'
+        },{
+            type: #AS_DATAPOINT,
+            qualifier: 'AvailableQuantity'
+        }]
+    }
+
 ]
 @UI.selectionVariant:[
     { //main area
         qualifier: 'Default',
         text: 'Default'
+    },
+    { //kpi
+        qualifier: 'svKPIConsumedQuantityByYear',
+        text: 'KPI Consumed Quantity By Year'
+    },
+    { //kpi
+        qualifier: 'svKPIAvailableQuantityByYear',
+        text: 'KPI Available Quantity By Year'
     }
 ]
 @UI.chart: [
@@ -85,12 +125,12 @@
         }]
     },
     {   //visual filter
-        qualifier: 'ChartFilterByConsumedSlots',
-        chartType: #DONUT,
-        dimensions:  [ 'ConsumedSlots' ],
+        qualifier: 'ChartFilterByQuarter',
+        chartType: #LINE,
+        dimensions:  [ 'MfgStartDateQuarter' ],
         measures:  [ 'Quantity' ],
         dimensionAttributes: [{
-            dimension: 'ConsumedSlots',
+            dimension: 'MfgStartDateQuarter',
             role: #CATEGORY
         }],
         measureAttributes: [
@@ -111,11 +151,46 @@
         {   measure: 'Quantity',
             role: #AXIS_1
         }]
+    },
+    { //kpi
+        qualifier: 'cqKPIConsumedQuantityByYear',
+        chartType: #LINE,
+        dimensions:  [ 'MfgStartDateYear' ],
+        measures:  [ 'ConsumedQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'MfgStartDateYear',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'ConsumedQuantity',
+            role: #AXIS_1
+        }]
+    },
+    { //kpi
+        qualifier: 'cqKPIAvailableQuantityByYear',
+        chartType: #LINE,
+        dimensions:  [ 'MfgStartDateYear' ],
+        measures:  [ 'AvailableQuantity' ],
+        dimensionAttributes: [{
+            dimension: 'MfgStartDateYear',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'AvailableQuantity',
+            role: #AXIS_1
+        }]
     }
 ]
 annotate view zpoco_c_alp_capacity with
 {
   @UI.facet: [
+          {     
+                id:                 'HeaderInfo',
+                purpose:            #HEADER,
+                type:               #FIELDGROUP_REFERENCE,
+                targetQualifier:    'HeaderInfo'
+                
+          },
           {
                 id:                 'GeneralInformation',
                 type:               #COLLECTION,
@@ -164,13 +239,13 @@ annotate view zpoco_c_alp_capacity with
 
   @UI.selectionField: [{ position: 10 }]
   @UI.lineItem:       [{ position: 10, importance: #HIGH }]
-  @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]  
-  MfgStartDate;  
-
-  @UI.lineItem:       [{ position: 20, importance: #HIGH }]
-  @UI.fieldGroup:     [{ position: 20, qualifier: 'BasicData' }]    
-  NvsId;
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'HeaderInfo' }]
+  MfgStartDate;
   
+  @UI.lineItem:       [{ position: 20, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'BasicData' }]
+  NvsId;
+
   @UI.selectionField: [{ position: 30 }]
   @UI.lineItem:       [{ position: 30, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
@@ -178,41 +253,63 @@ annotate view zpoco_c_alp_capacity with
 
   @UI.selectionField: [{ position: 30 }]
   @UI.lineItem:       [{ position: 30, importance: #HIGH }]
-  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]     
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
   CountryId;
-  
+
   @UI.selectionField: [{ position: 40 }]
   @UI.lineItem:       [{ position: 40, importance: #HIGH }]
-  @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData' }]   
+  @UI.fieldGroup:     [{ position: 40, qualifier: 'BasicData' }]
   TherapyTypeId;
-    
-  @UI.selectionField: [{ position: 50 }]
+
+
   @UI.lineItem:       [{ position: 50, importance: #HIGH }]
-  @UI.fieldGroup:     [{ position: 50, qualifier: 'BasicData' }]    
+  @UI.fieldGroup:     [{ position: 50, qualifier: 'BasicData' }]
   ConsumedSlots;
 
   @UI.lineItem:       [{ position: 53, importance: #HIGH }]
   Quantity;
-  
-  @UI.fieldGroup:     [{ position: 60, qualifier: 'BasicData' }]    
+
+  @UI.dataPoint: {
+       qualifier: 'ConsumedQuantity',
+       title: 'Consumed Slots Quantity',
+       criticalityCalculation: {
+           improvementDirection: #MAXIMIZE,
+           toleranceRangeLowValue:  100,
+           toleranceRangeHighValue: 200
+        }
+  }
+  ConsumedQuantity;
+
+  @UI.dataPoint: {
+       qualifier: 'AvailableQuantity',
+       title: 'Available Slots Quantity',
+       criticalityCalculation: {
+           improvementDirection: #MINIMIZE,
+           deviationRangeHighValue: 50,
+           deviationRangeLowValue:  150
+        }
+  }
+  AvailableQuantity;
+
+  @UI.fieldGroup:     [{ position: 60, qualifier: 'BasicData' }]
   Priority;
-  
-  @UI.fieldGroup:     [{ position: 70, qualifier: 'BasicData' }]    
+
+  @UI.fieldGroup:     [{ position: 70, qualifier: 'BasicData' }]
   ProtocolSubjectId;
-  
-  @UI.fieldGroup:     [{ position: 80, qualifier: 'BasicData' }]    
+
+  @UI.fieldGroup:     [{ position: 80, qualifier: 'BasicData' }]
   CountryAllocation;
-  
-  @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]  
+
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]
   CreatedBy;
-  
-  @UI.fieldGroup:     [{ position: 20, qualifier: 'AdminData' }]  
+
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'AdminData' }]
   CreatedAt;
-  
-  @UI.fieldGroup:     [{ position: 30, qualifier: 'AdminData' }]  
+
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'AdminData' }]
   LastChangedBy;
 
-  @UI.fieldGroup:     [{ position: 40, qualifier: 'AdminData' }]  
-  LastChangedAt;  
+  @UI.fieldGroup:     [{ position: 40, qualifier: 'AdminData' }]
+  LastChangedAt;
 
 }

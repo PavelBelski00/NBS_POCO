@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"ZPOCO_I_ALP_LABEL",
+"ZPOCO_I_LABEL",
 "ZPOCO_I_PLANT",
 "ZPOCO_I_TTYPE"
 ],
@@ -14,7 +14,7 @@
 ],
 "BASE":
 [
-"ZPOCO_I_ALP_LABEL"
+"ZPOCO_I_LABEL"
 ],
 "ANNO_REF":
 [],

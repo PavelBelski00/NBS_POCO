@@ -15,6 +15,16 @@ define view zpoco_i_alp_capacity
 
       1                           as Quantity,
 
+      case ConsumedSlots
+      when 'Consumed' then 1
+      else 0
+      end                         as ConsumedQuantity,
+
+      case ConsumedSlots
+      when 'Available' then 1
+      else 0
+      end                         as AvailableQuantity,
+
       MfgStartDate,
       substring(MfgStartDate,1,4) as MfgStartDateYear,
       case  substring(MfgStartDate,5,2)
