@@ -146,7 +146,6 @@
                           }
                         ]
 
-
 ---------------------------------------------------------------------
 
 define view zpoco_c_ovp_cards_order
@@ -225,12 +224,6 @@ define view zpoco_c_ovp_cards_order
       AmountCurr,
 
       @UI:{
-            lineItem: [{
-      //                         qualifier: 'TherapyDateQuan',
-                         position:   30,
-                         importance: #HIGH
-                      }],
-
             dataPoint: { qualifier:   'dpTherapyDateQuan',
                          criticalityCalculation: { improvementDirection: #MAXIMIZE,
                                                    deviationRangeLowValue: 2,

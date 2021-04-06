@@ -11,9 +11,7 @@ define view zpoco_i_order_for_ovp
   association [0..1] to zpoco_i_ttype     as _TType              on  $projection.TtypeId    = _TType.TherapyTypeId
   association [0..1] to zpoco_i_stsl1     as _StatusL1           on  $projection.Stsl1Id    = _StatusL1.StatusL1Id
   association [0..1] to zpoco_i_stsl2     as _StatusL2           on  $projection.Stsl2Id    = _StatusL2.StatusL2Id
-//  association [0..1] to zpoco_i_country   as _Country            on  $projection.CountryId  = _Country.CountryId
   association [0..1] to zpoco_i_plant     as _Plant              on  $projection.MfgPlantId = _Plant.MfgPlantId
-//  association [0..1] to zpoco_i_site      as _Site               on  $projection.ordsiteid  = _Site.OrderingSiteId
   association [0..1] to zpoco_i_oos       as _OOSDetails         on  $projection.OosId      = _OOSDetails.OosId
   association [0..1] to zpoco_i_oos_descr as _OOSDescription     on  $projection.OosDescrId = _OOSDescription.OosDescriptionId
   association [0..1] to zpoco_i_alert     as _OrderAlert         on  $projection.NvsId      = _OrderAlert.NvsId
@@ -42,7 +40,6 @@ define view zpoco_i_order_for_ovp
       end                                as TherapyCount4, 
       
       cast(250 as abap.int1)              as TargetValue,    
-//      country_id                         as CountryId,
       
       mfg_plant_id                       as MfgPlantId,
       _Plant.PlantName                   as PlantName,
@@ -65,17 +62,12 @@ define view zpoco_i_order_for_ovp
       stsl2_id                           as Stsl2Id,
       _StatusL2.StatusL2Name             as StatusL2Name,
       
-//      ord_site_id                        as OrdSiteId,
-
       oos_id                             as OosId,
       _OOSDetails.OosDetails             as OOSDetails,
       case when oos_id is not initial 
            then 1
            else 0
       end                                as OOSDetailsCount,
-      
-      
-//      oos                                as Oos,
       
       oos_descr_id                       as OosDescrId,
       _OOSDescription.OosDescription     as OOSDescriptions,
@@ -84,9 +76,6 @@ define view zpoco_i_order_for_ovp
            else 0
       end                                as OosDescriptionsCount,
       
-//      aph_dewar                          as AphDewar,
-//      fp_dewar                           as FpDewar,
-     
       _OrderAlert.AlertMessage           as AlertMassage,
       case when _OrderAlert.AlertMessage is not initial 
            then _OrderAlert.AlertMessage
@@ -112,16 +101,11 @@ define view zpoco_i_order_for_ovp
       amount                             as Amount,
       amount_curr                        as AmountCurr,
       
-//      @Semantics.businessDate: {at: true}      
-//      actual_day0                        as ActualDay0,
-      
       --Associations--
-//      _Country,
       _Plant,
       _StatusL1,
       _StatusL2,
       _TType,
-//      _Site,
       _OOSDetails,
       _OOSDescription,
       _OrderAlert,

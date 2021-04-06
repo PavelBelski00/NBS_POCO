@@ -14,6 +14,8 @@ etag master LastChangedAt
   field ( readonly : update ) OrderUuid;
   field ( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
 
+  action OpenRequest;
+
   mapping for zpoco_d_order_a
   {
     OrderUuid           = order_uuid;

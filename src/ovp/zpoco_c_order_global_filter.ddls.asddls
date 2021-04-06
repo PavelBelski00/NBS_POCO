@@ -43,7 +43,7 @@ define view zpoco_c_order_global_filter
             selectionField: [{ position: 40 }] 
           }
       @Consumption.valueHelpDefinition: [{ 
-                                           entity: { name:    'zpoco_i_plant',   
+                                           entity: { name:    'zpoco_c_plant_vh',   
                                                      element: 'MfgPlantId'} 
                                         }]          
       @ObjectModel.text.element: ['PlantName']
@@ -56,7 +56,7 @@ define view zpoco_c_order_global_filter
             selectionField: [{ position: 50 }] 
           }
       @Consumption.valueHelpDefinition: [{ 
-                                           entity: { name:    'zpoco_i_ttype',   
+                                           entity: { name:    'zpoco_c_ttype_vh',   
                                                      element: 'TherapyTypeId'} 
                                         }]
       @ObjectModel.text.element: ['TherapyTypeName']
@@ -76,7 +76,7 @@ define view zpoco_c_order_global_filter
             selectionField: [{ position: 80 }] 
           }
       @Consumption.valueHelpDefinition: [{ 
-                                           entity: { name:    'zpoco_i_stsl1',   
+                                           entity: { name:    'zpoco_c_stsl1_vh',   
                                                      element: 'StatusL1Id'} 
                                         }]
       stsl1_id                          as Stsl1Id,

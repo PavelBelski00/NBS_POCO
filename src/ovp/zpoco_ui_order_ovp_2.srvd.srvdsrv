@@ -3,4 +3,7 @@ define service Zpoco_ui_order_ovp_2 {
   expose zpoco_c_order_global_filter as GlobalFilterForOrder;
   expose zpoco_c_ovp_cards_order as CardsForOrder;
   expose zpoco_c_ovp_cards_capacity as CardsForCapacity;
+  expose zpoco_c_therapy_vh as TherapyValueHelp;
+  expose zpoco_c_ttype_vh as TherapyTypeValueHelp;
+  expose zpoco_c_stsl1_vh as StatusL1ValueHelp;
 }

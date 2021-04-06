@@ -90,7 +90,9 @@ annotate view zpoco_c_order with
            }
          
            ]
-
+  
+  @UI.identification: [{ type: #FOR_ACTION, dataAction:'OpenRequest', label: 'Open Request', position: 10 }]
+  
   @UI.hidden: true
   OrderUuid;
 
