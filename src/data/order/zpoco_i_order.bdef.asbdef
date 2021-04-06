@@ -10,31 +10,35 @@ etag master LastChangedAt
   update;
   delete;
 
-  field( numbering: managed ) OrderUuid;
-  field( readonly:  update )  OrderUuid;
-  field( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
+  field ( numbering : managed ) OrderUuid;
+  field ( readonly : update ) OrderUuid;
+  field ( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
 
   mapping for zpoco_d_order_a
   {
-    OrderUuid       = order_uuid;
-    NvsId           = nvs_id;
-    Therapy         = therapy;
-    CountryId       = country_id;
-    MfgPlantId      = mfg_plant_id;
-    TherapyTypeId   = ttype_id;
-    Day0            = day0;
-    StatusL1Id      = stsl1_id;
-    StatusL2Id      = stsl2_id;
-    OrderingSiteId  = ord_site_id;
-    OosId           = oos_id;
-    Oos             = oos;
-    OosDescriptionId = oos_descr_id;
-    AphDewar        = aph_dewar;
-    FpDewar         = fp_dewar;
-    ActualDay0      = actual_day0;
-    CreatedBy       = created_by;
-    CreatedAt       = created_at;
-    LastChangedBy   = last_changed_by;
-    LastChangedAt   = last_changed_at;
+    OrderUuid           = order_uuid;
+    NvsId               = nvs_id;
+    Therapy             = therapy;
+    CountryId           = country_id;
+    MfgPlantId          = mfg_plant_id;
+    TherapyTypeId       = ttype_id;
+    Day0                = day0;
+    StatusL1Id          = stsl1_id;
+    StatusL2Id          = stsl2_id;
+    OrderingSiteId      = ord_site_id;
+    OosId               = oos_id;
+    Oos                 = oos;
+    OosDescriptionId    = oos_descr_id;
+    AphDewar            = aph_dewar;
+    FpDewar             = fp_dewar;
+    ActualDay0          = actual_day0;
+    MaterialQuantity    = material_quan;
+    MaterialQuantityUOM = material_quan_uom;
+    Amount              = amount;
+    AmountCurrency      = amount_curr;
+    CreatedBy           = created_by;
+    CreatedAt           = created_at;
+    LastChangedBy       = last_changed_by;
+    LastChangedAt       = last_changed_at;
   }
 }

@@ -125,6 +125,15 @@
         }]
     }
     
+//    {   
+//        qualifier: 'test',
+//        text: 'KPI Commericial Therapy Type Quantity',
+//        visualizations: [{
+//            type: #AS_LINEITEM,
+//            qualifier: 'LineItemAlerts'
+//        }]
+//    }    
+    
 ]
 @UI.selectionVariant:[
     { //main area
@@ -309,7 +318,7 @@ annotate view zpoco_c_alp_order with
                 type:               #COLLECTION,
                 label:              'Admin Data',
                 position:           20
-          },
+          },                              
           {
                  id:                'BasicData',
                  purpose:           #STANDARD ,
@@ -319,6 +328,15 @@ annotate view zpoco_c_alp_order with
                  position:          10,
                  targetQualifier:   'BasicData'
           },
+          {
+                 id:                'QuantityData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Quantity/Amount Data',
+                 position:          10,
+                 targetQualifier:   'QuantityData'
+          }, 
           {
                  id:                'TherapyData',
                  purpose:           #STANDARD ,
@@ -505,7 +523,15 @@ annotate view zpoco_c_alp_order with
         }
   }
   TherapyTypeClinicalQuantity;  
+
+  @UI.lineItem:       [{ position: 160, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 120,  qualifier: 'QuantityData' }] 
+  MaterialQuantity;
   
+  @UI.lineItem:       [{ position: 170, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 140,  qualifier: 'QuantityData' }]   
+  Amount;
+    
   @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]
   CreatedBy;
 

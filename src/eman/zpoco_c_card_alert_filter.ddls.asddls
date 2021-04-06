@@ -3,30 +3,28 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Card: Alerts'
-@UI.presentationVariant: [{ sortOrder: [{ by: 'UpdatedDate', direction:  #ASC }],
-                            qualifier: 'Default' }]
+@UI.presentationVariant: [{ sortOrder: [{ by: 'AlertUpdatedDate', direction:  #DESC }],
+                            qualifier: 'Default'
+                         }]
 
 define view zpoco_c_card_alert_filter
   as select from zpoco_i_order
+    inner join   zpoco_i_alert as _Alert on zpoco_i_order.NvsId = _Alert.NvsId
 {
-
       @UI.hidden: true
-  key OrderUuid,
+  key zpoco_i_order.OrderUuid,
 
       @Consumption.semanticObject: 'NBS_POC_OVP_ALERT'
       @UI.lineItem: [{ position: 10 }]
-  key NvsId,
+      _Alert.NvsId        as NvsId,
 
       @UI.lineItem: [{ position: 20 }]
       _Alert.AlertMessage as AlertMessage,
 
-      @UI.lineItem: [{ position: 30 }]
       @EndUserText.label: 'Creation Date'
-      UpdatedDate,
+      _Alert.UpdatedDate  as AlertUpdatedDate
 
-      /* Associations */
-      _Alert
 }
 where
-  AlertUpdateDate is not initial and
-  UpdatedDate <= Today
+      _Alert.UpdatedDate is not initial
+  and _Alert.UpdatedDate <= zpoco_i_order.Today

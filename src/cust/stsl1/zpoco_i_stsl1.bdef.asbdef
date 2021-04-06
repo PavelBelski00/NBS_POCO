@@ -1,17 +1,20 @@
 managed;
+with draft;
 
 define behavior for zpoco_i_stsl1 alias StatusL1
 implementation in class zcl_poco_bp_stsl1 unique
 persistent table zpoco_c_stsl1_a
-lock master
+draft table zpoco_c_stsl1_d
+lock master total etag LastChangedAt
 etag master LastChangedAt
+
 {
   create;
   update;
   delete;
 
   field( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
-  field( mandatory: create ) StatusL1Id;
+//  field( mandatory: create ) StatusL1Id;
 
   mapping for zpoco_c_stsl1_a
   {

@@ -1,9 +1,11 @@
 managed;
+with draft;
 
 define behavior for zpoco_i_alert_wi alias AlertWorkItem
 implementation in class zcl_poco_bp_alert_wi unique
 persistent table zpoco_d_alerwi_a
-lock master
+draft table zpoco_d_alerwi_d
+lock master total etag LastChangedAt
 etag master LastChangedAt
 {
   create;
@@ -12,7 +14,7 @@ etag master LastChangedAt
 
   field( numbering: managed ) AlertWorkItemUuid;
   field( readonly:  update )  AlertWorkItemUuid;
-  field( mandatory: create ) NvsId;
+//  field( mandatory: create ) NvsId;
   field( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
 
   mapping for zpoco_d_alerwi_a

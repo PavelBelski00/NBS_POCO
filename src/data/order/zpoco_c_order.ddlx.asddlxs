@@ -26,6 +26,15 @@ annotate view zpoco_c_order with
                  targetQualifier:   'BasicData'
           },
           {
+                 id:                'QuantityData',
+                 purpose:           #STANDARD ,
+                 parentId:          'GeneralInformation',
+                 type:              #FIELDGROUP_REFERENCE,
+                 label:             'Quantity/Amount Data',
+                 position:          10,
+                 targetQualifier:   'QuantityData'
+          },          
+          {
                  id:                'TherapyData',
                  purpose:           #STANDARD ,
                  parentId:          'GeneralInformation',
@@ -94,7 +103,7 @@ annotate view zpoco_c_order with
   @UI.fieldGroup:     [{ position: 10, qualifier: 'TherapyData' }]
   Therapy;
   
-  @UI.lineItem:       [{ position: 30, importance: #HIGH  }]
+  @UI.lineItem:       [{ position: 30, importance: #HIGH }]
   @UI.fieldGroup:     [{ position: 30, qualifier: 'BasicData' }]
   CountryId;
   
@@ -154,14 +163,23 @@ annotate view zpoco_c_order with
   @UI.fieldGroup:     [{ position: 10,  qualifier: 'Others' }]  
   FpDewar;
   
-  @UI.selectionField: [{ position: 122 }]
-  @UI.lineItem:       [{ position: 143, importance: #MEDIUM }]
-  @UI.fieldGroup:     [{ position: 13,  qualifier: 'Others' }]
-  UpdatedDate;
- 
+  @UI.selectionField: [{ position: 145 }]
+  AlertUpdatedDate;
+
+  @UI.selectionField: [{ position: 147 }]
+  AlertWIUpdatedDate;
+   
   @UI.lineItem:       [{ position: 150, importance: #MEDIUM }]
   @UI.fieldGroup:     [{ position: 30,  qualifier: 'Day0Data' }]  
   ActualDay0;
+  
+  @UI.lineItem:       [{ position: 160, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 120,  qualifier: 'QuantityData' }] 
+  MaterialQuantity;
+  
+  @UI.lineItem:       [{ position: 170, importance: #HIGH }]
+  @UI.fieldGroup:     [{ position: 140,  qualifier: 'QuantityData' }]   
+  Amount;
     
   @UI.lineItem:       [{ position: 160, importance: #LOW }]
   @UI.fieldGroup:     [{ position: 10, qualifier: 'AdminData' }]  

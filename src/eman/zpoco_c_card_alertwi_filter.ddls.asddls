@@ -3,30 +3,27 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Card: Alert Work Items'
-@UI.presentationVariant: [{ sortOrder: [{ by: 'UpdatedDate', direction:  #ASC }] ,
-                            qualifier: 'Default' }]
-
+@UI.presentationVariant: [{ sortOrder: [{ by: 'AlertWIUpdatedDate', direction:  #DESC }],
+                            qualifier: 'Default'
+                         }]
 define view zpoco_c_card_alertwi_filter
   as select from zpoco_i_order
+  inner join   zpoco_i_alert_wi as _AlertWI on zpoco_i_order.NvsId = _AlertWI.NvsId
 {
       @UI.hidden: true
-  key OrderUuid,
+  key zpoco_i_order.OrderUuid,
 
       @Consumption.semanticObject: 'NBS_POC_OVP_ALERT'
       @UI.lineItem: [{ position: 10 }]
-  key NvsId,
+      _AlertWI.NvsId        as NvsId,
 
       @UI.lineItem: [{ position: 20 }]
-      @EndUserText.label: 'Task Message'
-      _AlertWi.AlertMessage as AlertMessage,
+      _AlertWI.AlertMessage as AlertMessage,
 
-      @UI.lineItem: [{ position: 30 }]
       @EndUserText.label: 'Creation Date'
-      UpdatedDate,
+      _AlertWI.UpdatedDate  as AlertWIUpdatedDate
 
-      /* Associations */
-      _AlertWi
 }
 where
-  AlertWiUpdateDate is not initial and
-  UpdatedDate <= Today
+      _AlertWI.UpdatedDate is not initial
+  and _AlertWI.UpdatedDate <= zpoco_i_order.Today

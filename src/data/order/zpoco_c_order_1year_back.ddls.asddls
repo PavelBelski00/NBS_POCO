@@ -22,9 +22,6 @@ define view zpoco_c_order_1year_back
       OosDescriptionId,
       AphDewar,
       FpDewar,
-      AlertUpdateDate,
-      AlertWIUpdateDate,
-      UpdatedDate,
       ActualDay0,
       CreatedBy,
       CreatedAt,
@@ -32,8 +29,6 @@ define view zpoco_c_order_1year_back
       LastChangedAt,
       Today,
       /* Associations */
-      _Alert,
-      _AlertWI,
       _Country,
       _OOSDescription,
       _OOSDetails,

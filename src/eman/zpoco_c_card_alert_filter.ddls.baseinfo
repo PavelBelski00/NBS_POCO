@@ -7,13 +7,9 @@
 "ZPOCO_I_ORDER"
 ],
 "ASSOCIATED":
-[
-"ZPOCO_I_ALERT"
-],
+[],
 "BASE":
-[
-"ZPOCO_I_ORDER"
-],
+[],
 "ANNO_REF":
 [],
 "VERSION":0,

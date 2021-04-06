@@ -30,7 +30,6 @@ define view zpoco_c_alp_order
       TherapyTypeClinicalQuantity,
       
       @EndUserText.label: 'Year'
-      @Consumption.filter.defaultValue: '2021'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_year',
                                                      element: 'CalendarYear'} }]
       Day0Year,
@@ -103,15 +102,20 @@ define view zpoco_c_alp_order
 
       AphDewar,
       FpDewar,
-
+      
+      @Aggregation.default: #SUM
+      MaterialQuantity,
+      MaterialQuantityUOM,   
+      @Aggregation.default: #SUM 
+      Amount,
+      AmountCurrency,
+      
       CreatedBy,
       CreatedAt,
       LastChangedBy,
       LastChangedAt,
 
       /* Associations */
-      _Alert,
-      _AlertWi,
       _Country,
       _OOSDescription,
       _OOSDetails,
@@ -127,5 +131,4 @@ define view zpoco_c_alp_order
       _OrderAlertWorkItem
 
 }
-where
-  Day0Year is not initial
+

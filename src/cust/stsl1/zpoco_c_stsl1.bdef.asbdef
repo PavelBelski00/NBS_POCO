@@ -1,4 +1,5 @@
 projection;
+use draft;
 
 define behavior for zpoco_c_stsl1 alias StatusL1
 use etag

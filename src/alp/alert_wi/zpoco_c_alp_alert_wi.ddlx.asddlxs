@@ -5,9 +5,9 @@
 
 @UI.selectionPresentationVariant: [
                                    {   //kpi
-                                       qualifier: 'KPIOrdersQuantity',
-                                       presentationVariantQualifier: 'pvKPIOrdersQuantity',
-                                       selectionVariantQualifier: 'svKPIOrdersQuantity'
+                                       qualifier: 'KPIOrdersQuantityWI',
+                                       presentationVariantQualifier: 'pvKPIOrdersQuantityWI',
+                                       selectionVariantQualifier: 'svKPIOrdersQuantityWI'
                                    },
                                    {  //chart and table
                                        qualifier: 'Default',
@@ -18,7 +18,7 @@
 
 @UI.presentationVariant: [
                           { //kpi
-                            qualifier:     'pvKPIOrdersQuantity',
+                            qualifier:     'pvKPIOrdersQuantityWI',
                             text:          'KPI: Orders Quantity',
                             visualizations: [{
                                                type: #AS_CHART,
@@ -192,7 +192,7 @@ annotate view zpoco_c_alp_alert_wi with
   AlertWIMessage;            
 
   @UI.lineItem:  [{ position: 80 }]
-  @UI.dataPoint: { title: 'OrdQ', 
+  @UI.dataPoint: { title: 'WIQ', 
                    qualifier: 'OrdersQuantity',
                    criticalityCalculation: { 
                                              improvementDirection:    #MINIMIZE,

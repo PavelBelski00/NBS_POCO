@@ -23,6 +23,7 @@ define root view entity zpoco_c_order
       }
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_c_therapy_vh',   element: 'Therapy'} }]
       Therapy,
+      
 
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_country', element: 'CountryId'} }]
       @ObjectModel.text.element: ['CountryName']
@@ -77,10 +78,19 @@ define root view entity zpoco_c_order
       OosDescriptionId,
       _OOSDescription.OosDescription as OosDescription,
       
-      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
-      @EndUserText.label: 'Tasks/Alerts Creation Date'
-      UpdatedDate,
+      MaterialQuantity,
+      MaterialQuantityUOM,
+      Amount,
+      AmountCurrency,
       
+      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
+      @EndUserText.label: 'Alerts Creation Date'
+      UpdatedDate as AlertUpdatedDate,
+
+      @Consumption.filter: { selectionType: #INTERVAL , multipleSelections:  false }
+      @EndUserText.label: 'Tasks Creation Date'
+      UpdatedDateWI as AlertWIUpdatedDate,
+            
       AphDewar,
       FpDewar,
       ActualDay0,

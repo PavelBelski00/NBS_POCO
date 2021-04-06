@@ -15,4 +15,6 @@ define service zpoco_ui_alp_order {
   expose zpoco_i_month as CalendarMonth;
   expose zpoco_i_alert as Alert;
   expose zpoco_i_alert_wi as AlertWorkItem;
+  expose zpoco_c_alp_alert as ALPAlert;
+  expose zpoco_c_alp_alert_wi as ALPAlertWorkItem;
 }

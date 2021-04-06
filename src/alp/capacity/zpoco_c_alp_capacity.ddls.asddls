@@ -34,7 +34,6 @@ define view zpoco_c_alp_capacity
       MfgStartDate,
 
       @EndUserText.label: 'Year'
-      @Consumption.filter.defaultValue: '2021'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_year',
                                                element: 'CalendarYear'} }]
       MfgStartDateYear,
@@ -77,5 +76,4 @@ define view zpoco_c_alp_capacity
       _Plant,
       _TType
 }
-where
-  MfgStartDateYear is not initial
+

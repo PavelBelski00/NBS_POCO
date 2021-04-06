@@ -82,7 +82,7 @@
 @UI.chart: [
             { //kpi
               qualifier: 'cqKPIOrdersQuantity',
-              chartType: #PIE,
+              chartType: #COLUMN,
               dimensions:  [ 'AlertMessage' ],
               measures:    [ 'OrdersQuantity' ],
               dimensionAttributes: [{ dimension: 'AlertMessage',   role: #CATEGORY }],
@@ -90,7 +90,7 @@
             },
             { //visual filter
               qualifier: 'ChartFilterAlertMessages',
-              chartType: #BAR,
+              chartType: #WATERFALL,
               dimensions:  [ 'AlertMessage' ],
               measures:    [ 'OrdersQuantity' ],
               dimensionAttributes: [{ dimension: 'AlertMessage',   role: #CATEGORY }],
@@ -206,7 +206,7 @@ annotate view zpoco_c_alp_alert with
          lineItem:   [ { position: 40 } ],
          dataPoint:  { 
                         qualifier: 'OrdersQuantity',
-                        title: 'OrQ',
+                        title: 'ALQ',
                         valueFormat.numberOfFractionalDigits:2,
                         criticalityCalculation: { 
                                                   improvementDirection:    #MINIMIZE,

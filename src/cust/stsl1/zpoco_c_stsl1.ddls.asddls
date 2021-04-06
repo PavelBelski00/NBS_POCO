@@ -2,6 +2,9 @@
 @AccessControl.authorizationCheck: #CHECK
 @Metadata.allowExtensions: true
 @Search.searchable: true
+
+//@ObjectModel.semanticKey: ['StatusL1Id']
+
 define root view entity zpoco_c_stsl1
   as projection on zpoco_i_stsl1
 {
@@ -10,6 +13,7 @@ define root view entity zpoco_c_stsl1
       ranking: #HIGH,
       fuzzinessThreshold: 0.8
   }
+  
   key StatusL1Id,
   @Search: {
       defaultSearchElement: true,
