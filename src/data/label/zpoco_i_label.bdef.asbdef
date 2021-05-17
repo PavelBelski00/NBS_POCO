@@ -14,6 +14,8 @@ etag master LastChangedAt
   field( readonly: update ) LabelUuid;
   field( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
 
+  action OpenRequest;
+
   mapping for zpoco_d_label_a
   {
     LabelUuid     = label_uuid     ;

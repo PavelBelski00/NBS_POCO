@@ -106,7 +106,8 @@
                             visualizations: [{
                                                type:      #AS_CHART,
                                                qualifier: 'OOSDetPeriods'
-                                            }]
+                                            }],
+                             sortOrder: [{by: 'OOSDetails', direction: #DESC }]               
                           },
                         ---------------
                           { //Chart OOS Descriptions by Periods by Periods
@@ -266,19 +267,19 @@ define view zpoco_c_ovp_cards_order
                        qualifier:   'dpThByTyPeriods',
                        maximumValue: 5,
                        criticalityCalculation: { improvementDirection: #MAXIMIZE,
-                                                 deviationRangeLowValue: 2,
-                                                 toleranceRangeLowValue: 4 }
+                                                 deviationRangeLowValue: 250,
+                                                 toleranceRangeLowValue: 200 }
                      }
       @Aggregation.default: #SUM
       @EndUserText.label: 'Therapy Type Quantity'
       TherapyTypeCount,
 
-      @Aggregation.default: #SUM
       @UI.dataPoint: { qualifier:               'dpOOSDetPeriods',
                        criticalityCalculation: { improvementDirection: #MINIMIZE,
-                                                 deviationRangeHighValue: 250,
-                                                 toleranceRangeHighValue: 200 }
+                                                 deviationRangeHighValue: 150,
+                                                 toleranceRangeHighValue: 100 }
                      }
+      @Aggregation.default: #SUM
       OOSDetailsCount,
 
       @Aggregation.default: #SUM

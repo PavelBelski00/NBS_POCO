@@ -63,10 +63,16 @@ define view zpoco_i_order_for_ovp
       _StatusL2.StatusL2Name             as StatusL2Name,
       
       oos_id                             as OosId,
-      _OOSDetails.OosDetails             as OOSDetails,
-      case when oos_id is not initial 
-           then 1
-           else 0
+      _OOSDetails.OosDetails             as InitialOOSDetails,
+      
+      case when _OOSDetails.OosDetails   is not initial
+           then _OOSDetails.OosDetails
+           else 'No Data'
+      end                                as OOSDetails,
+      
+     case when oos_id is not initial 
+          then  1
+          else  0
       end                                as OOSDetailsCount,
       
       oos_descr_id                       as OosDescrId,

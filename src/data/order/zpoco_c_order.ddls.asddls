@@ -24,7 +24,7 @@ define root view entity zpoco_c_order
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_c_therapy_vh',   element: 'Therapy'} }]
       Therapy,
       
-
+      @Consumption.semanticObject: 'NBS_POC_OVP_COUNTRY'
       @Consumption.valueHelpDefinition: [{ entity: { name: 'zpoco_i_country', element: 'CountryId'} }]
       @ObjectModel.text.element: ['CountryName']
       CountryId,

@@ -33,6 +33,7 @@ define view zpoco_i_alp_order
       Day0,
 
       substring(Day0,1,4) as Day0Year,
+            
       case  substring(Day0,5,2)
       when '01' then '1'
       when '02' then '1'

@@ -17,8 +17,6 @@
 define view zpoco_c_plant_vh
   as select from zpoco_i_plant
 {
-
   key MfgPlantId,
       PlantName
-     
 }

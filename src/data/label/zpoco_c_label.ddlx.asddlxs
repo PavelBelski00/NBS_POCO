@@ -35,6 +35,8 @@ annotate view zpoco_c_label with
                   targetQualifier: 'AdminData'
                }]
 
+  @UI.identification: [{ type: #FOR_ACTION, dataAction:'OpenRequest', label: 'Open Request', position: 10 }]
+  
   @UI.hidden: true
   LabelUuid;    
   
