@@ -1,0 +1,118 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Task',
+    typeNamePlural: 'Tasks'
+    }
+annotate entity zpoco_c_df_operations with
+{
+  @UI.facet: [
+      { id:              'HeaderFacet',
+        purpose:         #HEADER,
+        type:            #DATAPOINT_REFERENCE,
+        targetQualifier: 'TaskId',
+        position:         10},
+        
+      { id:              'HeaderFacet2',
+        purpose:         #HEADER,
+        type:            #DATAPOINT_REFERENCE,
+        targetQualifier: 'TicketOwner',
+        position:         20},
+        
+      { id:              'HeaderFacet3',
+        purpose:         #HEADER,
+        type:            #DATAPOINT_REFERENCE,
+        targetQualifier: 'TaskDueDate',
+        position:         30},
+        
+   {    id: 'ID1',
+        type: #COLLECTION,
+        label:'General Information',
+        position: 10},
+
+          {   id:          'Fieldgroup1-ID',
+              type:            #FIELDGROUP_REFERENCE,
+              label:           'Task Info',
+              parentId:        'ID1',
+              targetQualifier: 'Fieldgroup1',
+              position:         10  },
+              
+          {   id:           'Fieldgroup2-ID',
+              type:            #FIELDGROUP_REFERENCE,
+              label:           'Additional Info',
+              parentId:        'ID1',
+              targetQualifier: 'Fieldgroup2',
+              position:         20 },
+              
+          {   id:           'Fieldgroup5-ID',
+              type:            #FIELDGROUP_REFERENCE,
+              label:           'Vendor Info',
+              parentId:        'ID1',
+              targetQualifier: 'Fieldgroup5',
+              position:         30 },
+     {
+          id:'ID2',
+          type: #COLLECTION,
+          label: 'Admin Data',
+          position: 10 },
+          
+          {    id:          'Fieldgroup3-ID',
+               type:            #FIELDGROUP_REFERENCE,
+               label:           'Create Info',
+               parentId:        'ID2',
+               targetQualifier: 'Fieldgroup3',
+               position:         10 },
+                
+          {    id:           'Fieldgroup4-ID',
+               type:            #FIELDGROUP_REFERENCE,
+               label:           'Change Info',
+               parentId:        'ID2',
+               targetQualifier: 'Fieldgroup4',
+               position:         20 }
+          
+  ]
+
+  @UI.lineItem: [{ label: 'Task ID', position: 10, importance: #HIGH}]
+  @UI.fieldGroup: [ { qualifier: 'Fieldgroup1', position: 10  } ]
+//  @UI.identification: [{label: 'Task ID', position: 10,importance: #HIGH }]
+  @UI.dataPoint: { title: 'Task ID' }
+  @UI.selectionField: [{position: 10 }]
+  TaskId;
+  @UI.lineItem: [{ label: 'Sales Order ID', position: 20, importance: #HIGH}]
+  @UI.fieldGroup: [ { qualifier: 'Fieldgroup2', position: 10 } ]
+ // @UI.identification: [{label: 'Sales Order ID',position: 10,importance: #HIGH }]
+  SalesOrderId;
+  @UI.lineItem: [{ label: 'Service Type', position: 30, importance: #HIGH}]
+  @UI.fieldGroup: [ { qualifier: 'Fieldgroup2', position: 20 } ]
+//  @UI.identification: [{label: 'Service Type',position: 20,importance: #HIGH }]
+  ServiceType;
+  @UI.lineItem: [{ label: 'Ticket Owner', position: 40, importance: #HIGH}]
+  @UI.fieldGroup: [ { qualifier: 'Fieldgroup2', position: 30 } ]
+//  @UI.identification: [{label: 'Ticket Owner',position: 30,importance: #HIGH }]
+  @UI.dataPoint: { title: 'Ticket Owner' }
+  @UI.selectionField: [{position: 20 }]
+  TicketOwner;
+  @UI.lineItem: [{ label: 'Task Creation Date', position: 50, importance: #HIGH}]
+  @UI.fieldGroup: [ { qualifier: 'Fieldgroup3', position: 10  } ]
+ // @UI.identification: [{label: 'Task ID', position: 20,importance: #HIGH }]
+  TaskCreationDate;
+  @UI.lineItem: [{ label: 'Task Due Date', position: 60, importance: #HIGH}]
+  @UI.fieldGroup: [ { qualifier: 'Fieldgroup1', position: 40  } ]
+  @UI.dataPoint: { title: 'Task Due Date' }
+  @UI.selectionField: [{position: 30 }]
+  TaskDueDate;
+  @UI.lineItem: [{ label: 'Last Change Date', position: 70, importance: #HIGH}]
+  @UI.fieldGroup:[ { qualifier: 'Fieldgroup4', position: 10 } ]
+  LastChangeDate;
+//  @UI.lineItem: [{ label: 'Task Description', position: 70, importance: #HIGH}]
+  @UI.fieldGroup: [ { qualifier: 'Fieldgroup1', position: 20  } ]
+ // @UI.identification: [{label: 'Task Description', position: 20,importance: #HIGH }]
+  TaskDescription;
+  @UI.fieldGroup:[ { qualifier: 'Fieldgroup3', position: 20 } ]
+  CreatedBy;
+  @UI.lineItem: [{ label: 'Vendor Quote Time', position: 100, importance: #HIGH}]
+  @UI.fieldGroup: [ { qualifier: 'Fieldgroup5', position: 10  } ]
+  Vendorquotetime;
+  @UI.fieldGroup: [ { qualifier: 'Fieldgroup5', position: 20  } ]
+  VendorquotetimeUom;
+
+}

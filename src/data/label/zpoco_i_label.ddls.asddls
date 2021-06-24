@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+    @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Label'
 define root view entity zpoco_i_label
   as select from zpoco_d_label_a

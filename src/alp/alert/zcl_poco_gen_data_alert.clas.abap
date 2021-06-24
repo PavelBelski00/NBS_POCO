@@ -11,7 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_poco_gen_data_alert IMPLEMENTATION.
+CLASS ZCL_POCO_GEN_DATA_ALERT IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
         DATA: lt_get_data TYPE STANDARD TABLE OF zpoco_c_alert_a.
 
@@ -31,5 +33,4 @@ CLASS zcl_poco_gen_data_alert IMPLEMENTATION.
     DELETE FROM zpoco_c_alert_a.
     INSERT zpoco_c_alert_a FROM TABLE @lt_get_data.
   ENDMETHOD.
-
 ENDCLASS.

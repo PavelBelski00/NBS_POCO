@@ -28,7 +28,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_poco_generate_data IMPLEMENTATION.
+CLASS ZCL_POCO_GENERATE_DATA IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
 
@@ -48,6 +50,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
     me->fill_calendar(  ).
 
   ENDMETHOD.
+
 
   METHOD fill_label.
     DATA: lt_create  TYPE TABLE OF zpoco_d_label_a,
@@ -602,6 +605,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD fill_countries.
 
     DATA: lt_country    TYPE TABLE OF zpoco_c_countr_a,
@@ -633,6 +637,7 @@ CLASS zcl_poco_generate_data IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD fill_plants.
 
     DATA: lt_plant    TYPE TABLE OF zpoco_c_plant_a.
@@ -655,6 +660,7 @@ VALUE #( ( client ='100' plant_id ='PL1' plant_name ='CH12' created_by ='CB00000
     INSERT zpoco_c_plant_a FROM TABLE @lt_plant.
 
   ENDMETHOD.
+
 
   METHOD fill_sites.
 
@@ -694,6 +700,7 @@ VALUE #( ( client ='100' ord_site_id ='OS1' ord_site_name ='Bucharest Hospital' 
 
   ENDMETHOD.
 
+
   METHOD fill_stsl1.
 
     DATA: lt_stsl1 TYPE TABLE OF zpoco_c_stsl1_a.
@@ -709,6 +716,7 @@ VALUE #( ( client ='100' stsl1_id ='ST1' stsl1_name ='Cancelled' created_by ='CB
     INSERT zpoco_c_stsl1_a FROM TABLE @lt_stsl1.
 
   ENDMETHOD.
+
 
   METHOD fill_stsl2.
 
@@ -733,6 +741,7 @@ VALUE #( ( client ='100' stsl2_id ='ST1' stsl2_name ='ADF Approved' created_by =
 
   ENDMETHOD.
 
+
   METHOD fill_therapy_type.
 
     DATA: lt_ttype TYPE TABLE OF zpoco_c_ttype_a.
@@ -746,6 +755,7 @@ VALUE #( ( client ='100' therapy_type_id ='Clinical' therapy_type_name ='Clinica
     INSERT zpoco_c_ttype_a FROM TABLE @lt_ttype.
 
   ENDMETHOD.
+
 
   METHOD fill_capacity.
 
@@ -1235,6 +1245,7 @@ created_by =
     INSERT zpoco_d_capact_a FROM TABLE @lt_capacity.
 
   ENDMETHOD.
+
 
   METHOD fill_order.
     DATA: lt_order TYPE TABLE OF zpoco_d_order_a.
@@ -2416,6 +2427,7 @@ created_by =
 
   ENDMETHOD.
 
+
   METHOD fill_alert.
 
     DATA: lt_alert TYPE TABLE OF zpoco_d_alert_a.
@@ -2580,6 +2592,7 @@ last_changed_by ='CB0000000723' last_changed_at ='20210304100548.2598960 '  )
 
   ENDMETHOD.
 
+
   METHOD fill_alertwi.
 
     DATA: lt_alertwi TYPE TABLE OF zpoco_d_alerwi_a.
@@ -2613,6 +2626,7 @@ last_changed_at ='20210304114623.8753210 '  )
     INSERT zpoco_d_alerwi_a FROM TABLE @lt_alertwi.
 
   ENDMETHOD.
+
 
   METHOD fill_oos.
 
@@ -2678,6 +2692,7 @@ last_changed_at ='20210304114623.8753210 '  )
 
   ENDMETHOD.
 
+
   METHOD fill_calendar.
 
 *** YEAR ***
@@ -2726,5 +2741,4 @@ last_changed_at ='20210304114623.8753210 '  )
     INSERT zpoco_c_month_a FROM TABLE @lt_month.
 
   ENDMETHOD.
-
 ENDCLASS.
