@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition: DF Operations'
+define service zpoco_ui_df_operations {
+  expose zpoco_c_df_operations as Operations;
+}

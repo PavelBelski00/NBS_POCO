@@ -3,12 +3,12 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <SRVD>
-    <NAME>ZDMO_UI_DF_OPERATIONS</NAME>
+    <NAME>ZPOCO_UI_DF_OPERATIONS</NAME>
     <TYPE>SRVD/SRV</TYPE>
-    <DESCRIPTION>DF</DESCRIPTION>
+    <DESCRIPTION>Service Definition: DF Operations</DESCRIPTION>
     <LANGUAGE>EN</LANGUAGE>
     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
-    <SOURCE_URI>./zdmo_ui_df_operations/source/main</SOURCE_URI>
+    <SOURCE_URI>./zpoco_ui_df_operations/source/main</SOURCE_URI>
     <SOURCE_TYPE>ABAP_SOURCE</SOURCE_TYPE>
     <SOURCE_ORIGIN_DESCRIPTION>ABAP Development Tools</SOURCE_ORIGIN_DESCRIPTION>
     <SRVD_SOURCE_TYPE>S</SRVD_SOURCE_TYPE>

@@ -4,16 +4,16 @@
   <asx:values>
    <SRVB>
     <METADATA>
-     <NAME>ZDMO_UI_DF_OPERATIONS_O4</NAME>
+     <NAME>ZPOCO_UI_DF_OPERATIONS_O2</NAME>
      <TYPE>SRVB/SVB</TYPE>
-     <DESCRIPTION>DF</DESCRIPTION>
+     <DESCRIPTION>Service Bonding OData V2: DF Operations</DESCRIPTION>
      <LANGUAGE>EN</LANGUAGE>
      <LINKS>
       <item>
-       <HREF>/sap/bc/adt/businessservices/odatav4/ZDMO_UI_DF_OPERATIONS_O4</HREF>
-       <REL>http://www.sap.com/categories/odatav4</REL>
-       <TYPE>application/vnd.sap.adt.businessservices.odatav4.v1+xml</TYPE>
-       <TITLE>ODATAV4</TITLE>
+       <HREF>/sap/bc/adt/businessservices/odatav2/ZPOCO_UI_DF_OPERATIONS_O2</HREF>
+       <REL>http://www.sap.com/categories/odatav2</REL>
+       <TYPE>application/vnd.sap.adt.businessservices.odatav2.v2+xml</TYPE>
+       <TITLE>ODATAV2</TITLE>
       </item>
       <item>
        <HREF>/sap/bc/adt/businessservices/testclass</HREF>
@@ -26,20 +26,20 @@
     </METADATA>
     <CONTENT>
      <BIND_TYPE_IMPL>
-      <NAME>ZDMO_UI_DF_OPERATIONS_O4</NAME>
+      <NAME>ZPOCO_UI_DF_OPERATIONS_O2</NAME>
      </BIND_TYPE_IMPL>
      <BIND_TYPE>ODATA</BIND_TYPE>
-     <BIND_TYPE_VERSION>V4</BIND_TYPE_VERSION>
+     <BIND_TYPE_VERSION>V2</BIND_TYPE_VERSION>
      <SERVICES>
       <item>
-       <SERVICE_NAME>ZDMO_UI_DF_OPERATIONS</SERVICE_NAME>
+       <SERVICE_NAME>ZPOCO_UI_DF_OPERATIONS_O2</SERVICE_NAME>
        <SERVICE_CONTENT>
         <item>
          <SERVICE_VERSION>0001</SERVICE_VERSION>
          <SRVD_REF>
-          <URI>/sap/bc/adt/ddic/srvd/sources/zdmo_ui_df_operations</URI>
+          <URI>/sap/bc/adt/ddic/srvd/sources/zpoco_ui_df_operations</URI>
           <TYPE>SRVD/SRV</TYPE>
-          <NAME>ZDMO_UI_DF_OPERATIONS</NAME>
+          <NAME>ZPOCO_UI_DF_OPERATIONS</NAME>
          </SRVD_REF>
         </item>
        </SERVICE_CONTENT>

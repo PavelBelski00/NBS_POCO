@@ -1,4 +1,0 @@
-@EndUserText.label: 'DF'
-define service ZDMO_UI_DF_OPERATIONS {
-  expose zpoco_c_df_operations as Operations;
-}

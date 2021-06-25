@@ -2,117 +2,376 @@
 @UI.headerInfo: {
     typeName: 'Task',
     typeNamePlural: 'Tasks'
+}
+@UI.selectionPresentationVariant:[
+    {  //chart and table
+        qualifier: 'Default',
+        presentationVariantQualifier: 'Default',
+        selectionVariantQualifier: 'Default'
     }
+]
+@UI.presentationVariant:[
+    { //main area chart
+        qualifier: 'Default',
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartDefault'
+        }]
+    },
+    {   //visual filter Year
+        qualifier: 'pvFilterByVendorQuoteTime',
+        text: 'Vendor Quote Time by Ticket Owner',
+        sortOrder: [{ by: 'Vendorquotetime', direction: #DESC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterByVendorQuoteTime'
+        }]
+    },
+    {   //visual filter Year
+        qualifier: 'pvFilterSOMultCat1ByTotalDays',
+        text: 'Total Days by SO Mult.Category 1',
+        sortOrder: [{ by: 'TotalDays', direction: #DESC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterSOMultCat1ByTotalDays'
+        }]
+    },
+    {   //visual filter Year
+        qualifier: 'pvFilterSOMultCat2ByTotalDays',
+        text: 'Total Days by SO Mult.Category 2',
+        sortOrder: [{ by: 'TotalDays', direction: #DESC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterSOMultCat2ByTotalDays'
+        }]
+    },
+    {   //visual filter Year
+        qualifier: 'pvFilterTotalDaysByPriority',
+        text: 'Priority By Total Days',
+        sortOrder: [{ by: 'TotalDays', direction: #DESC }] ,
+        visualizations: [{
+            type: #AS_CHART,
+            qualifier: 'ChartFilterTotalDaysByPriority'
+        }]
+    }
+]
+@UI.selectionVariant:[
+    { //main area
+        qualifier: 'Default',
+        text: 'Default'
+    }
+]
+@UI.chart: [
+{
+        qualifier: 'ChartDefault',
+        chartType: #BAR,
+        dimensions:  [ 'SystemId' ],
+        measures:  [ 'TotalDays' ],
+        dimensionAttributes: [{
+            dimension: 'SystemId',
+            role: #SERIES
+        }],
+        measureAttributes: [{
+            measure: 'TotalDays',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterByVendorQuoteTime',
+        chartType: #DONUT,
+        dimensions:  [ 'TicketOwner' ],
+        measures:  [ 'Vendorquotetime' ],
+        dimensionAttributes: [{
+            dimension: 'TicketOwner',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'Vendorquotetime',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterSOMultCat1ByTotalDays',
+        chartType: #BAR,
+        dimensions:  [ 'SoMultCategory1' ],
+        measures:  [ 'TotalDays' ],
+        dimensionAttributes: [{
+            dimension: 'SoMultCategory1',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'TotalDays',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterSOMultCat2ByTotalDays',
+        chartType: #BAR,
+        dimensions:  [ 'SoMultCategory2' ],
+        measures:  [ 'TotalDays' ],
+        dimensionAttributes: [{
+            dimension: 'SoMultCategory2',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'TotalDays',
+            role: #AXIS_1
+        }]
+    },
+    {   //visual filter
+        qualifier: 'ChartFilterTotalDaysByPriority',
+        chartType: #LINE,
+        dimensions:  [ 'Priority' ],
+        measures:  [ 'TotalDays' ],
+        dimensionAttributes: [{
+            dimension: 'Priority',
+            role: #CATEGORY
+        }],
+        measureAttributes: [{
+            measure: 'TotalDays',
+            role: #AXIS_1
+        }]
+    }
+]
 annotate entity zpoco_c_df_operations with
 {
   @UI.facet: [
-      { id:              'HeaderFacet',
-        purpose:         #HEADER,
-        type:            #DATAPOINT_REFERENCE,
-        targetQualifier: 'TaskId',
-        position:         10},
-        
-      { id:              'HeaderFacet2',
-        purpose:         #HEADER,
-        type:            #DATAPOINT_REFERENCE,
-        targetQualifier: 'TicketOwner',
-        position:         20},
-        
-      { id:              'HeaderFacet3',
-        purpose:         #HEADER,
-        type:            #DATAPOINT_REFERENCE,
-        targetQualifier: 'TaskDueDate',
-        position:         30},
-        
-   {    id: 'ID1',
+   {    id: 'GeneralInformation',
         type: #COLLECTION,
         label:'General Information',
         position: 10},
 
-          {   id:          'Fieldgroup1-ID',
+          {   id:          'TaskInfo-ID',
               type:            #FIELDGROUP_REFERENCE,
               label:           'Task Info',
-              parentId:        'ID1',
-              targetQualifier: 'Fieldgroup1',
+              parentId:        'GeneralInformation',
+              targetQualifier: 'TaskInfo',
               position:         10  },
-              
-          {   id:           'Fieldgroup2-ID',
+
+          {   id:           'AdditionalInfo-ID',
               type:            #FIELDGROUP_REFERENCE,
               label:           'Additional Info',
-              parentId:        'ID1',
-              targetQualifier: 'Fieldgroup2',
+              parentId:        'GeneralInformation',
+              targetQualifier: 'AdditionalInfo',
               position:         20 },
-              
-          {   id:           'Fieldgroup5-ID',
+
+          {   id:           'VenforInfo-ID',
               type:            #FIELDGROUP_REFERENCE,
               label:           'Vendor Info',
-              parentId:        'ID1',
-              targetQualifier: 'Fieldgroup5',
+              parentId:        'GeneralInformation',
+              targetQualifier: 'VenforInfo',
               position:         30 },
+          {   id:              'StatusInfo',
+              type:            #FIELDGROUP_REFERENCE,
+              label:           'Status Info',
+              parentId:        'GeneralInformation',
+              targetQualifier: 'StatusInfo',
+              position:         40 },
+          {   id:              'SupportTeamInfo',
+              type:            #FIELDGROUP_REFERENCE,
+              label:           'Support Team Info',
+              parentId:        'GeneralInformation',
+              targetQualifier: 'SupportTeamInfo',
+              position:         50 },
+          {   id:              'SalesOrderInfo',
+              type:            #FIELDGROUP_REFERENCE,
+              label:           'Sales Order Info',
+              parentId:        'GeneralInformation',
+              targetQualifier: 'SalesOrderInfo',
+              position:         60 },
      {
-          id:'ID2',
+          id:'DurationDataCollection',
+          type: #COLLECTION,
+          label: 'Duration Data',
+          position: 20 },
+          {    id:             'DurationData',
+               type:            #FIELDGROUP_REFERENCE,
+               label:           '',
+               parentId:        'DurationDataCollection',
+               targetQualifier: 'DurationData',
+               position:         10 },
+     {
+          id:'AdminData',
           type: #COLLECTION,
           label: 'Admin Data',
-          position: 10 },
-          
-          {    id:          'Fieldgroup3-ID',
+          position: 30 },
+
+          {    id:          'CreateInfo-ID',
                type:            #FIELDGROUP_REFERENCE,
                label:           'Create Info',
-               parentId:        'ID2',
-               targetQualifier: 'Fieldgroup3',
+               parentId:        'AdminData',
+               targetQualifier: 'CreateInfo',
                position:         10 },
-                
-          {    id:           'Fieldgroup4-ID',
+
+          {    id:           'ChangeInfo-ID',
                type:            #FIELDGROUP_REFERENCE,
                label:           'Change Info',
-               parentId:        'ID2',
-               targetQualifier: 'Fieldgroup4',
-               position:         20 }
-          
+               parentId:        'AdminData',
+               targetQualifier: 'ChangeInfo',
+               position:         20 },
+          {    id:              'ReportedBy',
+               type:            #FIELDGROUP_REFERENCE,
+               label:           'Reported By',
+               parentId:        'AdminData',
+               targetQualifier: 'ReportedBy',
+               position:         30 }
   ]
 
-  @UI.lineItem: [{ label: 'Task ID', position: 10, importance: #HIGH}]
-  @UI.fieldGroup: [ { qualifier: 'Fieldgroup1', position: 10  } ]
-//  @UI.identification: [{label: 'Task ID', position: 10,importance: #HIGH }]
-  @UI.dataPoint: { title: 'Task ID' }
-  @UI.selectionField: [{position: 10 }]
+  @UI.lineItem:   [{ position: 10 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'TaskInfo'}]
+  @UI.dataPoint:   { title: 'Task ID' }
   TaskId;
-  @UI.lineItem: [{ label: 'Sales Order ID', position: 20, importance: #HIGH}]
-  @UI.fieldGroup: [ { qualifier: 'Fieldgroup2', position: 10 } ]
- // @UI.identification: [{label: 'Sales Order ID',position: 10,importance: #HIGH }]
+  
+  @UI.lineItem:   [{ position: 20 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'AdditionalInfo'}]
   SalesOrderId;
-  @UI.lineItem: [{ label: 'Service Type', position: 30, importance: #HIGH}]
-  @UI.fieldGroup: [ { qualifier: 'Fieldgroup2', position: 20 } ]
-//  @UI.identification: [{label: 'Service Type',position: 20,importance: #HIGH }]
+  
+  @UI.lineItem:   [{ position: 30 }]
+  @UI.fieldGroup: [{ position: 20, qualifier: 'AdditionalInfo'}]
   ServiceType;
-  @UI.lineItem: [{ label: 'Ticket Owner', position: 40, importance: #HIGH}]
-  @UI.fieldGroup: [ { qualifier: 'Fieldgroup2', position: 30 } ]
-//  @UI.identification: [{label: 'Ticket Owner',position: 30,importance: #HIGH }]
-  @UI.dataPoint: { title: 'Ticket Owner' }
-  @UI.selectionField: [{position: 20 }]
+  
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem:       [{ position: 40 }]
+  @UI.fieldGroup:     [{ position: 30, qualifier: 'AdditionalInfo'}]
+  @UI.dataPoint:       { title: 'Ticket Owner' }
   TicketOwner;
-  @UI.lineItem: [{ label: 'Task Creation Date', position: 50, importance: #HIGH}]
-  @UI.fieldGroup: [ { qualifier: 'Fieldgroup3', position: 10  } ]
- // @UI.identification: [{label: 'Task ID', position: 20,importance: #HIGH }]
+  
+  @UI.lineItem:   [{ position: 50 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'CreateInfo'}]
   TaskCreationDate;
-  @UI.lineItem: [{ label: 'Task Due Date', position: 60, importance: #HIGH}]
-  @UI.fieldGroup: [ { qualifier: 'Fieldgroup1', position: 40  } ]
-  @UI.dataPoint: { title: 'Task Due Date' }
-  @UI.selectionField: [{position: 30 }]
+  
+  @UI.lineItem:   [{  position: 60 }]
+  @UI.fieldGroup: [{  position: 40, qualifier: 'TaskInfo'}]
+  @UI.dataPoint:    { title: 'Task Due Date' }
   TaskDueDate;
-  @UI.lineItem: [{ label: 'Last Change Date', position: 70, importance: #HIGH}]
-  @UI.fieldGroup:[ { qualifier: 'Fieldgroup4', position: 10 } ]
+  
+  @UI.lineItem:   [{ position: 70, importance: #HIGH }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'ChangeInfo'}]
   LastChangeDate;
-//  @UI.lineItem: [{ label: 'Task Description', position: 70, importance: #HIGH}]
-  @UI.fieldGroup: [ { qualifier: 'Fieldgroup1', position: 20  } ]
- // @UI.identification: [{label: 'Task Description', position: 20,importance: #HIGH }]
+  
+  @UI.fieldGroup: [{ position: 20, qualifier: 'TaskInfo'}]
   TaskDescription;
-  @UI.fieldGroup:[ { qualifier: 'Fieldgroup3', position: 20 } ]
+  
+  @UI.fieldGroup: [{ position: 20, qualifier: 'CreateInfo'}]
   CreatedBy;
-  @UI.lineItem: [{ label: 'Vendor Quote Time', position: 100, importance: #HIGH}]
-  @UI.fieldGroup: [ { qualifier: 'Fieldgroup5', position: 10  } ]
+  
+  @UI.lineItem:   [{ position: 100, importance: #HIGH}]
+  @UI.fieldGroup: [{ position: 10,  qualifier: 'VenforInfo'}]
   Vendorquotetime;
-  @UI.fieldGroup: [ { qualifier: 'Fieldgroup5', position: 20  } ]
+  
+  @UI.fieldGroup: [{ position: 20,  qualifier: 'VenforInfo'}]
   VendorquotetimeUom;
+
+  @UI.lineItem:   [{ position: 110 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'StatusInfo' }]
+  StatusText;
+
+  @UI.selectionField: [{ position: 120 }]
+  @UI.lineItem:       [{ position: 120 }]
+  @UI.fieldGroup:     [{ position: 10, qualifier: 'SalesOrderInfo' }]
+  SoMultCategory1;
+
+  @UI.lineItem:   [{ position: 130 }]
+  @UI.fieldGroup: [{ position: 30, qualifier: 'SalesOrderInfo' }]
+  SapRefNum;
+
+  @UI.lineItem:   [{ position: 140 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'SupportTeamInfo' }]
+  SupportTeam;
+
+  @UI.lineItem:   [{ position: 150 }]
+  @UI.fieldGroup: [{ position: 80, qualifier: 'AdditionalInfo' }]
+  SystemId;
+
+  @UI.lineItem:   [{ position: 160 }]
+  @UI.fieldGroup: [{ position: 20, qualifier: 'StatusInfo' }]
+  SubStatusText;
+
+  @UI.lineItem:   [{ position: 170 }]
+  @UI.fieldGroup: [{ position: 20, qualifier: 'SupportTeamInfo' }]
+  SupportTeamId;
+
+  @UI.lineItem:   [{ position: 180 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'ReportedBy' }]
+  ReportedBy;
+
+  @UI.lineItem:   [{ position: 190 }]
+  @UI.fieldGroup: [{ position: 40, qualifier: 'SalesOrderInfo' }]
+  SoStatusText;
+
+  @UI.lineItem:   [{ position: 200 }]
+  @UI.fieldGroup: [{ position: 50, qualifier: 'SalesOrderInfo' }]
+  SoReleaseClassification;
+
+  @UI.lineItem:   [{ position: 210 }]
+  @UI.fieldGroup: [{ position: 70, qualifier: 'AdditionalInfo' }]
+  ProductId;
+
+  @UI.lineItem:   [{ position: 220 }]
+  @UI.fieldGroup: [{ position: 60, qualifier: 'SalesOrderInfo' }]
+  SoSupportTeam;
+
+  @UI.lineItem:       [{ position: 230 }]
+  @UI.selectionField: [{ position: 230 }]
+  @UI.fieldGroup:     [{ position: 20, qualifier: 'SalesOrderInfo' }]
+  SoMultCategory2;
+
+  @UI.lineItem:   [{ position: 240 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'DurationData' }]
+  TotalDays;
+  @UI.lineItem: [{ position: 250 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'DurationData' }]
+  DaysInCurrentStatus;
+  @UI.lineItem:   [{ position: 260 }]
+  @UI.fieldGroup: [{ position: 20, qualifier: 'DurationData' }]
+  DaysInOpenStatus;
+  @UI.lineItem:   [{ position: 270 }]
+  @UI.fieldGroup: [{ position: 30, qualifier: 'DurationData' }]
+  DaysInProgress;
+  @UI.lineItem:   [{ position: 280 }]
+  @UI.fieldGroup: [{ position: 40, qualifier: 'DurationData' }]
+  TotalDaysInClarification;
+  @UI.lineItem:   [{ position: 290 }]
+  @UI.fieldGroup: [{ position: 50, qualifier: 'DurationData' }]
+  TimesInClarification;
+  @UI.lineItem:   [{ position: 300 }]
+  @UI.fieldGroup: [{ position: 60, qualifier: 'DurationData' }]
+  DaysInEffortEstimation;
+  @UI.lineItem: [{ position: 310 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'DurationData' }]
+  TotalDaysInDevevelopment;
+  @UI.lineItem:   [{ position: 320 }]
+  @UI.fieldGroup: [{ position: 70, qualifier: 'DurationData' }]
+  TimesInDevelopment;
+  @UI.lineItem:   [{ position: 330 }]
+  @UI.fieldGroup: [{ position: 80, qualifier: 'DurationData' }]
+  DaysInReview;
+  @UI.lineItem:   [{ position: 340 }]
+  @UI.fieldGroup: [{ position: 90, qualifier: 'DurationData' }]
+  TotalDaysInScreening;
+  @UI.lineItem:   [{ position: 350 }]
+  @UI.fieldGroup: [{ position: 100, qualifier: 'DurationData' }]
+  TotalDaysInTesting;
+
+  @UI.selectionField: [{ position: 110 }]
+  @UI.lineItem:       [{ position: 360 }]
+  @UI.fieldGroup:     [{ position: 50, qualifier: 'TaskInfo' }]
+  Priority;
+
+  @UI.lineItem:   [{ position: 370 }]
+  @UI.fieldGroup: [{ position: 110, qualifier: 'DurationData' }]
+  TimesDueDateChanges;
+  @UI.lineItem:   [{ position: 380 }]
+  @UI.fieldGroup: [{ position: 120, qualifier: 'DurationData' }]
+  DaysInCurrentSubStatus;
+  @UI.lineItem:   [{ position: 390 }]
+  @UI.fieldGroup: [{ position: 130, qualifier: 'DurationData' }]
+  CoordinationTime;
+  @UI.lineItem:   [{ position: 400 }]
+  @UI.fieldGroup: [{ position: 140, qualifier: 'DurationData' }]
+  SolutionDeliveryTime;
+  @UI.lineItem:   [{ position: 410 }]
+  @UI.fieldGroup: [{ position: 150, qualifier: 'DurationData' }]
+  ProposedDevEffort;
 
 }
